@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Jannu ❤️</title>
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+
+body{
+
+    background:linear-gradient(135deg,#ff4e8b,#ff9a9e);
+    color:white;
+    text-align:center;
+    overflow-x:hidden;
+
+}
+
+
+
+section{
+
+    padding:50px 20px;
+    animation:fadeUp 1.2s ease;
+
+}
+
+
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+
+
+/* Birthday Title */
+
+h1{
+
+font-size:45px;
+margin-bottom:20px;
+animation:birthdayGlow 2s infinite alternate;
+
+}
+
+
+
+@keyframes birthdayGlow{
+
+
+0%{
+
+transform:scale(1);
+
+text-shadow:
+0 0 10px white,
+0 0 20px #ff1e62;
+
+}
+
+
+50%{
+
+transform:scale(1.12);
+
+text-shadow:
+0 0 20px white,
+0 0 50px #ff0055;
+
+}
+
+
+100%{
+
+transform:scale(1);
+
+text-shadow:
+0 0 30px white,
+0 0 60px #ff1e62;
+
+}
+
+
+}
+
+
+
+h1::after{
+
+content:" 🎉";
+
+display:inline-block;
+
+animation:party 1s infinite;
+
+}
+
+
+
+@keyframes party{
+
+
+50%{
+
+transform:rotate(20deg) scale(1.3);
+
+}
+
+}
+
+
+
+
+
+h2{
+
+margin-bottom:20px;
+
+animation:slide 1s ease;
+
+}
+
+
+
+@keyframes slide{
+
+
+from{
+
+opacity:0;
+
+transform:translateX(-50px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+
+}
+
+
+
+
+p{
+
+font-size:18px;
+
+line-height:1.7;
+
+}
+
+
+
+
+
+/* Glass Cards */
+
+
+.card{
+
+max-width:750px;
+
+margin:auto;
+
+padding:30px;
+
+
+background:rgba(255,255,255,0.15);
+
+backdrop-filter:blur(10px);
+
+border-radius:25px;
+
+
+box-shadow:
+
+0 0 25px rgba(255,255,255,.4);
+
+
+animation:cardMove 3s infinite alternate;
+
+transition:.5s;
+
+}
+
+
+
+.card:hover{
+
+transform:scale(1.03);
+
+box-shadow:
+
+0 0 30px white,
+
+0 0 60px #ff1e62;
+
+}
+
+
+
+@keyframes cardMove{
+
+
+from{
+
+transform:translateY(0);
+
+}
+
+
+to{
+
+transform:translateY(-10px);
+
+}
+
+
+}
+
+
+
+
+/* Kiss Emoji */
+
+/* Floating Kiss */
+
+.kiss-float{
+
+position:fixed;
+
+bottom:-50px;
+
+font-size:35px;
+
+z-index:999;
+
+pointer-events:none;
+
+filter:drop-shadow(0 0 10px white);
+
+animation:kissFloat 8s linear infinite;
+
+}
+
+
+
+@keyframes kissFloat{
+
+
+0%{
+
+transform:
+
+translateY(0)
+
+rotate(0deg)
+
+scale(.8);
+
+opacity:1;
+
+}
+
+
+
+50%{
+
+transform:
+
+translateY(-60vh)
+
+rotate(20deg)
+
+scale(1.3);
+
+}
+
+
+
+100%{
+
+transform:
+
+translateY(-120vh)
+
+rotate(-20deg)
+
+scale(1);
+
+opacity:0;
+
+}
+
+
+}
+
+
+
+@keyframes kiss{
+
+
+50%{
+
+transform:scale(1.3);
+
+}
+
+
+}
+
+
+
+
+
+/* Gallery */
+
+
+.gallery{
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:20px;
+
+}
+
+
+
+.gallery img{
+
+width:220px;
+
+height:220px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+border:4px solid white;
+
+transition:.5s;
+
+animation:imageShow 1s ease;
+
+}
+
+
+
+@keyframes imageShow{
+
+
+from{
+
+opacity:0;
+
+transform:scale(.5);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+
+}
+
+
+
+.gallery img:hover{
+
+
+transform:
+
+scale(1.15)
+
+rotate(5deg);
+
+
+box-shadow:
+
+0 0 30px white;
+
+
+}
+
+
+
+
+
+/* Buttons */
+
+
+button{
+
+
+background:#ff1e62;
+
+color:white;
+
+border:none;
+
+padding:12px 30px;
+
+border-radius:30px;
+
+font-size:18px;
+
+cursor:pointer;
+
+animation:pulse 2s infinite;
+
+transition:.3s;
+
+
+}
+
+
+
+button:hover{
+
+transform:scale(1.15);
+
+}
+
+
+
+
+@keyframes pulse{
+
+
+50%{
+
+box-shadow:
+
+0 0 20px white,
+
+0 0 40px #ff1e62;
+
+}
+
+
+}
+
+
+
+
+/* Inputs */
+
+
+input{
+
+
+padding:12px;
+
+border-radius:25px;
+
+border:none;
+
+text-align:center;
+
+font-size:16px;
+
+margin:10px;
+
+transition:.4s;
+
+
+}
+
+
+
+input:focus{
+
+
+outline:none;
+
+transform:scale(1.1);
+
+box-shadow:
+
+0 0 20px white;
+
+
+}
+
+
+
+
+/* Music */
+
+
+audio{
+
+margin-top:15px;
+
+filter:
+
+drop-shadow(0 0 15px white);
+
+}
+
+
+
+
+.hidden{
+
+display:none;
+
+}
+
+
+
+
+/* Floating Hearts */
+
+
+.heart{
+
+
+position:fixed;
+
+bottom:-50px;
+
+font-size:35px;
+
+z-index:999;
+
+animation:heartFloat 8s linear infinite;
+
+
+}
+
+
+
+@keyframes heartFloat{
+
+
+0%{
+
+transform:
+
+translateY(0)
+
+rotate(0deg);
+
+opacity:1;
+
+}
+
+
+100%{
+
+transform:
+
+translateY(-120vh)
+
+rotate(360deg);
+
+opacity:0;
+
+}
+
+
+}
+
+
+
+
+/* Floating Kiss GIF */
+
+
+.kiss-float{
+
+
+position:fixed;
+
+bottom:-60px;
+
+width:60px;
+
+height:60px;
+
+z-index:999;
+
+pointer-events:none;
+
+animation:kissFloat 8s linear infinite;
+
+
+}
+
+
+
+@keyframes kissFloat{
+
+
+0%{
+
+
+transform:
+
+translateY(0)
+
+scale(.7);
+
+
+opacity:1;
+
+
+}
+
+
+50%{
+
+
+transform:
+
+translateY(-60vh)
+
+rotate(20deg)
+
+scale(1.2);
+
+
+}
+
+
+100%{
+
+
+transform:
+
+translateY(-120vh)
+
+rotate(-20deg)
+
+scale(1);
+
+
+opacity:0;
+
+
+}
+
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<section>
+
+
+<h1>
+🎂 Happy Birthday Jannu ❤️
+</h1>
+
+
+<p>
+With endless love from your Jaan 💕
+</p>
+
+
+<p>
+Birthday Date: 04 August 2000
+</p>
+
+
+<div class="kiss">
+
+💋 ❤️ 💋
+
+</div>
+
+
+</section>
+
+
+<section>
+
+
+<div class="card">
+
+
+<h2>
+💖 What I Love About You
+</h2>
+
+
+<p>
+
+❤️ I love your eyes, my love... the way they look at me so gently and lovingly makes my heart melt. ❤️
+
+<br><br>
+
+❤️ The way you care for me ❤️
+
+<br>
+
+❤️ I love how you make me laugh whenever I feel sad. ❤️
+
+<br>
+
+❤️ The happiness you bring into my life ❤️
+
+<br>
+
+❤️ I love the way you tease me and make me smile. ❤️
+
+<br>
+
+❤️ Every moment spent with you ❤️
+
+
+</p>
+
+
+</div>
+
+
+</section>
+
+<section>
+
+<div class="card">
+
+<h2>
+📸 Our Memories
+</h2>
+
+
+<div class="gallery">
+
+<img src="photo1.jpg">
+
+<img src="photo2.jpg">
+
+<img src="photo3.jpg">
+
+</div>
+
+
+<p>
+Our beautiful memories forever ❤️
+</p>
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section>
+
+<div class="card">
+
+
+<h1>
+🔐 A Secret Just For You
+</h1>
+
+
+<h2>
+Unlock my heart to reveal a special message 💝
+</h2>
+
+
+
+<p>
+Enter your lover's name ❤️
+</p>
+
+
+
+<input id="pass1" placeholder="Password">
+
+
+<br>
+
+
+<button onclick="openLove()">
+
+Open ❤️
+
+</button>
+
+
+
+<p id="hint"></p>
+
+
+
+<h2 id="loveMsg" class="hidden">
+
+💖 I Love You My Hubby ❤️
+
+</h2>
+
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+<section>
+
+
+<div class="card">
+
+
+<h2>
+💌 My Love Letter To You
+</h2>
+
+
+<p>
+Enter our proposing date ❤️
+</p>
+
+
+
+<input id="pass2" placeholder="Password">
+
+
+<br>
+
+
+<button onclick="openLetter()">
+
+Unlock Letter 💌
+
+</button>
+
+
+
+<p id="letter" class="hidden">
+
+
+My Jannu ❤️
+
+<br><br>
+
+
+From the day we started our journey, you became my happiness, my smile, and my favorite person.
+
+
+<br><br>
+
+
+We have completed more than 5 years of togetherness, and I still wonder how we spent so many beautiful years together.
+
+
+<br><br>
+
+
+How did two strangers become lovers?
+
+How did we start coming closer without even telling each other that we liked one another?
+
+
+<br><br>
+
+
+How did the distances turn into closeness?
+
+
+<br><br>
+
+
+Always wanting to be together, coming to college just to see each other, creating so many beautiful memories, sharing countless moments — we have experienced it all.
+
+
+<br><br>
+
+
+There were many ups and downs, but we always stayed together and faced everything as a team.
+
+
+<br><br>
+
+
+Those moments when you couldn't even spend a minute without me, when we used to talk everywhere — in college, at home, and every place in between...
+
+
+<br><br>
+
+
+All these little things slowly made me fall deeper and deeper in love with you. ❤️
+
+
+<br><br>
+
+
+Thank you for loving me and always being there.
+
+
+<br><br>
+
+
+I love you so much ❤️
+
+
+<br><br>
+
+
+Forever yours,
+
+<br>
+
+Jaan 💕
+
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<script>
+
+
+// Secret Love Message
+
+function openLove(){
+
+
+let password =
+document.getElementById("pass1").value;
+
+
+let message =
+document.getElementById("loveMsg");
+
+
+let hint =
+document.getElementById("hint");
+
+
+
+if(password==="Jaan"){
+
+
+message.classList.remove("hidden");
+
+
+hint.innerHTML =
+"💋 Welcome to my heart, my love ❤️";
+
+
+}
+
+else{
+
+
+hint.innerHTML =
+"Hint: What do you call your loved one? 😘";
+
+
+}
+
+
+}
+
+
+
+
+
+
+// Love Letter Unlock
+
+
+function openLetter(){
+
+
+let password =
+document.getElementById("pass2").value.toLowerCase();
+
+
+let letter =
+document.getElementById("letter");
+
+
+
+if(password==="18 april"){
+
+
+letter.classList.remove("hidden");
+
+
+}
+
+else{
+
+
+letter.innerHTML =
+"Hint: Our special proposing date ❤️";
+
+
+letter.classList.remove("hidden");
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+// Floating Hearts ❤️
+
+
+setInterval(()=>{
+
+
+let heart=document.createElement("div");
+
+
+heart.className="heart";
+
+
+heart.innerHTML="❤️";
+
+
+heart.style.left =
+Math.random()*100+"%";
+
+
+
+heart.style.animationDuration =
+(5+Math.random()*5)+"s";
+
+
+
+document.body.appendChild(heart);
+
+
+
+setTimeout(()=>{
+
+heart.remove();
+
+},9000);
+
+
+
+},700);
+
+
+
+
+
+
+
+// Floating Kiss GIFs 💋
+
+
+// Floating Kiss 💋
+
+setInterval(()=>{
+
+let kiss = document.createElement("div");
+
+kiss.className = "kiss-float";
+
+kiss.innerHTML = "💋";
+
+kiss.style.left =
+Math.random()*100+"%";
+
+
+kiss.style.animationDuration =
+(5+Math.random()*5)+"s";
+
+
+document.body.appendChild(kiss);
+
+
+
+setTimeout(()=>{
+
+kiss.remove();
+
+},9000);
+
+
+
+},1200);
+</script>
+
+
+
+</body>
+
+</html>
