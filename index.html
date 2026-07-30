@@ -8,774 +8,7 @@
 
 <title>Happy Birthday Jannu ❤️</title>
 
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
-}
-
-
-body{
-
-    background:linear-gradient(135deg,#ff4e8b,#ff9a9e);
-    color:white;
-    text-align:center;
-    overflow-x:hidden;
-
-}
-
-
-
-section{
-
-    padding:50px 20px;
-    animation:fadeUp 1.2s ease;
-
-}
-
-
-
-@keyframes fadeUp{
-
-from{
-
-opacity:0;
-transform:translateY(50px);
-
-}
-
-to{
-
-opacity:1;
-transform:translateY(0);
-
-}
-
-}
-
-
-
-/* Birthday Title */
-
-h1{
-
-font-size:45px;
-margin-bottom:20px;
-animation:birthdayGlow 2s infinite alternate;
-
-}
-
-
-
-@keyframes birthdayGlow{
-
-
-0%{
-
-transform:scale(1);
-
-text-shadow:
-0 0 10px white,
-0 0 20px #ff1e62;
-
-}
-
-
-50%{
-
-transform:scale(1.12);
-
-text-shadow:
-0 0 20px white,
-0 0 50px #ff0055;
-
-}
-
-
-100%{
-
-transform:scale(1);
-
-text-shadow:
-0 0 30px white,
-0 0 60px #ff1e62;
-
-}
-
-
-}
-
-
-
-h1::after{
-
-content:" 🎉";
-
-display:inline-block;
-
-animation:party 1s infinite;
-
-}
-
-
-
-@keyframes party{
-
-
-50%{
-
-transform:rotate(20deg) scale(1.3);
-
-}
-
-}
-
-
-
-
-
-h2{
-
-margin-bottom:20px;
-
-animation:slide 1s ease;
-
-}
-
-
-
-@keyframes slide{
-
-
-from{
-
-opacity:0;
-
-transform:translateX(-50px);
-
-}
-
-
-to{
-
-opacity:1;
-
-transform:translateX(0);
-
-}
-
-
-}
-
-
-
-
-p{
-
-font-size:18px;
-
-line-height:1.7;
-
-}
-
-
-
-
-
-/* Glass Cards */
-
-
-.card{
-
-max-width:750px;
-
-margin:auto;
-
-padding:30px;
-
-
-background:rgba(255,255,255,0.15);
-
-backdrop-filter:blur(10px);
-
-border-radius:25px;
-
-
-box-shadow:
-
-0 0 25px rgba(255,255,255,.4);
-
-
-animation:cardMove 3s infinite alternate;
-
-transition:.5s;
-
-}
-
-
-
-.card:hover{
-
-transform:scale(1.03);
-
-box-shadow:
-
-0 0 30px white,
-
-0 0 60px #ff1e62;
-
-}
-
-
-
-@keyframes cardMove{
-
-
-from{
-
-transform:translateY(0);
-
-}
-
-
-to{
-
-transform:translateY(-10px);
-
-}
-
-
-}
-
-
-
-
-/* Kiss Emoji */
-
-/* Floating Kiss */
-
-.kiss-float{
-
-position:fixed;
-
-bottom:-50px;
-
-font-size:35px;
-
-z-index:999;
-
-pointer-events:none;
-
-filter:drop-shadow(0 0 10px white);
-
-animation:kissFloat 8s linear infinite;
-
-}
-
-
-
-@keyframes kissFloat{
-
-
-0%{
-
-transform:
-
-translateY(0)
-
-rotate(0deg)
-
-scale(.8);
-
-opacity:1;
-
-}
-
-
-
-50%{
-
-transform:
-
-translateY(-60vh)
-
-rotate(20deg)
-
-scale(1.3);
-
-}
-
-
-
-100%{
-
-transform:
-
-translateY(-120vh)
-
-rotate(-20deg)
-
-scale(1);
-
-opacity:0;
-
-}
-
-
-}
-
-
-
-@keyframes kiss{
-
-
-50%{
-
-transform:scale(1.3);
-
-}
-
-
-}
-
-
-
-
-
-/* Gallery */
-
-
-.gallery{
-
-display:flex;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-gap:20px;
-
-}
-
-
-
-.gallery img{
-
-width:220px;
-
-height:220px;
-
-object-fit:cover;
-
-border-radius:20px;
-
-border:4px solid white;
-
-transition:.5s;
-
-animation:imageShow 1s ease;
-
-}
-
-
-
-@keyframes imageShow{
-
-
-from{
-
-opacity:0;
-
-transform:scale(.5);
-
-}
-
-
-to{
-
-opacity:1;
-
-transform:scale(1);
-
-}
-
-
-}
-
-
-
-.gallery img:hover{
-
-
-transform:
-
-scale(1.15)
-
-rotate(5deg);
-
-
-box-shadow:
-
-0 0 30px white;
-
-
-}
-
-
-
-
-
-/* Buttons */
-
-
-button{
-
-
-background:#ff1e62;
-
-color:white;
-
-border:none;
-
-padding:12px 30px;
-
-border-radius:30px;
-
-font-size:18px;
-
-cursor:pointer;
-
-animation:pulse 2s infinite;
-
-transition:.3s;
-
-
-}
-
-
-
-button:hover{
-
-transform:scale(1.15);
-
-}
-
-
-
-
-@keyframes pulse{
-
-
-50%{
-
-box-shadow:
-
-0 0 20px white,
-
-0 0 40px #ff1e62;
-
-}
-
-
-}
-
-
-
-
-/* Inputs */
-
-
-input{
-
-
-padding:12px;
-
-border-radius:25px;
-
-border:none;
-
-text-align:center;
-
-font-size:16px;
-
-margin:10px;
-
-transition:.4s;
-
-
-}
-
-
-
-input:focus{
-
-
-outline:none;
-
-transform:scale(1.1);
-
-box-shadow:
-
-0 0 20px white;
-
-
-}
-
-
-
-
-/* Music */
-
-
-audio{
-
-margin-top:15px;
-
-filter:
-
-drop-shadow(0 0 15px white);
-
-}
-
-
-
-
-.hidden{
-
-display:none;
-
-}
-
-
-
-
-/* Floating Hearts */
-
-
-.heart{
-
-
-position:fixed;
-
-bottom:-50px;
-
-font-size:35px;
-
-z-index:999;
-
-animation:heartFloat 8s linear infinite;
-
-
-}
-
-
-
-@keyframes heartFloat{
-
-
-0%{
-
-transform:
-
-translateY(0)
-
-rotate(0deg);
-
-opacity:1;
-
-}
-
-
-100%{
-
-transform:
-
-translateY(-120vh)
-
-rotate(360deg);
-
-opacity:0;
-
-}
-
-
-}
-
-
-
-
-/* Floating Kiss GIF */
-
-
-.kiss-float{
-
-
-position:fixed;
-
-bottom:-60px;
-
-width:60px;
-
-height:60px;
-
-z-index:999;
-
-pointer-events:none;
-
-animation:kissFloat 8s linear infinite;
-
-
-}
-
-
-
-@keyframes kissFloat{
-
-
-0%{
-
-
-transform:
-
-translateY(0)
-
-scale(.7);
-
-
-opacity:1;
-
-
-}
-
-
-50%{
-
-
-transform:
-
-translateY(-60vh)
-
-rotate(20deg)
-
-scale(1.2);
-
-
-}
-
-
-100%{
-
-
-transform:
-
-translateY(-120vh)
-
-rotate(-20deg)
-
-scale(1);
-
-
-opacity:0;
-
-
-}
-
-
-}
-/* Gift Box */
-
-.gift-box{
-    width:170px;
-    margin:30px auto;
-    cursor:pointer;
-    position:relative;
-    transition:.5s;
-}
-
-.gift-box:hover{
-    transform:scale(1.08);
-}
-
-.gift-body{
-    width:170px;
-    height:130px;
-    background:#ff2d75;
-    border-radius:0 0 15px 15px;
-    font-size:70px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    box-shadow:0 0 25px rgba(255,255,255,.5);
-}
-
-.gift-lid{
-    width:180px;
-    height:35px;
-    background:#ff80ab;
-    border-radius:15px;
-    position:absolute;
-    top:-25px;
-    left:-5px;
-    transition:1s;
-    transform-origin:left bottom;
-    box-shadow:0 0 20px rgba(255,255,255,.5);
-}
-
-/* Lid opens */
-
-.gift-box.open .gift-lid{
-    transform:
-    rotate(-45deg)
-    translate(-20px,-15px);
-}
-
-/* Ring */
-
-.ring{
-    font-size:90px;
-    margin-top:30px;
-    animation:ringGlow 2s infinite alternate;
-}
-
-@keyframes ringGlow{
-
-0%{
-    transform:scale(1);
-    filter:drop-shadow(0 0 10px white);
-}
-
-100%{
-    transform:scale(1.2);
-    filter:
-    drop-shadow(0 0 25px gold)
-    drop-shadow(0 0 40px white);
-}
-
-}
-
-/* Quote */
-
-.quote{
-
-    margin-top:20px;
-    font-size:20px;
-    line-height:1.8;
-    color:white;
-    max-width:650px;
-    margin-left:auto;
-    margin-right:auto;
-
-    animation:fadeUp 1.5s;
-
-}
-
-
-</style>
-
+<link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -783,39 +16,37 @@ opacity:0;
 <body>
 
 
-<section>
+<!-- Welcome Section -->
 
+<section class="welcome">
 
 <h1>
 🎂 Happy Birthday Jannu ❤️
 </h1>
 
-
 <p>
 With endless love from your Jaan 💕
 </p>
-
 
 <p>
 Birthday Date: 04 August 2000
 </p>
 
-
 <div class="kiss">
-
 💋 ❤️ 💋
-
 </div>
-
 
 </section>
 
 
+
+
+<!-- Love About Section -->
+
+
 <section>
 
-
 <div class="card">
-
 
 <h2>
 💖 What I Love About You
@@ -824,40 +55,47 @@ Birthday Date: 04 August 2000
 
 <p>
 
-❤️ I love your eyes, my love... the way they look at me so gently and lovingly makes my heart melt. ❤️
+❤️ I love your eyes, my love... the way they look at me so gently and lovingly makes my heart melt.
 
 <br><br>
 
-❤️ The way you care for me ❤️
+❤️ The way you care for me.
 
-<br>
+<br><br>
 
-❤️ I love how you make me laugh whenever I feel sad. ❤️
+❤️ I love how you make me laugh whenever I feel sad.
 
-<br>
+<br><br>
 
-❤️ The happiness you bring into my life ❤️
+❤️ The happiness you bring into my life.
 
-<br>
+<br><br>
 
-❤️ I love the way you tease me and make me smile. ❤️
+❤️ I love the way you tease me and make me smile.
 
-<br>
+<br><br>
 
-❤️ Every moment spent with you ❤️
-
+❤️ Every moment spent with you is special.
 
 </p>
 
 
 </div>
 
-
 </section>
+
+
+
+
+
+<!-- Memory Gallery -->
+
 
 <section>
 
+
 <div class="card">
+
 
 <h2>
 📸 Our Memories
@@ -866,11 +104,13 @@ Birthday Date: 04 August 2000
 
 <div class="gallery">
 
-<img src="photo1.jpg">
 
-<img src="photo2.jpg">
+<img src="photo1.jpg" alt="Our Memory 1">
 
-<img src="photo3.jpg">
+<img src="photo2.jpg" alt="Our Memory 2">
+
+<img src="photo3.jpg" alt="Our Memory 3">
+
 
 </div>
 
@@ -882,6 +122,7 @@ Our beautiful memories forever ❤️
 
 </div>
 
+
 </section>
 
 
@@ -890,11 +131,11 @@ Our beautiful memories forever ❤️
 
 
 
-
-
+<!-- Secret Message -->
 
 
 <section>
+
 
 <div class="card">
 
@@ -909,11 +150,9 @@ Unlock my heart to reveal a special message 💝
 </h2>
 
 
-
 <p>
 Enter your lover's name ❤️
 </p>
-
 
 
 <input id="pass1" placeholder="Password">
@@ -923,15 +162,11 @@ Enter your lover's name ❤️
 
 
 <button onclick="openLove()">
-
 Open ❤️
-
 </button>
 
 
-
 <p id="hint"></p>
-
 
 
 <h2 id="loveMsg" class="hidden">
@@ -941,8 +176,8 @@ Open ❤️
 </h2>
 
 
-
 </div>
+
 
 </section>
 
@@ -952,42 +187,110 @@ Open ❤️
 
 
 
-<section>
+
+<!-- Virtual Gift Box -->
+
 
 <section>
+
 
 <div class="card">
 
-<h2>🎁 A Special Gift For You</h2>
 
-<p>Click the gift box to open your surprise ❤️</p>
+<h2>
+🎁 A Special Gift For You
+</h2>
+
+
+<p>
+Click the gift box to open your surprise ❤️
+</p>
+
+
 
 <div class="gift-box" onclick="openGift()">
 
-    <div class="gift-lid"></div>
-    <div class="gift-body">🎁</div>
+
+
+<div class="gift-lid"></div>
+
+
+<div class="gift-body">
+
+🎁
 
 </div>
+
+
+</div>
+
+
+
+
 
 <div id="giftSurprise" class="hidden">
 
-    <div class="ring">💍</div>
 
-    <h2>For My Forever Love ❤️</h2>
+<div class="ring">
 
-    <p class="quote">
-        "You are the most precious gift life has ever given me.
-        This ring is a symbol of my endless love, trust, and promise
-        to stand beside you through every smile, every tear,
-        and every dream.
-        I choose you today, tomorrow, and forever. ❤️"
-    </p>
+💍
 
 </div>
 
+
+
+<h2>
+For My Forever Love ❤️
+</h2>
+
+
+
+<p class="quote">
+
+
+"You are the most precious gift life has ever given me.
+
+
+<br><br>
+
+
+This ring is a symbol of my endless love,
+trust, and promise to stand beside you through
+every smile, every tear, and every dream.
+
+
+<br><br>
+
+
+I choose you today, tomorrow,
+and forever. ❤️"
+
+
+</p>
+
+
 </div>
+
+
+
+</div>
+
 
 </section>
+
+
+
+
+
+
+
+
+<!-- Love Letter -->
+
+
+<section>
+
+
 <div class="card">
 
 
@@ -1030,7 +333,8 @@ From the day we started our journey, you became my happiness, my smile, and my f
 <br><br>
 
 
-We have completed more than 5 years of togetherness, and I still wonder how we spent so many beautiful years together.
+We have completed more than 5 years of togetherness,
+and I still wonder how we spent so many beautiful years together.
 
 
 <br><br>
@@ -1050,19 +354,16 @@ How did the distances turn into closeness?
 <br><br>
 
 
-Always wanting to be together, coming to college just to see each other, creating so many beautiful memories, sharing countless moments — we have experienced it all.
+Always wanting to be together, coming to college just to see each other,
+creating so many beautiful memories, sharing countless moments —
+we have experienced it all.
 
 
 <br><br>
 
 
-There were many ups and downs, but we always stayed together and faced everything as a team.
-
-
-<br><br>
-
-
-Those moments when you couldn't even spend a minute without me, when we used to talk everywhere — in college, at home, and every place in between...
+There were many ups and downs,
+but we always stayed together and faced everything as a team.
 
 
 <br><br>
@@ -1107,16 +408,991 @@ Jaan 💕
 
 
 
-<script>
+<!-- Audio -->
 
 
-// Secret Love Message
+<audio id="music" loop>
+
+<source src="birthday.mp3" type="audio/mpeg">
+
+</audio>
+
+
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
+/* ---------------- BASIC SETTINGS ---------------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+
+body{
+
+    background:
+    linear-gradient(135deg,#ff4e8b,#ff9a9e);
+
+    color:white;
+
+    text-align:center;
+
+    overflow-x:hidden;
+
+}
+
+
+
+section{
+
+    padding:50px 20px;
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+
+
+
+/* ---------------- ANIMATIONS ---------------- */
+
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+
+@keyframes slide{
+
+from{
+
+opacity:0;
+
+transform:translateX(-50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+}
+
+
+
+
+
+/* ---------------- TITLE ---------------- */
+
+
+h1{
+
+font-size:45px;
+
+margin-bottom:20px;
+
+animation:birthdayGlow 2s infinite alternate;
+
+}
+
+
+
+
+@keyframes birthdayGlow{
+
+
+0%{
+
+transform:scale(1);
+
+text-shadow:
+
+0 0 10px white,
+
+0 0 20px #ff1e62;
+
+}
+
+
+
+50%{
+
+transform:scale(1.12);
+
+text-shadow:
+
+0 0 20px white,
+
+0 0 50px #ff0055;
+
+}
+
+
+
+100%{
+
+transform:scale(1);
+
+text-shadow:
+
+0 0 30px white,
+
+0 0 60px #ff1e62;
+
+}
+
+
+}
+
+
+
+
+h1::after{
+
+content:" 🎉";
+
+display:inline-block;
+
+animation:party 1s infinite;
+
+}
+
+
+
+@keyframes party{
+
+50%{
+
+transform:rotate(20deg) scale(1.3);
+
+}
+
+}
+
+
+
+
+h2{
+
+margin-bottom:20px;
+
+animation:slide 1s ease;
+
+}
+
+
+
+p{
+
+font-size:18px;
+
+line-height:1.7;
+
+}
+
+
+
+
+
+
+/* ---------------- GLASS CARD ---------------- */
+
+
+.card{
+
+max-width:750px;
+
+margin:auto;
+
+padding:30px;
+
+
+background:
+
+rgba(255,255,255,0.15);
+
+
+backdrop-filter:blur(10px);
+
+
+border-radius:25px;
+
+
+box-shadow:
+
+0 0 25px rgba(255,255,255,.4);
+
+
+transition:.5s;
+
+
+}
+
+
+
+.card:hover{
+
+transform:scale(1.03);
+
+
+box-shadow:
+
+0 0 30px white,
+
+0 0 60px #ff1e62;
+
+
+}
+
+
+
+
+
+
+/* ---------------- GALLERY ---------------- */
+
+
+.gallery{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:20px;
+
+}
+
+
+
+.gallery img{
+
+width:220px;
+
+height:220px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+border:4px solid white;
+
+transition:.5s;
+
+}
+
+
+
+.gallery img:hover{
+
+transform:
+
+scale(1.15)
+
+rotate(5deg);
+
+
+box-shadow:
+
+0 0 30px white;
+
+
+}
+
+
+
+
+
+/* ---------------- BUTTONS ---------------- */
+
+
+button{
+
+
+background:#ff1e62;
+
+
+color:white;
+
+
+border:none;
+
+
+padding:12px 30px;
+
+
+border-radius:30px;
+
+
+font-size:18px;
+
+
+cursor:pointer;
+
+
+transition:.3s;
+
+
+animation:pulse 2s infinite;
+
+
+}
+
+
+
+
+button:hover{
+
+transform:scale(1.15);
+
+}
+
+
+
+
+
+@keyframes pulse{
+
+
+50%{
+
+box-shadow:
+
+0 0 20px white,
+
+0 0 40px #ff1e62;
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* ---------------- INPUT ---------------- */
+
+
+input{
+
+
+padding:12px;
+
+
+border-radius:25px;
+
+
+border:none;
+
+
+text-align:center;
+
+
+font-size:16px;
+
+
+margin:10px;
+
+
+}
+
+
+
+input:focus{
+
+
+outline:none;
+
+
+transform:scale(1.1);
+
+
+box-shadow:0 0 20px white;
+
+
+}
+
+
+
+
+
+
+
+/* ---------------- HIDDEN ---------------- */
+
+
+.hidden{
+
+display:none;
+
+}
+
+
+
+
+
+
+
+/* ---------------- FLOATING HEARTS ---------------- */
+
+
+.heart{
+
+
+position:fixed;
+
+
+bottom:-50px;
+
+
+font-size:35px;
+
+
+z-index:999;
+
+
+animation:heartFloat 8s linear infinite;
+
+
+}
+
+
+
+@keyframes heartFloat{
+
+
+0%{
+
+transform:
+
+translateY(0)
+
+rotate(0deg);
+
+
+opacity:1;
+
+}
+
+
+
+100%{
+
+transform:
+
+translateY(-120vh)
+
+rotate(360deg);
+
+
+opacity:0;
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* ---------------- FLOATING KISS ---------------- */
+
+
+.kiss-float{
+
+
+position:fixed;
+
+
+bottom:-60px;
+
+
+font-size:40px;
+
+
+z-index:999;
+
+
+pointer-events:none;
+
+
+animation:kissFloat 8s linear infinite;
+
+
+}
+
+
+
+@keyframes kissFloat{
+
+
+0%{
+
+transform:
+
+translateY(0)
+
+scale(.7);
+
+
+opacity:1;
+
+}
+
+
+
+50%{
+
+transform:
+
+translateY(-60vh)
+
+rotate(20deg)
+
+scale(1.3);
+
+}
+
+
+
+100%{
+
+transform:
+
+translateY(-120vh)
+
+rotate(-20deg)
+
+scale(1);
+
+
+opacity:0;
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* ---------------- GIFT BOX ---------------- */
+
+
+.gift-box{
+
+
+width:180px;
+
+height:170px;
+
+margin:40px auto;
+
+position:relative;
+
+cursor:pointer;
+
+transition:.5s;
+
+
+}
+
+
+
+.gift-box:hover{
+
+transform:scale(1.1);
+
+}
+
+
+
+
+.gift-body{
+
+
+width:180px;
+
+
+height:130px;
+
+
+background:#ff2d75;
+
+
+border-radius:0 0 20px 20px;
+
+
+position:absolute;
+
+
+bottom:0;
+
+
+display:flex;
+
+
+justify-content:center;
+
+
+align-items:center;
+
+
+font-size:70px;
+
+
+box-shadow:
+
+0 0 30px rgba(255,255,255,.5);
+
+
+}
+
+
+
+
+
+.gift-lid{
+
+
+width:190px;
+
+
+height:40px;
+
+
+background:#ff80ab;
+
+
+position:absolute;
+
+
+top:0;
+
+
+left:-5px;
+
+
+border-radius:20px;
+
+
+transition:1s;
+
+
+transform-origin:left bottom;
+
+
+}
+
+
+
+
+
+.gift-box.open .gift-lid{
+
+
+transform:
+
+rotate(-45deg)
+
+translate(-25px,-15px);
+
+
+}
+
+
+
+
+
+
+/* Ribbon */
+
+
+.gift-body::before{
+
+
+content:"";
+
+
+position:absolute;
+
+
+width:18px;
+
+
+height:130px;
+
+
+background:gold;
+
+
+left:50%;
+
+
+transform:translateX(-50%);
+
+
+}
+
+
+
+.gift-body::after{
+
+
+content:"";
+
+
+position:absolute;
+
+
+height:18px;
+
+
+width:180px;
+
+
+background:gold;
+
+
+top:56px;
+
+
+}
+
+
+
+
+
+
+
+/* ---------------- RING ---------------- */
+
+
+.ring{
+
+
+font-size:100px;
+
+
+margin-top:30px;
+
+
+animation:ringGlow 2s infinite alternate;
+
+
+}
+
+
+
+
+
+@keyframes ringGlow{
+
+
+0%{
+
+
+transform:scale(1);
+
+
+filter:drop-shadow(0 0 10px white);
+
+
+}
+
+
+100%{
+
+
+transform:scale(1.25);
+
+
+filter:
+
+drop-shadow(0 0 20px gold)
+
+drop-shadow(0 0 50px white);
+
+
+}
+
+
+}
+
+
+
+
+
+
+/* ---------------- QUOTE ---------------- */
+
+
+.quote{
+
+
+font-size:20px;
+
+
+line-height:1.8;
+
+
+max-width:650px;
+
+
+margin:20px auto;
+
+
+}
+
+
+
+
+
+
+
+/* ---------------- SPARKLES ---------------- */
+
+
+.sparkle{
+
+
+position:fixed;
+
+
+font-size:25px;
+
+
+pointer-events:none;
+
+
+animation:sparkleMove 2s linear forwards;
+
+
+}
+
+
+
+@keyframes sparkleMove{
+
+
+0%{
+
+
+opacity:1;
+
+
+transform:translateY(0) scale(.5);
+
+
+}
+
+
+
+100%{
+
+
+opacity:0;
+
+
+transform:translateY(-100px) scale(1.5);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* ---------------- MOBILE ---------------- */
+
+
+@media(max-width:600px){
+
+
+h1{
+
+font-size:32px;
+
+}
+
+
+.gallery img{
+
+
+width:150px;
+
+
+height:150px;
+
+
+}
+
+
+
+.card{
+
+
+padding:20px;
+
+
+}
+
+
+}
+/* ---------------- SECRET LOVE MESSAGE ---------------- */
+
 
 function openLove(){
 
 
 let password =
-document.getElementById("pass1").value;
+document.getElementById("pass1").value.trim().toLowerCase();
 
 
 let message =
@@ -1128,7 +1404,7 @@ document.getElementById("hint");
 
 
 
-if(password==="Jaan"){
+if(password==="jaan"){
 
 
 message.classList.remove("hidden");
@@ -1136,6 +1412,9 @@ message.classList.remove("hidden");
 
 hint.innerHTML =
 "💋 Welcome to my heart, my love ❤️";
+
+
+createHearts();
 
 
 }
@@ -1157,14 +1436,18 @@ hint.innerHTML =
 
 
 
-// Love Letter Unlock
+
+/* ---------------- LOVE LETTER ---------------- */
 
 
 function openLetter(){
 
 
 let password =
-document.getElementById("pass2").value.toLowerCase();
+document.getElementById("pass2").value
+.trim()
+.toLowerCase();
+
 
 
 let letter =
@@ -1202,10 +1485,181 @@ letter.classList.remove("hidden");
 
 
 
-// Floating Hearts ❤️
+/* ---------------- GIFT BOX ---------------- */
 
 
-setInterval(()=>{
+function openGift(){
+
+
+const box =
+document.querySelector(".gift-box");
+
+
+const surprise =
+document.getElementById("giftSurprise");
+
+
+
+if(box.classList.contains("open")){
+
+return;
+
+}
+
+
+
+box.classList.add("open");
+
+
+
+setTimeout(()=>{
+
+
+surprise.classList.remove("hidden");
+
+
+createGiftMagic();
+
+
+},800);
+
+
+
+}
+
+
+
+
+
+
+
+
+/* ---------------- GIFT MAGIC ---------------- */
+
+
+function createGiftMagic(){
+
+
+
+// Screen glow
+
+
+document.body.style.transition="0.5s";
+
+document.body.style.boxShadow=
+"inset 0 0 250px pink";
+
+
+
+setTimeout(()=>{
+
+document.body.style.boxShadow="none";
+
+},800);
+
+
+
+
+// Create sparkles
+
+
+for(let i=0;i<30;i++){
+
+
+let sparkle=document.createElement("div");
+
+
+sparkle.className="sparkle";
+
+
+sparkle.innerHTML="✨";
+
+
+sparkle.style.left=
+Math.random()*100+"%";
+
+
+sparkle.style.top=
+Math.random()*70+"%";
+
+
+
+document.body.appendChild(sparkle);
+
+
+
+setTimeout(()=>{
+
+sparkle.remove();
+
+},2000);
+
+
+
+}
+
+
+
+// Roses
+
+
+for(let i=0;i<20;i++){
+
+
+let rose=document.createElement("div");
+
+
+rose.innerHTML="🌹";
+
+
+rose.style.position="fixed";
+
+
+rose.style.bottom="-50px";
+
+
+rose.style.left=
+Math.random()*100+"%";
+
+
+rose.style.fontSize="35px";
+
+
+rose.style.animation=
+"heartFloat 6s linear";
+
+
+
+document.body.appendChild(rose);
+
+
+
+setTimeout(()=>{
+
+rose.remove();
+
+},6000);
+
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+/* ---------------- FLOATING HEARTS ---------------- */
+
+
+function createHearts(){
+
 
 
 let heart=document.createElement("div");
@@ -1217,12 +1671,12 @@ heart.className="heart";
 heart.innerHTML="❤️";
 
 
-heart.style.left =
+heart.style.left=
 Math.random()*100+"%";
 
 
 
-heart.style.animationDuration =
+heart.style.animationDuration=
 (5+Math.random()*5)+"s";
 
 
@@ -1238,6 +1692,15 @@ heart.remove();
 },9000);
 
 
+}
+
+
+
+setInterval(()=>{
+
+
+createHearts();
+
 
 },700);
 
@@ -1247,25 +1710,32 @@ heart.remove();
 
 
 
-// Floating Kiss GIFs 💋
 
 
-// Floating Kiss 💋
+/* ---------------- FLOATING KISSES ---------------- */
 
-setInterval(()=>{
 
-let kiss = document.createElement("div");
+function createKiss(){
 
-kiss.className = "kiss-float";
 
-kiss.innerHTML = "💋";
 
-kiss.style.left =
+let kiss=document.createElement("div");
+
+
+kiss.className="kiss-float";
+
+
+kiss.innerHTML="💋";
+
+
+kiss.style.left=
 Math.random()*100+"%";
 
 
-kiss.style.animationDuration =
+
+kiss.style.animationDuration=
 (5+Math.random()*5)+"s";
+
 
 
 document.body.appendChild(kiss);
@@ -1280,25 +1750,106 @@ kiss.remove();
 
 
 
+}
+
+
+
+setInterval(()=>{
+
+
+createKiss();
+
+
 },1200);
-    function openGift(){
 
-    const box = document.querySelector(".gift-box");
-    const surprise = document.getElementById("giftSurprise");
 
-    box.classList.add("open");
 
-    setTimeout(()=>{
 
-        surprise.classList.remove("hidden");
 
-    },800);
+
+
+
+
+/* ---------------- SPARKLES AROUND RING ---------------- */
+
+
+setInterval(()=>{
+
+
+let surprise =
+document.getElementById("giftSurprise");
+
+
+
+if(
+surprise &&
+!surprise.classList.contains("hidden")
+){
+
+
+
+let sparkle=document.createElement("div");
+
+
+sparkle.className="sparkle";
+
+
+sparkle.innerHTML="✨";
+
+
+sparkle.style.left=
+(40+Math.random()*20)+"%";
+
+
+
+sparkle.style.top=
+(35+Math.random()*30)+"%";
+
+
+
+document.body.appendChild(sparkle);
+
+
+
+setTimeout(()=>{
+
+sparkle.remove();
+
+},2000);
+
+
 
 }
-</script>
 
 
 
-</body>
+},300);
 
-</html>
+
+
+
+
+
+
+
+/* ---------------- AUTO MUSIC ---------------- */
+
+
+window.addEventListener("click",()=>{
+
+
+let music =
+document.getElementById("music");
+
+
+
+if(music){
+
+
+music.play().catch(()=>{});
+
+
+}
+
+
+},{once:true});
