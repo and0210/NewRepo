@@ -353,48 +353,48 @@ function createGiftMagic(){
 /* ================= FLOATING HEARTS ================= */
 
 
-function createHeart(){
+// function createHeart(){
 
 
-    let heart =
-    document.createElement("div");
+//     let heart =
+//     document.createElement("div");
 
 
-    heart.className="heart";
+//     heart.className="heart";
 
 
-    heart.innerHTML="❤️";
+//     heart.innerHTML="❤️";
 
 
-    heart.style.left =
-    Math.random()*100+"%";
+//     heart.style.left =
+//     Math.random()*100+"%";
 
 
-    heart.style.animationDuration =
-    (5+Math.random()*5)+"s";
-
-
-
-    document.body.appendChild(heart);
+//     heart.style.animationDuration =
+//     (5+Math.random()*5)+"s";
 
 
 
-    setTimeout(()=>{
-
-        heart.remove();
-
-    },9000);
-
-
-}
+//     document.body.appendChild(heart);
 
 
 
-setInterval(()=>{
+//     setTimeout(()=>{
 
-    createHeart();
+//         heart.remove();
 
-},800);
+//     },9000);
+
+
+// }
+
+
+
+// setInterval(()=>{
+
+//     createHeart();
+
+// },800);
 
 
 
