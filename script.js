@@ -254,43 +254,43 @@ function createGiftMagic(){
 
 
 
-    // sparkle effect
+    // // sparkle effect
 
 
-    for(let i=0;i<40;i++){
+    // for(let i=0;i<40;i++){
 
 
-        let sparkle =
-        document.createElement("div");
+    //     let sparkle =
+    //     document.createElement("div");
 
 
-        sparkle.className="sparkle";
+    //     sparkle.className="sparkle";
 
 
-        sparkle.innerHTML="✨";
+    //     sparkle.innerHTML="✨";
 
 
-        sparkle.style.left =
-        Math.random()*100+"%";
+    //     sparkle.style.left =
+    //     Math.random()*100+"%";
 
 
-        sparkle.style.top =
-        Math.random()*80+"%";
-
-
-
-        document.body.appendChild(sparkle);
+    //     sparkle.style.top =
+    //     Math.random()*80+"%";
 
 
 
-        setTimeout(()=>{
-
-            sparkle.remove();
-
-        },2000);
+    //     document.body.appendChild(sparkle);
 
 
-    }
+
+    //     setTimeout(()=>{
+
+    //         sparkle.remove();
+
+    //     },2000);
+
+
+    // }
 
 
 
@@ -462,55 +462,6 @@ setInterval(()=>{
 
 /* ================= RING SPARKLES ================= */
 
-
-setInterval(()=>{
-
-
-    let surprise =
-    document.getElementById("giftSurprise");
-
-
-
-    if(
-        surprise &&
-        !surprise.classList.contains("hidden")
-    ){
-
-
-        let sparkle =
-        document.createElement("div");
-
-
-        sparkle.className="sparkle";
-
-
-        sparkle.innerHTML="✨";
-
-
-        sparkle.style.left =
-        (40+Math.random()*20)+"%";
-
-
-        sparkle.style.top =
-        (35+Math.random()*20)+"%";
-
-
-
-        document.body.appendChild(sparkle);
-
-
-
-        setTimeout(()=>{
-
-            sparkle.remove();
-
-        },2000);
-
-
-    }
-
-
-},500);
 
 
 
