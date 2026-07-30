@@ -16,8 +16,6 @@
 <body>
 
 
-<!-- Welcome Section -->
-
 <section class="welcome">
 
 <h1>
@@ -32,16 +30,16 @@ With endless love from your Jaan 💕
 Birthday Date: 04 August 2000
 </p>
 
+
 <div class="kiss">
 💋 ❤️ 💋
 </div>
+
 
 </section>
 
 
 
-
-<!-- Love About Section -->
 
 
 <section>
@@ -79,7 +77,6 @@ Birthday Date: 04 August 2000
 
 </p>
 
-
 </div>
 
 </section>
@@ -88,11 +85,8 @@ Birthday Date: 04 August 2000
 
 
 
-<!-- Memory Gallery -->
-
 
 <section>
-
 
 <div class="card">
 
@@ -105,11 +99,11 @@ Birthday Date: 04 August 2000
 <div class="gallery">
 
 
-<img src="photo1.jpg" alt="Our Memory 1">
+<img src="photo1.jpg">
 
-<img src="photo2.jpg" alt="Our Memory 2">
+<img src="photo2.jpg">
 
-<img src="photo3.jpg" alt="Our Memory 3">
+<img src="photo3.jpg">
 
 
 </div>
@@ -122,7 +116,6 @@ Our beautiful memories forever ❤️
 
 </div>
 
-
 </section>
 
 
@@ -130,8 +123,6 @@ Our beautiful memories forever ❤️
 
 
 
-
-<!-- Secret Message -->
 
 
 <section>
@@ -146,7 +137,7 @@ Our beautiful memories forever ❤️
 
 
 <h2>
-Unlock my heart to reveal a special message 💝
+Unlock my heart 💝
 </h2>
 
 
@@ -188,23 +179,26 @@ Open ❤️
 
 
 
-<!-- Virtual Gift Box -->
+
+
+<!-- GIFT BOX -->
 
 
 <section>
 
 
-<div class="card">
+<div class="card gift-card">
 
 
-<h2>
+<h2 id="giftTitle">
 🎁 A Special Gift For You
 </h2>
 
 
-<p>
+<p id="giftText">
 Click the gift box to open your surprise ❤️
 </p>
+
 
 
 
@@ -216,13 +210,19 @@ Click the gift box to open your surprise ❤️
 
 
 <div class="gift-body">
-
 🎁
+</div>
 
+
+
+<div class="ring">
+💍
 </div>
 
 
 </div>
+
+
 
 
 
@@ -231,18 +231,9 @@ Click the gift box to open your surprise ❤️
 <div id="giftSurprise" class="hidden">
 
 
-<div class="ring">
-
-💍
-
-</div>
-
-
-
 <h2>
 For My Forever Love ❤️
 </h2>
-
 
 
 <p class="quote">
@@ -250,17 +241,12 @@ For My Forever Love ❤️
 
 "You are the most precious gift life has ever given me.
 
-
 <br><br>
-
 
 This ring is a symbol of my endless love,
-trust, and promise to stand beside you through
-every smile, every tear, and every dream.
-
+trust, and promise to stand beside you.
 
 <br><br>
-
 
 I choose you today, tomorrow,
 and forever. ❤️"
@@ -284,8 +270,6 @@ and forever. ❤️"
 
 
 
-
-<!-- Love Letter -->
 
 
 <section>
@@ -319,6 +303,7 @@ Unlock Letter 💌
 
 
 
+
 <p id="letter" class="hidden">
 
 
@@ -326,66 +311,31 @@ My Jannu ❤️
 
 <br><br>
 
-
-From the day we started our journey, you became my happiness, my smile, and my favorite person.
-
-
-<br><br>
-
-
-We have completed more than 5 years of togetherness,
-and I still wonder how we spent so many beautiful years together.
-
+From the day we started our journey,
+you became my happiness, my smile,
+and my favorite person.
 
 <br><br>
 
-
-How did two strangers become lovers?
-
-How did we start coming closer without even telling each other that we liked one another?
-
+We have completed more than 5 years
+of togetherness.
 
 <br><br>
-
-
-How did the distances turn into closeness?
-
-
-<br><br>
-
-
-Always wanting to be together, coming to college just to see each other,
-creating so many beautiful memories, sharing countless moments —
-we have experienced it all.
-
-
-<br><br>
-
 
 There were many ups and downs,
-but we always stayed together and faced everything as a team.
-
-
-<br><br>
-
-
-All these little things slowly made me fall deeper and deeper in love with you. ❤️
-
+but we always stayed together
+and faced everything as a team.
 
 <br><br>
 
-
-Thank you for loving me and always being there.
-
+Thank you for loving me
+and always being there.
 
 <br><br>
-
 
 I love you so much ❤️
 
-
 <br><br>
-
 
 Forever yours,
 
@@ -407,16 +357,11 @@ Jaan 💕
 
 
 
-
-<!-- Audio -->
-
-
 <audio id="music" loop>
 
 <source src="birthday.mp3" type="audio/mpeg">
 
 </audio>
-
 
 
 
@@ -428,7 +373,7 @@ Jaan 💕
 </body>
 
 </html>
-/* ---------------- BASIC SETTINGS ---------------- */
+/* ================= BASIC SETTINGS ================= */
 
 *{
     margin:0;
@@ -440,166 +385,71 @@ Jaan 💕
 
 body{
 
-    background:
-    linear-gradient(135deg,#ff4e8b,#ff9a9e);
-
+    background:linear-gradient(135deg,#ff4e8b,#ff9a9e);
     color:white;
-
     text-align:center;
-
     overflow-x:hidden;
 
 }
 
 
-
 section{
 
     padding:50px 20px;
-
-    animation:fadeUp 1.2s ease;
+    animation:fadeUp 1s ease;
 
 }
 
-
-
-
-/* ---------------- ANIMATIONS ---------------- */
 
 
 @keyframes fadeUp{
 
 from{
-
-opacity:0;
-
-transform:translateY(50px);
-
+    opacity:0;
+    transform:translateY(50px);
 }
 
 to{
-
-opacity:1;
-
-transform:translateY(0);
-
+    opacity:1;
+    transform:translateY(0);
 }
 
 }
 
 
 
-@keyframes slide{
-
-from{
-
-opacity:0;
-
-transform:translateX(-50px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateX(0);
-
-}
-
-}
-
-
-
-
-
-/* ---------------- TITLE ---------------- */
+/* ================= HEADINGS ================= */
 
 
 h1{
 
 font-size:45px;
-
 margin-bottom:20px;
-
-animation:birthdayGlow 2s infinite alternate;
+animation:glow 2s infinite alternate;
 
 }
 
 
+@keyframes glow{
 
-
-@keyframes birthdayGlow{
-
-
-0%{
-
-transform:scale(1);
+from{
 
 text-shadow:
-
 0 0 10px white,
-
 0 0 20px #ff1e62;
 
 }
 
 
-
-50%{
-
-transform:scale(1.12);
+to{
 
 text-shadow:
-
-0 0 20px white,
-
-0 0 50px #ff0055;
-
-}
-
-
-
-100%{
-
-transform:scale(1);
-
-text-shadow:
-
 0 0 30px white,
-
-0 0 60px #ff1e62;
-
-}
-
-
-}
-
-
-
-
-h1::after{
-
-content:" 🎉";
-
-display:inline-block;
-
-animation:party 1s infinite;
-
-}
-
-
-
-@keyframes party{
-
-50%{
-
-transform:rotate(20deg) scale(1.3);
+0 0 60px #ff0055;
 
 }
 
 }
-
 
 
 
@@ -607,16 +457,14 @@ h2{
 
 margin-bottom:20px;
 
-animation:slide 1s ease;
-
 }
+
 
 
 
 p{
 
 font-size:18px;
-
 line-height:1.7;
 
 }
@@ -625,39 +473,26 @@ line-height:1.7;
 
 
 
-
-/* ---------------- GLASS CARD ---------------- */
+/* ================= CARD ================= */
 
 
 .card{
 
 max-width:750px;
-
 margin:auto;
-
 padding:30px;
 
-
-background:
-
-rgba(255,255,255,0.15);
-
+background:rgba(255,255,255,.15);
 
 backdrop-filter:blur(10px);
 
-
 border-radius:25px;
 
-
 box-shadow:
-
 0 0 25px rgba(255,255,255,.4);
 
-
-transition:.5s;
-
-
 }
+
 
 
 
@@ -665,13 +500,40 @@ transition:.5s;
 
 transform:scale(1.03);
 
+}
 
-box-shadow:
 
-0 0 30px white,
 
-0 0 60px #ff1e62;
 
+
+/* ================= BUTTON ================= */
+
+
+button{
+
+background:#ff1e62;
+
+color:white;
+
+border:none;
+
+padding:12px 30px;
+
+border-radius:30px;
+
+font-size:18px;
+
+cursor:pointer;
+
+}
+
+
+
+button:hover{
+
+transform:scale(1.1);
+
+box-shadow:0 0 30px white;
 
 }
 
@@ -679,8 +541,35 @@ box-shadow:
 
 
 
+input{
 
-/* ---------------- GALLERY ---------------- */
+padding:12px;
+
+border-radius:25px;
+
+border:none;
+
+text-align:center;
+
+font-size:16px;
+
+}
+
+
+
+
+
+.hidden{
+
+display:none;
+
+}
+
+
+
+
+
+/* ================= GALLERY ================= */
 
 
 .gallery{
@@ -689,9 +578,9 @@ display:flex;
 
 justify-content:center;
 
-flex-wrap:wrap;
-
 gap:20px;
+
+flex-wrap:wrap;
 
 }
 
@@ -709,332 +598,38 @@ border-radius:20px;
 
 border:4px solid white;
 
-transition:.5s;
-
-}
-
-
-
-.gallery img:hover{
-
-transform:
-
-scale(1.15)
-
-rotate(5deg);
-
-
-box-shadow:
-
-0 0 30px white;
-
-
 }
 
 
 
 
 
-/* ---------------- BUTTONS ---------------- */
+/* ================= GIFT BOX ================= */
 
 
-button{
+.gift-area{
 
+position:relative;
 
-background:#ff1e62;
-
-
-color:white;
-
-
-border:none;
-
-
-padding:12px 30px;
-
-
-border-radius:30px;
-
-
-font-size:18px;
-
-
-cursor:pointer;
-
-
-transition:.3s;
-
-
-animation:pulse 2s infinite;
-
+height:300px;
 
 }
 
-
-
-
-button:hover{
-
-transform:scale(1.15);
-
-}
-
-
-
-
-
-@keyframes pulse{
-
-
-50%{
-
-box-shadow:
-
-0 0 20px white,
-
-0 0 40px #ff1e62;
-
-}
-
-
-}
-
-
-
-
-
-
-
-/* ---------------- INPUT ---------------- */
-
-
-input{
-
-
-padding:12px;
-
-
-border-radius:25px;
-
-
-border:none;
-
-
-text-align:center;
-
-
-font-size:16px;
-
-
-margin:10px;
-
-
-}
-
-
-
-input:focus{
-
-
-outline:none;
-
-
-transform:scale(1.1);
-
-
-box-shadow:0 0 20px white;
-
-
-}
-
-
-
-
-
-
-
-/* ---------------- HIDDEN ---------------- */
-
-
-.hidden{
-
-display:none;
-
-}
-
-
-
-
-
-
-
-/* ---------------- FLOATING HEARTS ---------------- */
-
-
-.heart{
-
-
-position:fixed;
-
-
-bottom:-50px;
-
-
-font-size:35px;
-
-
-z-index:999;
-
-
-animation:heartFloat 8s linear infinite;
-
-
-}
-
-
-
-@keyframes heartFloat{
-
-
-0%{
-
-transform:
-
-translateY(0)
-
-rotate(0deg);
-
-
-opacity:1;
-
-}
-
-
-
-100%{
-
-transform:
-
-translateY(-120vh)
-
-rotate(360deg);
-
-
-opacity:0;
-
-}
-
-
-}
-
-
-
-
-
-
-
-/* ---------------- FLOATING KISS ---------------- */
-
-
-.kiss-float{
-
-
-position:fixed;
-
-
-bottom:-60px;
-
-
-font-size:40px;
-
-
-z-index:999;
-
-
-pointer-events:none;
-
-
-animation:kissFloat 8s linear infinite;
-
-
-}
-
-
-
-@keyframes kissFloat{
-
-
-0%{
-
-transform:
-
-translateY(0)
-
-scale(.7);
-
-
-opacity:1;
-
-}
-
-
-
-50%{
-
-transform:
-
-translateY(-60vh)
-
-rotate(20deg)
-
-scale(1.3);
-
-}
-
-
-
-100%{
-
-transform:
-
-translateY(-120vh)
-
-rotate(-20deg)
-
-scale(1);
-
-
-opacity:0;
-
-}
-
-
-}
-
-
-
-
-
-
-
-/* ---------------- GIFT BOX ---------------- */
 
 
 .gift-box{
 
-
 width:180px;
 
-height:170px;
+height:160px;
 
-margin:40px auto;
+margin:50px auto;
 
 position:relative;
 
 cursor:pointer;
 
 transition:.5s;
-
 
 }
 
@@ -1048,100 +643,80 @@ transform:scale(1.1);
 
 
 
+/* Box */
+
 
 .gift-body{
 
-
-width:180px;
-
-
-height:130px;
-
-
-background:#ff2d75;
-
-
-border-radius:0 0 20px 20px;
-
-
 position:absolute;
-
 
 bottom:0;
 
+width:180px;
+
+height:120px;
+
+background:#ff2675;
+
+border-radius:0 0 20px 20px;
 
 display:flex;
 
+align-items:center;
 
 justify-content:center;
 
-
-align-items:center;
-
-
 font-size:70px;
-
 
 box-shadow:
 
-0 0 30px rgba(255,255,255,.5);
-
+0 0 30px white;
 
 }
 
 
 
+/* Lid */
 
 
 .gift-lid{
 
-
-width:190px;
-
-
-height:40px;
-
-
-background:#ff80ab;
-
-
 position:absolute;
 
-
-top:0;
-
+top:10px;
 
 left:-5px;
 
+width:190px;
 
-border-radius:20px;
+height:40px;
 
+background:#ff8bb5;
+
+border-radius:15px;
+
+z-index:2;
 
 transition:1s;
 
-
 transform-origin:left bottom;
-
 
 }
 
 
 
+/* Opening */
 
 
 .gift-box.open .gift-lid{
 
-
 transform:
 
-rotate(-45deg)
+rotate(-50deg)
 
-translate(-25px,-15px);
-
+translate(-30px,-20px);
 
 }
-
-
 
 
 
@@ -1149,139 +724,131 @@ translate(-25px,-15px);
 /* Ribbon */
 
 
-.gift-body::before{
-
+.gift-body:before{
 
 content:"";
 
-
 position:absolute;
 
+height:120px;
 
-width:18px;
-
-
-height:130px;
-
+width:20px;
 
 background:gold;
-
 
 left:50%;
 
-
 transform:translateX(-50%);
-
 
 }
 
 
-
-.gift-body::after{
-
+.gift-body:after{
 
 content:"";
 
-
 position:absolute;
 
-
-height:18px;
-
+height:20px;
 
 width:180px;
 
-
 background:gold;
 
-
-top:56px;
-
+top:50px;
 
 }
 
 
 
 
+/* ================= SURPRISE AREA ================= */
+
+
+#giftSurprise{
+
+margin-top:20px;
+
+animation:showGift 1s ease;
+
+}
 
 
 
-/* ---------------- RING ---------------- */
+@keyframes showGift{
+
+from{
+
+opacity:0;
+
+transform:scale(.5);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+
+
+/* Ring */
 
 
 .ring{
 
+font-size:110px;
 
-font-size:100px;
-
-
-margin-top:30px;
-
+margin:20px auto;
 
 animation:ringGlow 2s infinite alternate;
 
-
 }
-
-
 
 
 
 @keyframes ringGlow{
 
-
-0%{
-
+from{
 
 transform:scale(1);
 
-
-filter:drop-shadow(0 0 10px white);
-
+filter:drop-shadow(0 0 10px gold);
 
 }
 
 
-100%{
-
+to{
 
 transform:scale(1.25);
 
-
 filter:
 
-drop-shadow(0 0 20px gold)
-
-drop-shadow(0 0 50px white);
-
+drop-shadow(0 0 30px gold);
 
 }
-
 
 }
 
 
 
-
-
-
-/* ---------------- QUOTE ---------------- */
 
 
 .quote{
 
-
 font-size:20px;
-
-
-line-height:1.8;
-
 
 max-width:650px;
 
+margin:auto;
 
-margin:20px auto;
-
+line-height:1.8;
 
 }
 
@@ -1289,71 +856,130 @@ margin:20px auto;
 
 
 
+/* ================= FLOATING HEARTS ================= */
 
 
-/* ---------------- SPARKLES ---------------- */
+.heart{
+
+position:fixed;
+
+bottom:-50px;
+
+font-size:35px;
+
+z-index:999;
+
+animation:heartMove 8s linear;
+
+}
+
+
+@keyframes heartMove{
+
+from{
+
+transform:translateY(0);
+
+opacity:1;
+
+}
+
+to{
+
+transform:translateY(-120vh);
+
+opacity:0;
+
+}
+
+}
+
+
+
+
+
+/* ================= FLOATING KISS ================= */
+
+
+.kiss-float{
+
+position:fixed;
+
+bottom:-50px;
+
+font-size:40px;
+
+z-index:999;
+
+animation:kissMove 8s linear;
+
+}
+
+
+@keyframes kissMove{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-120vh);
+
+opacity:0;
+
+}
+
+}
+
+
+
+
+
+/* ================= SPARKLES ================= */
 
 
 .sparkle{
 
-
 position:fixed;
-
 
 font-size:25px;
 
-
-pointer-events:none;
-
-
-animation:sparkleMove 2s linear forwards;
-
+animation:spark 2s forwards;
 
 }
 
 
+@keyframes spark{
 
-@keyframes sparkleMove{
-
-
-0%{
-
+from{
 
 opacity:1;
 
-
-transform:translateY(0) scale(.5);
-
+transform:scale(.5);
 
 }
 
-
-
-100%{
-
+to{
 
 opacity:0;
 
-
 transform:translateY(-100px) scale(1.5);
 
+}
 
 }
 
 
-}
 
 
 
-
-
-
-
-/* ---------------- MOBILE ---------------- */
+/* MOBILE */
 
 
 @media(max-width:600px){
-
 
 h1{
 
@@ -1364,423 +990,385 @@ font-size:32px;
 
 .gallery img{
 
-
 width:150px;
-
 
 height:150px;
 
-
 }
-
 
 
 .card{
 
-
 padding:20px;
 
-
 }
 
-
 }
-/* ---------------- SECRET LOVE MESSAGE ---------------- */
+/* ================= SECRET LOVE MESSAGE ================= */
 
 
 function openLove(){
 
-
-let password =
-document.getElementById("pass1").value.trim().toLowerCase();
-
-
-let message =
-document.getElementById("loveMsg");
+    let password =
+    document.getElementById("pass1").value
+    .trim()
+    .toLowerCase();
 
 
-let hint =
-document.getElementById("hint");
+    let message =
+    document.getElementById("loveMsg");
 
 
-
-if(password==="jaan"){
-
-
-message.classList.remove("hidden");
+    let hint =
+    document.getElementById("hint");
 
 
-hint.innerHTML =
-"💋 Welcome to my heart, my love ❤️";
+    if(password === "jaan"){
 
+        message.classList.remove("hidden");
 
-createHearts();
+        hint.innerHTML =
+        "💋 Welcome to my heart, my love ❤️";
 
+    }
 
-}
+    else{
 
-else{
+        hint.innerHTML =
+        "Hint: What do you call your loved one? 😘";
 
-
-hint.innerHTML =
-"Hint: What do you call your loved one? 😘";
-
-
-}
-
+    }
 
 }
 
 
 
 
-
-
-
-/* ---------------- LOVE LETTER ---------------- */
+/* ================= LOVE LETTER ================= */
 
 
 function openLetter(){
 
 
-let password =
-document.getElementById("pass2").value
-.trim()
-.toLowerCase();
+    let password =
+    document.getElementById("pass2")
+    .value
+    .trim()
+    .toLowerCase();
 
 
 
-let letter =
-document.getElementById("letter");
+    let letter =
+    document.getElementById("letter");
 
 
 
-if(password==="18 april"){
+    if(password === "18 april"){
 
 
-letter.classList.remove("hidden");
+        letter.classList.remove("hidden");
+
+
+    }
+
+    else{
+
+
+        letter.innerHTML =
+        "Hint: Our special proposing date ❤️";
+
+
+        letter.classList.remove("hidden");
+
+
+    }
 
 
 }
 
-else{
-
-
-letter.innerHTML =
-"Hint: Our special proposing date ❤️";
-
-
-letter.classList.remove("hidden");
-
-
-}
-
-
-}
 
 
 
 
-
-
-
-
-/* ---------------- GIFT BOX ---------------- */
+/* ================= VIRTUAL GIFT BOX ================= */
 
 
 function openGift(){
 
 
-let box=document.querySelector(".gift-box");
+    let box =
+    document.querySelector(".gift-box");
 
 
-let title=document.getElementById("giftTitle");
-
-let text=document.getElementById("giftText");
-
-
-let surprise=document.getElementById("giftSurprise");
+    let surprise =
+    document.getElementById("giftSurprise");
 
 
 
-if(box.classList.contains("open")) return;
+    let heading =
+    document.querySelector(".gift-heading");
+
+
+    let instruction =
+    document.querySelector(".gift-text");
 
 
 
-box.classList.add("open");
+    // prevent double click
+
+    if(box.classList.contains("open")){
+
+        return;
+
+    }
 
 
 
-// Remove top text
+    // open box
 
-setTimeout(()=>{
-
-
-title.style.display="none";
-
-text.style.display="none";
-
-
-},500);
+    box.classList.add("open");
 
 
 
+    // remove heading text
 
-// Show message after ring appears
-
-setTimeout(()=>{
-
-
-surprise.classList.remove("hidden");
+    setTimeout(()=>{
 
 
-},1500);
+        if(heading){
+
+            heading.style.display="none";
+
+        }
+
+
+        if(instruction){
+
+            instruction.style.display="none";
+
+        }
+
+
+    },500);
+
+
+
+
+    // show ring and message
+
+    setTimeout(()=>{
+
+
+        surprise.classList.remove("hidden");
+
+
+        createGiftMagic();
+
+
+    },1200);
 
 
 
 }
 
 
-box.classList.add("open");
-
-
-
-setTimeout(()=>{
-
-
-surprise.classList.remove("hidden");
-
-
-createGiftMagic();
-
-
-},800);
-
-
-
-}
 
 
 
 
 
 
-
-
-/* ---------------- GIFT MAGIC ---------------- */
+/* ================= GIFT MAGIC ================= */
 
 
 function createGiftMagic(){
 
 
 
-// Screen glow
+    // sparkle effect
 
 
-document.body.style.transition="0.5s";
-
-document.body.style.boxShadow=
-"inset 0 0 250px pink";
+    for(let i=0;i<40;i++){
 
 
+        let sparkle =
+        document.createElement("div");
 
-setTimeout(()=>{
 
-document.body.style.boxShadow="none";
+        sparkle.className="sparkle";
+
+
+        sparkle.innerHTML="✨";
+
+
+        sparkle.style.left =
+        Math.random()*100+"%";
+
+
+        sparkle.style.top =
+        Math.random()*80+"%";
+
+
+
+        document.body.appendChild(sparkle);
+
+
+
+        setTimeout(()=>{
+
+            sparkle.remove();
+
+        },2000);
+
+
+    }
+
+
+
+
+    // roses
+
+
+    for(let i=0;i<15;i++){
+
+
+        let rose =
+        document.createElement("div");
+
+
+        rose.innerHTML="🌹";
+
+
+        rose.style.position="fixed";
+
+
+        rose.style.bottom="-50px";
+
+
+        rose.style.left =
+        Math.random()*100+"%";
+
+
+        rose.style.fontSize="35px";
+
+
+        rose.style.animation=
+        "heartMove 6s linear";
+
+
+
+        document.body.appendChild(rose);
+
+
+
+        setTimeout(()=>{
+
+            rose.remove();
+
+        },6000);
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ================= FLOATING HEARTS ================= */
+
+
+function createHeart(){
+
+
+    let heart =
+    document.createElement("div");
+
+
+    heart.className="heart";
+
+
+    heart.innerHTML="❤️";
+
+
+    heart.style.left =
+    Math.random()*100+"%";
+
+
+    heart.style.animationDuration =
+    (5+Math.random()*5)+"s";
+
+
+
+    document.body.appendChild(heart);
+
+
+
+    setTimeout(()=>{
+
+        heart.remove();
+
+    },9000);
+
+
+}
+
+
+
+setInterval(()=>{
+
+    createHeart();
 
 },800);
 
 
 
 
-// Create sparkles
 
 
-for(let i=0;i<30;i++){
 
 
-let sparkle=document.createElement("div");
 
-
-sparkle.className="sparkle";
-
-
-sparkle.innerHTML="✨";
-
-
-sparkle.style.left=
-Math.random()*100+"%";
-
-
-sparkle.style.top=
-Math.random()*70+"%";
-
-
-
-document.body.appendChild(sparkle);
-
-
-
-setTimeout(()=>{
-
-sparkle.remove();
-
-},2000);
-
-
-
-}
-
-
-
-// Roses
-
-
-for(let i=0;i<20;i++){
-
-
-let rose=document.createElement("div");
-
-
-rose.innerHTML="🌹";
-
-
-rose.style.position="fixed";
-
-
-rose.style.bottom="-50px";
-
-
-rose.style.left=
-Math.random()*100+"%";
-
-
-rose.style.fontSize="35px";
-
-
-rose.style.animation=
-"heartFloat 6s linear";
-
-
-
-document.body.appendChild(rose);
-
-
-
-setTimeout(()=>{
-
-rose.remove();
-
-},6000);
-
-
-
-}
-
-
-
-}
-
-
-
-
-
-
-
-
-/* ---------------- FLOATING HEARTS ---------------- */
-
-
-function createHearts(){
-
-
-
-let heart=document.createElement("div");
-
-
-heart.className="heart";
-
-
-heart.innerHTML="❤️";
-
-
-heart.style.left=
-Math.random()*100+"%";
-
-
-
-heart.style.animationDuration=
-(5+Math.random()*5)+"s";
-
-
-
-document.body.appendChild(heart);
-
-
-
-setTimeout(()=>{
-
-heart.remove();
-
-},9000);
-
-
-}
-
-
-
-setInterval(()=>{
-
-
-createHearts();
-
-
-},700);
-
-
-
-
-
-
-
-
-
-/* ---------------- FLOATING KISSES ---------------- */
+/* ================= FLOATING KISSES ================= */
 
 
 function createKiss(){
 
 
-
-let kiss=document.createElement("div");
-
-
-kiss.className="kiss-float";
+    let kiss =
+    document.createElement("div");
 
 
-kiss.innerHTML="💋";
+    kiss.className="kiss-float";
 
 
-kiss.style.left=
-Math.random()*100+"%";
+    kiss.innerHTML="💋";
 
 
-
-kiss.style.animationDuration=
-(5+Math.random()*5)+"s";
-
+    kiss.style.left =
+    Math.random()*100+"%";
 
 
-document.body.appendChild(kiss);
+    kiss.style.animationDuration =
+    (5+Math.random()*5)+"s";
 
 
 
-setTimeout(()=>{
+    document.body.appendChild(kiss);
 
-kiss.remove();
 
-},9000);
 
+    setTimeout(()=>{
+
+        kiss.remove();
+
+    },9000);
 
 
 }
@@ -1790,7 +1378,7 @@ kiss.remove();
 setInterval(()=>{
 
 
-createKiss();
+    createKiss();
 
 
 },1200);
@@ -1803,61 +1391,57 @@ createKiss();
 
 
 
-/* ---------------- SPARKLES AROUND RING ---------------- */
+/* ================= RING SPARKLES ================= */
 
 
 setInterval(()=>{
 
 
-let surprise =
-document.getElementById("giftSurprise");
+    let surprise =
+    document.getElementById("giftSurprise");
 
 
 
-if(
-surprise &&
-!surprise.classList.contains("hidden")
-){
+    if(
+        surprise &&
+        !surprise.classList.contains("hidden")
+    ){
+
+
+        let sparkle =
+        document.createElement("div");
+
+
+        sparkle.className="sparkle";
+
+
+        sparkle.innerHTML="✨";
+
+
+        sparkle.style.left =
+        (40+Math.random()*20)+"%";
+
+
+        sparkle.style.top =
+        (35+Math.random()*20)+"%";
 
 
 
-let sparkle=document.createElement("div");
-
-
-sparkle.className="sparkle";
-
-
-sparkle.innerHTML="✨";
-
-
-sparkle.style.left=
-(40+Math.random()*20)+"%";
+        document.body.appendChild(sparkle);
 
 
 
-sparkle.style.top=
-(35+Math.random()*30)+"%";
+        setTimeout(()=>{
+
+            sparkle.remove();
+
+        },2000);
 
 
-
-document.body.appendChild(sparkle);
-
+    }
 
 
-setTimeout(()=>{
-
-sparkle.remove();
-
-},2000);
-
-
-
-}
-
-
-
-},300);
-
+},500);
 
 
 
@@ -1865,24 +1449,24 @@ sparkle.remove();
 
 
 
-/* ---------------- AUTO MUSIC ---------------- */
+/* ================= MUSIC START ================= */
 
 
 window.addEventListener("click",()=>{
 
 
-let music =
-document.getElementById("music");
+    let music =
+    document.getElementById("music");
 
 
-
-if(music){
-
-
-music.play().catch(()=>{});
+    if(music){
 
 
-}
+        music.play()
+        .catch(()=>{});
+
+
+    }
 
 
 },{once:true});
