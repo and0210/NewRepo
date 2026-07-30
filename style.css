@@ -103,38 +103,36 @@ line-height:1.7;
 
 /* ================= PHOTO SLIDER ================= */
 /* ================= CARD ================= */
+/* ================= CARD ================= */
 
 .card{
 
-max-width:1300px;
+    width:fit-content;
+    max-width:95%;
 
-min-height:1400px;
+    margin:40px auto;
 
-margin:40px auto;
+    padding:40px;
 
-padding:50px;
+    background:rgba(255,255,255,.15);
 
-background:rgba(255,255,255,.15);
+    backdrop-filter:blur(12px);
 
-backdrop-filter:blur(12px);
+    border-radius:35px;
 
-border-radius:35px;
+    box-shadow:
+    0 0 40px rgba(255,255,255,.5);
 
-box-shadow:
-0 0 40px rgba(255,255,255,.5);
-
-transition:.5s;
+    transition:.5s;
 
 }
 
 
 .card:hover{
 
-transform:scale(1.03);
+    transform:scale(1.03);
 
 }
-
-
 
 
 
@@ -142,41 +140,41 @@ transform:scale(1.03);
 
 .slider{
 
-display:flex;
+    display:flex;
 
-align-items:center;
+    align-items:center;
 
-justify-content:center;
+    justify-content:center;
 
-gap:35px;
+    gap:25px;
 
-margin-top:30px;
+    margin-top:30px;
 
 }
-
-
 
 
 .slider img{
 
-width:900px;
+    width:auto;
 
-height:1000px;
+    height:auto;
 
-object-fit:cover;
+    max-width:80vw;
 
-border-radius:35px;
+    max-height:80vh;
 
-border:5px solid white;
+    object-fit:contain;
 
-box-shadow:
+    border-radius:35px;
 
-0 0 35px rgba(255,255,255,.8);
+    border:5px solid white;
 
-animation:photoShow .8s ease;
+    box-shadow:
+    0 0 35px rgba(255,255,255,.8);
+
+    animation:photoShow .8s ease;
 
 }
-
 
 
 
@@ -265,34 +263,32 @@ box-shadow:
 @media(max-width:600px){
 
 
+@media(max-width:600px){
+
 .card{
 
-max-width:90;
-
-min-height:80;
-
-padding:20px;
+    width:90%;
+    padding:20px;
 
 }
-
-
-
-.slider{
-
-gap:10px;
-
-}
-
 
 
 .slider img{
 
-width:250px;
-
-height:300px;
+    max-width:85vw;
+    max-height:60vh;
 
 }
 
+.slider button{
+
+    width:45px;
+    height:45px;
+    font-size:25px;
+
+}
+
+}
 
 
 .slider button{
