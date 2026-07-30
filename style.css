@@ -323,9 +323,9 @@ flex-wrap:wrap;
 
 .gallery img{
 
-width:220px;
+width:600px;
 
-height:220px;
+height:700px;
 
 object-fit:cover;
 
@@ -725,9 +725,9 @@ font-size:32px;
 
 .gallery img{
 
-width:150px;
+width:600px;
 
-height:150px;
+height:700px;
 
 }
 
