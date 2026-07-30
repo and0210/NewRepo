@@ -1,0 +1,631 @@
+/* ================= BASIC SETTINGS ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+
+body{
+
+    background:linear-gradient(135deg,#ff4e8b,#ff9a9e);
+    color:white;
+    text-align:center;
+    overflow-x:hidden;
+
+}
+
+
+section{
+
+    padding:50px 20px;
+    animation:fadeUp 1s ease;
+
+}
+
+
+
+@keyframes fadeUp{
+
+from{
+    opacity:0;
+    transform:translateY(50px);
+}
+
+to{
+    opacity:1;
+    transform:translateY(0);
+}
+
+}
+
+
+
+/* ================= HEADINGS ================= */
+
+
+h1{
+
+font-size:45px;
+margin-bottom:20px;
+animation:glow 2s infinite alternate;
+
+}
+
+
+@keyframes glow{
+
+from{
+
+text-shadow:
+0 0 10px white,
+0 0 20px #ff1e62;
+
+}
+
+
+to{
+
+text-shadow:
+0 0 30px white,
+0 0 60px #ff0055;
+
+}
+
+}
+
+
+
+h2{
+
+margin-bottom:20px;
+
+}
+
+
+
+
+p{
+
+font-size:18px;
+line-height:1.7;
+
+}
+
+
+
+
+
+/* ================= CARD ================= */
+
+
+.card{
+
+max-width:750px;
+margin:auto;
+padding:30px;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(10px);
+
+border-radius:25px;
+
+box-shadow:
+0 0 25px rgba(255,255,255,.4);
+
+}
+
+
+
+
+.card:hover{
+
+transform:scale(1.03);
+
+}
+
+
+
+
+
+/* ================= BUTTON ================= */
+
+
+button{
+
+background:#ff1e62;
+
+color:white;
+
+border:none;
+
+padding:12px 30px;
+
+border-radius:30px;
+
+font-size:18px;
+
+cursor:pointer;
+
+}
+
+
+
+button:hover{
+
+transform:scale(1.1);
+
+box-shadow:0 0 30px white;
+
+}
+
+
+
+
+
+input{
+
+padding:12px;
+
+border-radius:25px;
+
+border:none;
+
+text-align:center;
+
+font-size:16px;
+
+}
+
+
+
+
+
+.hidden{
+
+display:none;
+
+}
+
+
+
+
+
+/* ================= GALLERY ================= */
+
+
+.gallery{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+
+
+.gallery img{
+
+width:220px;
+
+height:220px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+border:4px solid white;
+
+}
+
+
+
+
+
+/* ================= GIFT BOX ================= */
+
+
+.gift-area{
+
+position:relative;
+
+height:300px;
+
+}
+
+
+
+.gift-box{
+
+width:180px;
+
+height:160px;
+
+margin:50px auto;
+
+position:relative;
+
+cursor:pointer;
+
+transition:.5s;
+
+}
+
+
+
+.gift-box:hover{
+
+transform:scale(1.1);
+
+}
+
+
+
+/* Box */
+
+
+.gift-body{
+
+position:absolute;
+
+bottom:0;
+
+width:180px;
+
+height:120px;
+
+background:#ff2675;
+
+border-radius:0 0 20px 20px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:70px;
+
+box-shadow:
+
+0 0 30px white;
+
+}
+
+
+
+/* Lid */
+
+
+.gift-lid{
+
+position:absolute;
+
+top:10px;
+
+left:-5px;
+
+width:190px;
+
+height:40px;
+
+background:#ff8bb5;
+
+border-radius:15px;
+
+z-index:2;
+
+transition:1s;
+
+transform-origin:left bottom;
+
+}
+
+
+
+/* Opening */
+
+
+.gift-box.open .gift-lid{
+
+transform:
+
+rotate(-50deg)
+
+translate(-30px,-20px);
+
+}
+
+
+
+
+/* Ribbon */
+
+
+.gift-body:before{
+
+content:"";
+
+position:absolute;
+
+height:120px;
+
+width:20px;
+
+background:gold;
+
+left:50%;
+
+transform:translateX(-50%);
+
+}
+
+
+.gift-body:after{
+
+content:"";
+
+position:absolute;
+
+height:20px;
+
+width:180px;
+
+background:gold;
+
+top:50px;
+
+}
+
+
+
+
+/* ================= SURPRISE AREA ================= */
+
+
+#giftSurprise{
+
+margin-top:20px;
+
+animation:showGift 1s ease;
+
+}
+
+
+
+@keyframes showGift{
+
+from{
+
+opacity:0;
+
+transform:scale(.5);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+
+
+/* Ring */
+
+
+.ring{
+
+font-size:110px;
+
+margin:20px auto;
+
+animation:ringGlow 2s infinite alternate;
+
+}
+
+
+
+@keyframes ringGlow{
+
+from{
+
+transform:scale(1);
+
+filter:drop-shadow(0 0 10px gold);
+
+}
+
+
+to{
+
+transform:scale(1.25);
+
+filter:
+
+drop-shadow(0 0 30px gold);
+
+}
+
+}
+
+
+
+
+
+.quote{
+
+font-size:20px;
+
+max-width:650px;
+
+margin:auto;
+
+line-height:1.8;
+
+}
+
+
+
+
+
+/* ================= FLOATING HEARTS ================= */
+
+
+.heart{
+
+position:fixed;
+
+bottom:-50px;
+
+font-size:35px;
+
+z-index:999;
+
+animation:heartMove 8s linear;
+
+}
+
+
+@keyframes heartMove{
+
+from{
+
+transform:translateY(0);
+
+opacity:1;
+
+}
+
+to{
+
+transform:translateY(-120vh);
+
+opacity:0;
+
+}
+
+}
+
+
+
+
+
+/* ================= FLOATING KISS ================= */
+
+
+.kiss-float{
+
+position:fixed;
+
+bottom:-50px;
+
+font-size:40px;
+
+z-index:999;
+
+animation:kissMove 8s linear;
+
+}
+
+
+@keyframes kissMove{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-120vh);
+
+opacity:0;
+
+}
+
+}
+
+
+
+
+
+/* ================= SPARKLES ================= */
+
+
+.sparkle{
+
+position:fixed;
+
+font-size:25px;
+
+animation:spark 2s forwards;
+
+}
+
+
+@keyframes spark{
+
+from{
+
+opacity:1;
+
+transform:scale(.5);
+
+}
+
+to{
+
+opacity:0;
+
+transform:translateY(-100px) scale(1.5);
+
+}
+
+}
+
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:600px){
+
+h1{
+
+font-size:32px;
+
+}
+
+
+.gallery img{
+
+width:150px;
+
+height:150px;
+
+}
+
+
+.card{
+
+padding:20px;
+
+}
+
+}
