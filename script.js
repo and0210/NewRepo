@@ -6,7 +6,10 @@ let photos = [
     "photo3.jpeg",
     "photo4.jpeg",
     "photo5.jpeg",
-    "video.mp4"
+       "photo6.jpeg",
+       "photo7.jpeg",
+       "photo8.jpeg",
+       "photo9.jpeg",
 ];
 
 let index = 0;
