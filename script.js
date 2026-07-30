@@ -2,8 +2,7 @@
 
 let photos = [
     "photo1.jpeg",
-    "photo2.jpeg",
-    "photo3.jpeg"
+    "photo2.jpeg"
 ];
 
 let index = 0;
