@@ -10,7 +10,12 @@
 
 body{
 
-    background:red;
+    background:linear-gradient(135deg,
+    #8B0000,
+    #C2185B,
+    #FF1744,
+    #FF6F91);
+
     color:white;
     text-align:center;
     overflow-x:hidden;
