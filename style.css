@@ -267,7 +267,7 @@ box-shadow:
 
 .card{
 
-max-width:95%;
+max-width:auto;
 
 min-height:auto;
 
@@ -287,9 +287,9 @@ gap:10px;
 
 .slider img{
 
-width:300px;
+width:250px;
 
-height:400px;
+height:300px;
 
 }
 
