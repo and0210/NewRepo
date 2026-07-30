@@ -1,6 +1,42 @@
 /* ================= SECRET LOVE MESSAGE ================= */
 
+let photos = [
+    "photo1.jpeg",
+    "photo2.jpeg",
+    "photo3.jpeg"
+];
 
+let index = 0;
+
+function showPhoto(){
+    document.getElementById("photo").src = photos[index];
+}
+
+
+function nextPhoto(){
+
+    index++;
+
+    if(index >= photos.length){
+        index = 0;
+    }
+
+    showPhoto();
+
+}
+
+
+function prevPhoto(){
+
+    index--;
+
+    if(index < 0){
+        index = photos.length - 1;
+    }
+
+    showPhoto();
+
+}
 function openLove(){
 
     let password =
