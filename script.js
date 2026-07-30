@@ -2,7 +2,11 @@
 
 let photos = [
     "photo1.jpeg",
-    "photo2.jpeg"
+    "photo2.jpeg",
+    "photo3.jpeg",
+    "photo4.jpeg",
+    "photo5.jpeg",
+    "video.mp4",
 ];
 
 let index = 0;
