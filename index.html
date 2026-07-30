@@ -1491,21 +1491,54 @@ letter.classList.remove("hidden");
 function openGift(){
 
 
-const box =
-document.querySelector(".gift-box");
+let box=document.querySelector(".gift-box");
 
 
-const surprise =
-document.getElementById("giftSurprise");
+let title=document.getElementById("giftTitle");
+
+let text=document.getElementById("giftText");
+
+
+let surprise=document.getElementById("giftSurprise");
 
 
 
-if(box.classList.contains("open")){
+if(box.classList.contains("open")) return;
 
-return;
+
+
+box.classList.add("open");
+
+
+
+// Remove top text
+
+setTimeout(()=>{
+
+
+title.style.display="none";
+
+text.style.display="none";
+
+
+},500);
+
+
+
+
+// Show message after ring appears
+
+setTimeout(()=>{
+
+
+surprise.classList.remove("hidden");
+
+
+},1500);
+
+
 
 }
-
 
 
 box.classList.add("open");
