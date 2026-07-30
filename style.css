@@ -45,7 +45,35 @@ to{
 
 /* ================= HEADINGS ================= */
 
+/* ================= VIDEO ================= */
 
+.slider video{
+
+    width:auto;
+    height:auto;
+
+    max-width:80vw;
+    max-height:80vh;
+
+    border-radius:35px;
+    border:5px solid white;
+
+    box-shadow:0 0 35px rgba(255,255,255,.8);
+
+    background:black;
+
+}
+
+@media(max-width:600px){
+
+    .slider video{
+
+        max-width:85vw;
+        max-height:60vh;
+
+    }
+
+}
 h1{
 
 font-size:45px;
