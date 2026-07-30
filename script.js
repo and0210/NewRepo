@@ -1,5 +1,38 @@
 /* ================= SECRET LOVE MESSAGE ================= */
+/* ================= VIDEO SLIDER ================= */
 
+let videos = [
+    "video.mp4",
+    
+];
+
+let videoIndex = 0;
+
+function showVideo() {
+    const video = document.getElementById("video");
+    video.src = videos[videoIndex];
+    video.load();
+}
+
+function nextVideo() {
+    videoIndex++;
+
+    if (videoIndex >= videos.length) {
+        videoIndex = 0;
+    }
+
+    showVideo();
+}
+
+function prevVideo() {
+    videoIndex--;
+
+    if (videoIndex < 0) {
+        videoIndex = videos.length - 1;
+    }
+
+    showVideo();
+}
 let photos = [
     "photo1.jpeg",
     "photo2.jpeg",
