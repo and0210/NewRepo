@@ -493,27 +493,25 @@ message:
 
 {
 
-lat:34.2955,
+lat: 32.76982,
+lng: 74.81392,
 
-lng:74.6200,
+title:"The Day We First Met❤️",
 
-title:"❄️ Snow Memories",
+place:"ycet",
 
-place:"Gulmarg",
-
-date:"15 January 2022",
 
 photos:[
 
-"photo4.jpeg",
-"photo5.jpeg"
+"photo1.jpeg",
 
 ],
 
 message:
-"Snow was cold but your love was warm ❤️"
-
+'ye humaari pehli mulakat..is din jb mille socha bhi nhi tha ki we became life partners in love, and we can no longer imagine our lives without each other. ❤️'
 },
+
+
 
 
 
@@ -581,7 +579,7 @@ L.marker([memory.lat, memory.lng], {
 
     <p>📍 ${memory.place}</p>
 
-    <p>📅 ${memory.date}</p>
+    // <p>📅 ${memory.date}</p>
 
     <div class="popup-message">
         ${memory.message}
