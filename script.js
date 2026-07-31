@@ -1,4 +1,3 @@
-```javascript
 /* ================= VIDEO SLIDER ================= */
 
 let videos = [
@@ -7,12 +6,13 @@ let videos = [
 
 let videoIndex = 0;
 
+
 function showVideo(){
 
-    let video = document.getElementById("video");
+    let video=document.getElementById("video");
 
     if(video){
-        video.src = videos[videoIndex];
+        video.src=videos[videoIndex];
         video.load();
     }
 
@@ -23,8 +23,8 @@ function nextVideo(){
 
     videoIndex++;
 
-    if(videoIndex >= videos.length){
-        videoIndex = 0;
+    if(videoIndex>=videos.length){
+        videoIndex=0;
     }
 
     showVideo();
@@ -36,8 +36,8 @@ function prevVideo(){
 
     videoIndex--;
 
-    if(videoIndex < 0){
-        videoIndex = videos.length - 1;
+    if(videoIndex<0){
+        videoIndex=videos.length-1;
     }
 
     showVideo();
@@ -51,7 +51,7 @@ function prevVideo(){
 /* ================= PHOTO SLIDER ================= */
 
 
-let photos = [
+let photos=[
     "photo1.jpeg",
     "photo2.jpeg",
     "photo3.jpeg",
@@ -64,27 +64,26 @@ let photos = [
 ];
 
 
-let index = 0;
+let index=0;
 
 
 function showPhoto(){
 
-    let photo = document.getElementById("photo");
+    let photo=document.getElementById("photo");
 
     if(photo){
-        photo.src = photos[index];
+        photo.src=photos[index];
     }
 
 }
-
 
 
 function nextPhoto(){
 
     index++;
 
-    if(index >= photos.length){
-        index = 0;
+    if(index>=photos.length){
+        index=0;
     }
 
     showPhoto();
@@ -92,13 +91,12 @@ function nextPhoto(){
 }
 
 
-
 function prevPhoto(){
 
     index--;
 
-    if(index < 0){
-        index = photos.length - 1;
+    if(index<0){
+        index=photos.length-1;
     }
 
     showPhoto();
@@ -114,37 +112,41 @@ function prevPhoto(){
 
 function openLove(){
 
-    let password =
-    document.getElementById("pass1").value
-    .trim()
-    .toLowerCase();
+let password=
+document.getElementById("pass1")
+.value
+.trim()
+.toLowerCase();
 
 
-    let message =
-    document.getElementById("loveMsg");
+let message=
+document.getElementById("loveMsg");
 
 
-    let hint =
-    document.getElementById("hint");
+let hint=
+document.getElementById("hint");
 
 
-    if(password === "jaan"){
 
-        message.classList.remove("hidden");
+if(password==="jaan"){
 
-        hint.innerHTML =
-        "💋 Welcome to my heart, my love ❤️";
+message.classList.remove("hidden");
 
-    }
-
-    else{
-
-        hint.innerHTML =
-        "Hint: What do you call your loved one? 😘";
-
-    }
+hint.innerHTML=
+"💋 Welcome to my heart, my love ❤️";
 
 }
+
+else{
+
+hint.innerHTML=
+"Hint: What do you call your loved one? 😘";
+
+}
+
+}
+
+
 
 
 
@@ -155,33 +157,35 @@ function openLove(){
 
 function openLetter(){
 
-    let password =
-    document.getElementById("pass2")
-    .value
-    .trim()
-    .toLowerCase();
+let password=
+document.getElementById("pass2")
+.value
+.trim()
+.toLowerCase();
 
 
-    let letter =
-    document.getElementById("letter");
+let letter=
+document.getElementById("letter");
 
 
-    if(password === "18 april"){
+if(password==="18 april"){
 
-        letter.classList.remove("hidden");
-
-    }
-
-    else{
-
-        letter.innerHTML =
-        "Hint: Our special proposing date ❤️";
-
-        letter.classList.remove("hidden");
-
-    }
+letter.classList.remove("hidden");
 
 }
+
+else{
+
+letter.innerHTML=
+"Hint: Our special proposing date ❤️";
+
+letter.classList.remove("hidden");
+
+}
+
+}
+
+
 
 
 
@@ -192,55 +196,58 @@ function openLetter(){
 
 function openGift(){
 
-    let box =
-    document.querySelector(".gift-box");
+let box=
+document.querySelector(".gift-box");
 
 
-    let surprise =
-    document.getElementById("giftSurprise");
+let surprise=
+document.getElementById("giftSurprise");
 
 
-    let heading =
-    document.getElementById("giftTitle");
+let heading=
+document.getElementById("giftTitle");
 
 
-    let instruction =
-    document.getElementById("giftText");
-
-
-    if(box.classList.contains("open")){
-        return;
-    }
-
-
-    box.classList.add("open");
-
-
-    setTimeout(()=>{
-
-        if(heading){
-            heading.style.display="none";
-        }
-
-
-        if(instruction){
-            instruction.style.display="none";
-        }
-
-    },500);
+let text=
+document.getElementById("giftText");
 
 
 
-    setTimeout(()=>{
-
-        if(surprise){
-            surprise.classList.remove("hidden");
-        }
-
-        createGiftMagic();
+if(box.classList.contains("open")){
+return;
+}
 
 
-    },1200);
+box.classList.add("open");
+
+
+
+setTimeout(()=>{
+
+if(heading){
+heading.style.display="none";
+}
+
+
+if(text){
+text.style.display="none";
+}
+
+
+},500);
+
+
+
+setTimeout(()=>{
+
+if(surprise){
+surprise.classList.remove("hidden");
+}
+
+createGiftMagic();
+
+
+},1200);
 
 
 }
@@ -251,42 +258,47 @@ function openGift(){
 
 function createGiftMagic(){
 
-    for(let i=0;i<15;i++){
 
-        let rose =
-        document.createElement("div");
+for(let i=0;i<15;i++){
 
 
-        rose.innerHTML="🌹";
+let rose=document.createElement("div");
 
 
-        rose.style.position="fixed";
-
-        rose.style.bottom="-50px";
-
-        rose.style.left =
-        Math.random()*100+"%";
+rose.innerHTML="🌹";
 
 
-        rose.style.fontSize="35px";
+rose.style.position="fixed";
+
+rose.style.bottom="-50px";
+
+rose.style.left=
+Math.random()*100+"%";
 
 
-        rose.style.animation =
-        "heartMove 6s linear";
+rose.style.fontSize="35px";
 
 
-        document.body.appendChild(rose);
+rose.style.animation=
+"heartMove 6s linear";
 
 
-        setTimeout(()=>{
+document.body.appendChild(rose);
 
-            rose.remove();
 
-        },6000);
 
-    }
+setTimeout(()=>{
+
+rose.remove();
+
+},6000);
+
 
 }
+
+}
+
+
 
 
 
@@ -297,38 +309,39 @@ function createGiftMagic(){
 
 function createKiss(){
 
-    let kiss =
-    document.createElement("div");
+let kiss=document.createElement("div");
 
 
-    kiss.className="kiss-float";
+kiss.className="kiss-float";
 
 
-    kiss.innerHTML="💋";
+kiss.innerHTML="💋";
 
 
-    kiss.style.left =
-    Math.random()*100+"%";
+kiss.style.left=
+Math.random()*100+"%";
 
 
-    kiss.style.animationDuration =
-    (5+Math.random()*5)+"s";
+kiss.style.animationDuration=
+(5+Math.random()*5)+"s";
 
 
-    document.body.appendChild(kiss);
+document.body.appendChild(kiss);
 
 
-    setTimeout(()=>{
 
-        kiss.remove();
+setTimeout(()=>{
 
-    },9000);
+kiss.remove();
+
+},9000);
+
 
 }
 
 
-
 setInterval(createKiss,1200);
+
 
 
 
@@ -342,32 +355,36 @@ setInterval(createKiss,1200);
 document.addEventListener("DOMContentLoaded",()=>{
 
 
-    let mapBox =
-    document.getElementById("loveMap");
-
-
-    if(mapBox && typeof L !== "undefined"){
-
-
-        let map =
-        L.map("loveMap")
-        .setView([34.0837,74.7973],8);
+let mapBox=document.getElementById("loveMap");
 
 
 
-        L.tileLayer(
-        "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-        {
-            maxZoom:19
-        })
-        .addTo(map);
+if(mapBox && typeof L!=="undefined"){
 
 
 
-        let memories=[
+let map=L.map("loveMap")
+.setView([34.0837,74.7973],8);
 
 
-      {
+
+L.tileLayer(
+"https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+{
+maxZoom:19
+}
+
+).addTo(map);
+
+
+
+
+
+let memories=[
+
+
+
+{
 lat:34.0837,
 lng:74.7973,
 
@@ -383,75 +400,140 @@ photos:[
 "photo3.jpeg"
 ],
 
+message:
+"Our beautiful first memory ❤️"
+
 },
 
 
-        {
-            lat:34.2955,
-            lng:74.6200,
-            title:"❄️ Snow Memories",
-            place:"Gulmarg",
-            date:"15 January 2022",
-            photo:"photo2.jpeg",
-            message:"Every moment with you is special ❤️"
-        },
 
+{
+lat:34.2955,
+lng:74.6200,
 
-        {
-            lat:34.0159,
-            lng:75.3180,
-            title:"💕 Forever",
-            place:"Pahalgam",
-            date:"20 May 2023",
-            photo:"photo3.jpeg",
-            message:"My favourite journey with you ❤️"
-        }
+title:"❄️ Snow Memories",
 
+place:"Gulmarg",
 
-        ];
+date:"15 January 2022",
+
+photos:[
+"photo4.jpeg",
+"photo5.jpeg"
+],
+
+message:
+"Every moment with you is special ❤️"
+
+},
 
 
 
-        memories.forEach(memory=>{
+
+{
+lat:34.0159,
+lng:75.3180,
+
+title:"💕 Forever",
+
+place:"Pahalgam",
+
+date:"20 May 2023",
+
+photos:[
+"photo6.jpeg",
+"photo7.jpeg"
+],
+
+message:
+"My favourite journey with you ❤️"
+
+}
 
 
-            L.marker(
-            [memory.lat,memory.lng]
-            )
+];
 
-            .addTo(map)
 
-            .bindPopup(`
+
+
+
+
+
+memories.forEach(memory=>{
+
+
+
+let photoHTML="";
+
+
+
+memory.photos.forEach(photo=>{
+
+
+photoHTML+=`
+
+<img src="${photo}" class="memory-photo">
+
+`;
+
+});
+
+
+
+
+
+
+L.marker(
+[memory.lat,memory.lng]
+
+)
+
+.addTo(map)
+
+.bindPopup(`
+
 
 <div class="popup">
 
+
 <div class="memory-slider">
 
-<img src="${memory.photo}" class="memory-photo">
+${photoHTML}
 
 </div>
 
 
+
 <h3>${memory.title}</h3>
+
 
 <p>📍 ${memory.place}</p>
 
+
 <p>📅 ${memory.date}</p>
+
 
 <p>${memory.message}</p>
 
 
 </div>
 
+
+
 `);
 
-        });
-
-
-    }
 
 
 });
+
+
+
+}
+
+
+});
+
+
 
 
 
@@ -465,17 +547,15 @@ photos:[
 window.addEventListener("click",()=>{
 
 
-    let music =
-    document.getElementById("music");
+let music=document.getElementById("music");
 
 
-    if(music){
+if(music){
 
-        music.play()
-        .catch(()=>{});
+music.play()
+.catch(()=>{});
 
-    }
+}
 
 
 },{once:true});
-```
