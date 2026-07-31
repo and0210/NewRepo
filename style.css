@@ -800,14 +800,32 @@ button,
     height:auto;
     object-fit:contain;
 }
+
 .popup{
-    max-height:600px;
+    max-height:650px;
     overflow-y:auto;
+    padding:10px;
 }
 
 .popup p{
     text-align:left;
     line-height:1.8;
+    color:#444;
     white-space:pre-line;
+}
+
+/* Scrollbar */
+.popup::-webkit-scrollbar{
+    width:8px;
+}
+
+.popup::-webkit-scrollbar-track{
+    background:#f1f1f1;
+    border-radius:10px;
+}
+
+.popup::-webkit-scrollbar-thumb{
+    background:#ff2e7a;
+    border-radius:10px;
 }
 /* ================= THE END ================= */
