@@ -844,31 +844,30 @@ height:600px;
 
 
 
+/* Popup Slider */
 .memory-slider{
-
-
-width:250px;
-
-
-height:320px;
-
-
+    width:100%;
+    max-width:420px;
+    display:flex;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    gap:10px;
+    padding:10px;
 }
 
-
-
+/* Popup Image */
 .memory-photo{
-
-
-width:230px;
-
-
-height:290px;
-
-
+    width:100%;
+    max-width:380px;
+    height:auto;
+    max-height:450px;
+    object-fit:contain;   /* <-- image crop nahi hogi */
+    flex-shrink:0;
+    scroll-snap-align:center;
+    border-radius:20px;
+    border:3px solid #fff;
+    box-shadow:0 0 20px #ff2e7a;
 }
-
-
 
 .popup h3{
 
