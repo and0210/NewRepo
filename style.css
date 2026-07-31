@@ -847,22 +847,24 @@ height:600px;
 /* Popup Slider */
 .memory-slider{
     width:100%;
-    max-width:420px;
-    height:auto;
-    overflow-x:auto;
+    max-width:400px;
     display:flex;
-    scroll-snap-type:x mandatory;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
 }
 
 .memory-photo{
     width:100%;
-    max-width:400px;
     height:auto;
-    object-fit:contain;
-    scroll-snap-align:center;
+    max-height:450px;
+    object-fit:contain !important;
+    display:block;
+    margin:auto;
     border-radius:20px;
-}
-    .popup h3{
+    border:4px solid white;
+    box-shadow:0 0 20px #ff2e7a;
+}    .popup h3{
 
 font-size:20px;
 
