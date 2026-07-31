@@ -408,11 +408,13 @@ setInterval(createKiss,1200);
 document.addEventListener("DOMContentLoaded",function(){
 
 
-
+console.log("DOM READY");
 let mapElement =
 document.getElementById("loveMap");
 
+console.log("MAP DIV:", mapElement);
 
+console.log("LEAFLET:", typeof L);
 
 if(!mapElement){
 
