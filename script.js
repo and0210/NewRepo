@@ -467,26 +467,26 @@ let memories=[
 
 {
 
-lat:34.0837,
+lat: 32.76982,
+lng: 74.81392,
 
-lng:74.7973,
+title:"❤️",
 
-title:"❤️ First Date",
+place:"ycet",
 
-place:"Dal Lake",
-
-date:"04 August 2021",
 
 photos:[
 
-"photo1.jpeg",
-"photo2.jpeg",
-"photo3.jpeg"
+"1.jpeg",
+"2.jpeg",
+"3.jpeg"
 
 ],
 
 message:
-"The day our love story became beautiful ❤️"
+"This was the day our love story began❤️.
+ aapko yaad hai iss din hairband ar aapka haath..hairband ke saath khelne se bahane mai aake haath ke saath khel rhi thi ..ar aap bhi.
+    ye vhi din hai jb hum dono ko lga ki hum ek dusre ke lie kuch feel kr rhe hai ....dono ke mnn mei hai kuch lekin bol nhi rhe....."
 
 },
 
