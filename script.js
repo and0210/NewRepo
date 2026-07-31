@@ -583,12 +583,12 @@ L.marker([memory.lat, memory.lng], {
 
     <p>📅 ${memory.date}</p>
 
-    <p>${memory.message}</p>
+    <div class="popup-message">
+        ${memory.message}
+    </div>
 
 </div>
-`, {
-    maxWidth: 450
-});});
+`)});
 
 
 
