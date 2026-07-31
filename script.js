@@ -460,99 +460,59 @@ setInterval(()=>{
 
 // Create Map
 
-var map = L.map('loveMap').setView([34.0837,74.7973],8);
+document.addEventListener("DOMContentLoaded", function () {
 
-// Map Tiles
+    var map = L.map("loveMap").setView([34.0837, 74.7973], 8);
 
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
-    maxZoom:19
-}).addTo(map);
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19
+    }).addTo(map);
 
+    const memories = [
+        {
+            lat:34.0837,
+            lng:74.7973,
+            title:"❤️ First Date",
+            date:"04 August 2021",
+            place:"Dal Lake",
+            photo:"photo1.jpeg",
+            message:"The day our love story became even more beautiful ❤️"
+        },
+        {
+            lat:34.2955,
+            lng:74.6200,
+            title:"❄️ Snow Memories",
+            date:"15 January 2022",
+            place:"Gulmarg",
+            photo:"photo2.jpeg",
+            message:"You made even the snow feel warm ❤️"
+        },
+        {
+            lat:34.0159,
+            lng:75.3180,
+            title:"💕 Together Forever",
+            date:"20 May 2023",
+            place:"Pahalgam",
+            photo:"photo3.jpeg",
+            message:"Every journey with you is my favorite ❤️"
+        }
+    ];
 
-// Memories
+    memories.forEach(memory => {
+        L.marker([memory.lat, memory.lng])
+            .addTo(map)
+            .bindPopup(`
+                <div class="popup">
+                    <img src="${memory.photo}" width="220">
+                    <h3>${memory.title}</h3>
+                    <p>📍 ${memory.place}</p>
+                    <p>📅 ${memory.date}</p>
+                    <p>${memory.message}</p>
+                </div>
+            `);
+    });
 
-const memories=[
-
-{
-lat:34.0837,
-lng:74.7973,
-
-title:"❤️ First Date",
-
-date:"04 August 2021",
-
-place:"Dal Lake",
-
-photo:"photo1.jpeg",
-
-message:"The day our love story became even more beautiful ❤️"
-
-},
-
-{
-lat:34.2955,
-lng:74.6200,
-
-title:"❄️ Snow Memories",
-
-date:"15 January 2022",
-
-place:"Gulmarg",
-
-photo:"photo2.jpeg",
-
-message:"You made even the snow feel warm ❤️"
-
-},
-
-{
-lat:34.0159,
-lng:75.3180,
-
-title:"💕 Together Forever",
-
-date:"20 May 2023",
-
-place:"Pahalgam",
-
-photo:"photo3.jpeg",
-
-message:"Every journey with you is my favorite ❤️"
-
-}
-
-];
-
-
-// Add markers
-
-memories.forEach(memory=>{
-
-L.marker([memory.lat,memory.lng])
-
-.addTo(map)
-
-.bindPopup(`
-
-<div class="popup">
-
-<img src="${memory.photo}">
-
-<h3>${memory.title}</h3>
-
-<p>📍 ${memory.place}</p>
-
-<p>📅 ${memory.date}</p>
-
-<p>${memory.message}</p>
-
-</div>
-
-`);
-
-});
-
-/* ================= RING SPARKLES ================= */
+});/* ================= RING SPARKLES ================= */
 
 
 
