@@ -12,11 +12,14 @@ function showVideo(){
     let video = document.getElementById("video");
 
     if(video){
+
         video.src = videos[videoIndex];
         video.load();
+
     }
 
 }
+
 
 
 function nextVideo(){
@@ -30,6 +33,7 @@ function nextVideo(){
     showVideo();
 
 }
+
 
 
 function prevVideo(){
@@ -89,9 +93,7 @@ function nextPhoto(){
     index++;
 
     if(index >= photos.length){
-
         index = 0;
-
     }
 
     showPhoto();
@@ -105,9 +107,7 @@ function prevPhoto(){
     index--;
 
     if(index < 0){
-
         index = photos.length-1;
-
     }
 
     showPhoto();
@@ -118,18 +118,17 @@ function prevPhoto(){
 
 
 
+
 /* ================= SECRET LOVE ================= */
 
 
 function openLove(){
-
 
 let password =
 document.getElementById("pass1")
 .value
 .trim()
 .toLowerCase();
-
 
 
 let message =
@@ -140,30 +139,24 @@ let hint =
 document.getElementById("hint");
 
 
-
 if(password === "jaan"){
-
 
 message.classList.remove("hidden");
 
-
 hint.innerHTML =
 "💋 Welcome to my heart, my love ❤️";
-
 
 }
 
 else{
 
-
 hint.innerHTML =
 "Hint: What do you call your loved one? 😘";
 
+}
 
 }
 
-
-}
 
 
 
@@ -175,7 +168,6 @@ hint.innerHTML =
 
 function openLetter(){
 
-
 let password =
 document.getElementById("pass2")
 .value
@@ -183,32 +175,24 @@ document.getElementById("pass2")
 .toLowerCase();
 
 
-
 let letter =
 document.getElementById("letter");
 
 
-
 if(password === "18 april"){
 
-
 letter.classList.remove("hidden");
-
 
 }
 
 else{
 
-
 letter.innerHTML =
 "Hint: Our special proposing date ❤️";
 
-
 letter.classList.remove("hidden");
 
-
 }
-
 
 }
 
@@ -224,34 +208,21 @@ letter.classList.remove("hidden");
 
 function openGift(){
 
+let box=document.querySelector(".gift-box");
 
-let box =
-document.querySelector(".gift-box");
+let surprise=document.getElementById("giftSurprise");
 
+let title=document.getElementById("giftTitle");
 
-let surprise =
-document.getElementById("giftSurprise");
-
-
-let title =
-document.getElementById("giftTitle");
-
-
-let text =
-document.getElementById("giftText");
-
+let text=document.getElementById("giftText");
 
 
 if(!box) return;
 
 
-
 if(box.classList.contains("open")){
-
-return;
-
+    return;
 }
-
 
 
 box.classList.add("open");
@@ -262,20 +233,17 @@ setTimeout(()=>{
 
 
 if(title){
-
 title.style.display="none";
-
 }
 
 
 if(text){
-
 text.style.display="none";
-
 }
 
 
 },500);
+
 
 
 
@@ -292,12 +260,10 @@ surprise.classList.remove("hidden");
 createGiftMagic();
 
 
-
 },1200);
 
 
 }
-
 
 
 
@@ -319,15 +285,15 @@ rose.style.position="fixed";
 
 rose.style.bottom="-50px";
 
-rose.style.left=
-Math.random()*100+"%";
-
+rose.style.left=Math.random()*100+"%";
 
 rose.style.fontSize="35px";
 
+rose.style.zIndex="999";
+
 
 rose.style.animation=
-"heartMove 6s linear";
+"kissMove 6s linear";
 
 
 
@@ -358,7 +324,6 @@ rose.remove();
 
 function createKiss(){
 
-
 let kiss=document.createElement("div");
 
 
@@ -368,13 +333,12 @@ kiss.className="kiss-float";
 kiss.innerHTML="💋";
 
 
-kiss.style.left=
+kiss.style.left =
 Math.random()*100+"%";
 
 
-
 kiss.style.animationDuration =
-(5 + Math.random()*5)+"s";
+(5+Math.random()*5)+"s";
 
 
 
@@ -401,20 +365,16 @@ setInterval(createKiss,1200);
 
 
 
-
-/* ================= MEMORY LOVE MAP ================= */
-
-
-document.addEventListener("DOMContentLoaded",function(){
+/* ================= SNAPCHAT STYLE LOVE MAP ================= */
 
 
-console.log("DOM READY");
+document.addEventListener("DOMContentLoaded",()=>{
+
+
 let mapElement =
 document.getElementById("loveMap");
 
-console.log("MAP DIV:", mapElement);
 
-console.log("LEAFLET:", typeof L);
 
 if(!mapElement){
 
@@ -438,7 +398,8 @@ return;
 
 
 let map =
-L.map("loveMap",{
+L.map("loveMap",
+{
 
 scrollWheelZoom:true
 
@@ -453,7 +414,9 @@ scrollWheelZoom:true
 
 
 L.tileLayer(
+
 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+
 {
 
 maxZoom:19
@@ -466,12 +429,32 @@ maxZoom:19
 
 
 
-
 setTimeout(()=>{
 
 map.invalidateSize();
 
-},500);
+},800);
+
+
+
+
+
+
+
+
+/* Heart Marker */
+
+let heartIcon = L.divIcon({
+
+className:"memory-marker",
+
+html:"❤️",
+
+iconSize:[45,45],
+
+iconAnchor:[22,22]
+
+});
 
 
 
@@ -480,7 +463,6 @@ map.invalidateSize();
 
 
 let memories=[
-
 
 
 {
@@ -531,7 +513,7 @@ photos:[
 ],
 
 message:
-"Snow was colder but your love was warmer ❤️"
+"Snow was cold but your love was warm ❤️"
 
 },
 
@@ -570,22 +552,23 @@ message:
 
 
 
-memories.forEach(function(memory){
+memories.forEach(memory=>{
 
 
 
-let photosHTML="";
+let photoHTML="";
 
 
 
-memory.photos.forEach(function(photo){
+memory.photos.forEach(photo=>{
 
 
-photosHTML += `
+photoHTML += `
 
 <img src="${photo}" class="memory-photo">
 
 `;
+
 
 
 });
@@ -595,16 +578,17 @@ photosHTML += `
 
 
 
-L.marker([
+L.marker(
 
-memory.lat,
+[memory.lat,memory.lng],
 
-memory.lng
+{
+icon:heartIcon
+}
 
-])
+)
 
 .addTo(map)
-
 
 
 .bindPopup(`
@@ -615,21 +599,40 @@ memory.lng
 
 <div class="memory-slider">
 
-${photosHTML}
+${photoHTML}
 
 </div>
 
 
-<h3>${memory.title}</h3>
+
+<h3>
+
+${memory.title}
+
+</h3>
 
 
-<p>📍 ${memory.place}</p>
+
+<p>
+
+📍 ${memory.place}
+
+</p>
 
 
-<p>📅 ${memory.date}</p>
+<p>
+
+📅 ${memory.date}
+
+</p>
 
 
-<p>${memory.message}</p>
+<p>
+
+${memory.message}
+
+</p>
+
 
 
 </div>
@@ -669,9 +672,7 @@ if(music){
 music.play()
 .catch(()=>{});
 
-
 }
-
 
 
 },{once:true});
