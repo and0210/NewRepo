@@ -9,10 +9,10 @@ let videoIndex = 0;
 
 function showVideo(){
 
-    let video=document.getElementById("video");
+    let video = document.getElementById("video");
 
     if(video){
-        video.src=videos[videoIndex];
+        video.src = videos[videoIndex];
         video.load();
     }
 
@@ -23,8 +23,8 @@ function nextVideo(){
 
     videoIndex++;
 
-    if(videoIndex>=videos.length){
-        videoIndex=0;
+    if(videoIndex >= videos.length){
+        videoIndex = 0;
     }
 
     showVideo();
@@ -36,8 +36,8 @@ function prevVideo(){
 
     videoIndex--;
 
-    if(videoIndex<0){
-        videoIndex=videos.length-1;
+    if(videoIndex < 0){
+        videoIndex = videos.length - 1;
     }
 
     showVideo();
@@ -51,20 +51,23 @@ function prevVideo(){
 /* ================= PHOTO SLIDER ================= */
 
 
-let photos=[
-    "photo1.jpeg",
-    "photo2.jpeg",
-    "photo3.jpeg",
-    "photo4.jpeg",
-    "photo5.jpeg",
-    "photo6.jpeg",
-    "photo7.jpeg",
-    "photo8.jpeg",
-    "photo9.jpeg"
+let photos = [
+
+"photo1.jpeg",
+"photo2.jpeg",
+"photo3.jpeg",
+"photo4.jpeg",
+"photo5.jpeg",
+"photo6.jpeg",
+"photo7.jpeg",
+"photo8.jpeg",
+"photo9.jpeg"
+
 ];
 
 
-let index=0;
+let index = 0;
+
 
 
 function showPhoto(){
@@ -72,18 +75,23 @@ function showPhoto(){
     let photo=document.getElementById("photo");
 
     if(photo){
-        photo.src=photos[index];
+
+        photo.src = photos[index];
+
     }
 
 }
+
 
 
 function nextPhoto(){
 
     index++;
 
-    if(index>=photos.length){
-        index=0;
+    if(index >= photos.length){
+
+        index = 0;
+
     }
 
     showPhoto();
@@ -91,12 +99,15 @@ function nextPhoto(){
 }
 
 
+
 function prevPhoto(){
 
     index--;
 
-    if(index<0){
-        index=photos.length-1;
+    if(index < 0){
+
+        index = photos.length-1;
+
     }
 
     showPhoto();
@@ -112,40 +123,47 @@ function prevPhoto(){
 
 function openLove(){
 
-let password=
+
+let password =
 document.getElementById("pass1")
 .value
 .trim()
 .toLowerCase();
 
 
-let message=
+
+let message =
 document.getElementById("loveMsg");
 
 
-let hint=
+let hint =
 document.getElementById("hint");
 
 
 
-if(password==="jaan"){
+if(password === "jaan"){
+
 
 message.classList.remove("hidden");
 
-hint.innerHTML=
+
+hint.innerHTML =
 "💋 Welcome to my heart, my love ❤️";
+
 
 }
 
 else{
 
-hint.innerHTML=
+
+hint.innerHTML =
 "Hint: What do you call your loved one? 😘";
 
-}
 
 }
 
+
+}
 
 
 
@@ -157,33 +175,43 @@ hint.innerHTML=
 
 function openLetter(){
 
-let password=
+
+let password =
 document.getElementById("pass2")
 .value
 .trim()
 .toLowerCase();
 
 
-let letter=
+
+let letter =
 document.getElementById("letter");
 
 
-if(password==="18 april"){
+
+if(password === "18 april"){
+
 
 letter.classList.remove("hidden");
+
 
 }
 
 else{
 
-letter.innerHTML=
+
+letter.innerHTML =
 "Hint: Our special proposing date ❤️";
+
 
 letter.classList.remove("hidden");
 
-}
 
 }
+
+
+}
+
 
 
 
@@ -196,26 +224,34 @@ letter.classList.remove("hidden");
 
 function openGift(){
 
-let box=
+
+let box =
 document.querySelector(".gift-box");
 
 
-let surprise=
+let surprise =
 document.getElementById("giftSurprise");
 
 
-let heading=
+let title =
 document.getElementById("giftTitle");
 
 
-let text=
+let text =
 document.getElementById("giftText");
 
 
 
+if(!box) return;
+
+
+
 if(box.classList.contains("open")){
+
 return;
+
 }
+
 
 
 box.classList.add("open");
@@ -224,13 +260,18 @@ box.classList.add("open");
 
 setTimeout(()=>{
 
-if(heading){
-heading.style.display="none";
+
+if(title){
+
+title.style.display="none";
+
 }
 
 
 if(text){
+
 text.style.display="none";
+
 }
 
 
@@ -240,17 +281,23 @@ text.style.display="none";
 
 setTimeout(()=>{
 
+
 if(surprise){
+
 surprise.classList.remove("hidden");
+
 }
 
+
 createGiftMagic();
+
 
 
 },1200);
 
 
 }
+
 
 
 
@@ -283,6 +330,7 @@ rose.style.animation=
 "heartMove 6s linear";
 
 
+
 document.body.appendChild(rose);
 
 
@@ -295,6 +343,7 @@ rose.remove();
 
 
 }
+
 
 }
 
@@ -309,6 +358,7 @@ rose.remove();
 
 function createKiss(){
 
+
 let kiss=document.createElement("div");
 
 
@@ -322,8 +372,10 @@ kiss.style.left=
 Math.random()*100+"%";
 
 
-kiss.style.animationDuration=
-(5+Math.random()*5)+"s";
+
+kiss.style.animationDuration =
+(5 + Math.random()*5)+"s";
+
 
 
 document.body.appendChild(kiss);
@@ -349,32 +401,77 @@ setInterval(createKiss,1200);
 
 
 
-/* ================= MEMORY MAP ================= */
+
+/* ================= MEMORY LOVE MAP ================= */
 
 
-document.addEventListener("DOMContentLoaded",()=>{
-
-
-let mapBox=document.getElementById("loveMap");
-
-
-
-if(mapBox && typeof L!=="undefined"){
+document.addEventListener("DOMContentLoaded",function(){
 
 
 
-let map=L.map("loveMap")
-.setView([34.0837,74.7973],8);
+let mapElement =
+document.getElementById("loveMap");
+
+
+
+if(!mapElement){
+
+console.log("Map div missing");
+
+return;
+
+}
+
+
+
+if(typeof L === "undefined"){
+
+console.log("Leaflet not loaded");
+
+return;
+
+}
+
+
+
+
+let map =
+L.map("loveMap",{
+
+scrollWheelZoom:true
+
+})
+.setView(
+[34.0837,74.7973],
+8
+);
+
+
 
 
 
 L.tileLayer(
 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
 {
+
 maxZoom:19
+
 }
 
 ).addTo(map);
+
+
+
+
+
+
+setTimeout(()=>{
+
+map.invalidateSize();
+
+},500);
+
+
 
 
 
@@ -385,7 +482,9 @@ let memories=[
 
 
 {
+
 lat:34.0837,
+
 lng:74.7973,
 
 title:"❤️ First Date",
@@ -395,20 +494,25 @@ place:"Dal Lake",
 date:"04 August 2021",
 
 photos:[
+
 "photo1.jpeg",
 "photo2.jpeg",
 "photo3.jpeg"
+
 ],
 
 message:
-"Our beautiful first memory ❤️"
+"The day our love story became beautiful ❤️"
 
 },
 
 
 
+
 {
+
 lat:34.2955,
+
 lng:74.6200,
 
 title:"❄️ Snow Memories",
@@ -418,12 +522,14 @@ place:"Gulmarg",
 date:"15 January 2022",
 
 photos:[
+
 "photo4.jpeg",
 "photo5.jpeg"
+
 ],
 
 message:
-"Every moment with you is special ❤️"
+"Snow was colder but your love was warmer ❤️"
 
 },
 
@@ -431,7 +537,9 @@ message:
 
 
 {
+
 lat:34.0159,
+
 lng:75.3180,
 
 title:"💕 Forever",
@@ -441,12 +549,14 @@ place:"Pahalgam",
 date:"20 May 2023",
 
 photos:[
+
 "photo6.jpeg",
 "photo7.jpeg"
+
 ],
 
 message:
-"My favourite journey with you ❤️"
+"Every journey with you is special ❤️"
 
 }
 
@@ -458,23 +568,23 @@ message:
 
 
 
-
-memories.forEach(memory=>{
-
-
-
-let photoHTML="";
+memories.forEach(function(memory){
 
 
 
-memory.photos.forEach(photo=>{
+let photosHTML="";
 
 
-photoHTML+=`
+
+memory.photos.forEach(function(photo){
+
+
+photosHTML += `
 
 <img src="${photo}" class="memory-photo">
 
 `;
+
 
 });
 
@@ -483,12 +593,17 @@ photoHTML+=`
 
 
 
-L.marker(
-[memory.lat,memory.lng]
+L.marker([
 
-)
+memory.lat,
+
+memory.lng
+
+])
 
 .addTo(map)
+
+
 
 .bindPopup(`
 
@@ -498,10 +613,9 @@ L.marker(
 
 <div class="memory-slider">
 
-${photoHTML}
+${photosHTML}
 
 </div>
-
 
 
 <h3>${memory.title}</h3>
@@ -519,16 +633,12 @@ ${photoHTML}
 </div>
 
 
-
 `);
 
 
 
 });
 
-
-
-}
 
 
 });
@@ -547,7 +657,9 @@ ${photoHTML}
 window.addEventListener("click",()=>{
 
 
-let music=document.getElementById("music");
+let music =
+document.getElementById("music");
+
 
 
 if(music){
@@ -555,7 +667,9 @@ if(music){
 music.play()
 .catch(()=>{});
 
+
 }
+
 
 
 },{once:true});
