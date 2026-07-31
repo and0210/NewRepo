@@ -751,7 +751,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             place:"YCET",
 
-            // date:"18 April 2020",
+            date:"18 April 2020",
 
             photos:[
                 "photo1.jpeg",
@@ -837,11 +837,11 @@ ${images}
 
 </p>
 
-// ${memory.date ?
+${memory.date ?
 
-// `<p>📅 ${memory.date}</p>`
+`<p>📅 ${memory.date}</p>`
 
-// : ""}
+: ""}
 
 <p>
 
