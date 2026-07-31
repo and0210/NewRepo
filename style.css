@@ -832,4 +832,438 @@ button,
     background:#ff2e7a;
     border-radius:10px;
 }
+/* ===========================================
+ ❤️ EXTRA CSS FOR SPIDERFY + LOVE EFFECTS
+=========================================== */
+
+
+/* ================= HEART MAP MARKER ================= */
+
+
+.heart-marker{
+
+    background:none !important;
+
+    border:none !important;
+
+}
+
+
+.heart-pin{
+
+    font-size:38px;
+
+    cursor:pointer;
+
+    filter:
+    drop-shadow(0 0 8px hotpink);
+
+    animation:
+    heartBeat 1.2s infinite;
+
+}
+
+
+@keyframes heartBeat{
+
+
+0%{
+
+transform:scale(1);
+
+}
+
+
+50%{
+
+transform:scale(1.25);
+
+}
+
+
+100%{
+
+transform:scale(1);
+
+}
+
+
+}
+
+
+
+
+
+/* ================= SPIDERFY EFFECT ================= */
+
+
+/* Spider legs */
+
+.oms-leg{
+
+    stroke:#ff1493;
+
+    stroke-width:3;
+
+    opacity:.8;
+
+}
+
+
+
+/* Spider marker hover */
+
+.leaflet-marker-icon:hover{
+
+    filter:
+    drop-shadow(0 0 15px white);
+
+}
+
+
+
+
+
+/* ================= SPIDER CIRCLE ================= */
+
+
+.oms-circle{
+
+    fill:#ff69b4;
+
+    fill-opacity:.15;
+
+    stroke:#ff1493;
+
+    stroke-width:2;
+
+}
+
+
+
+
+
+/* ================= POPUP BEAUTY ================= */
+
+
+.custom-popup
+.leaflet-popup-content-wrapper{
+
+
+    background:
+    linear-gradient(
+    135deg,
+    #fff5fa,
+    #ffd1e6
+    );
+
+
+    border-radius:30px;
+
+}
+
+
+
+.custom-popup
+.leaflet-popup-tip{
+
+
+background:#ffd1e6;
+
+
+}
+
+
+
+
+
+/* ================= POPUP TITLE ================= */
+
+
+.popup h3{
+
+
+text-shadow:
+
+0 0 10px pink;
+
+
+}
+
+
+
+
+
+/* ================= MEMORY PHOTO SLIDE ================= */
+
+
+.memory-slide{
+
+
+animation:
+
+zoomImage .5s ease;
+
+
+}
+
+
+
+@keyframes zoomImage{
+
+
+from{
+
+opacity:0;
+
+transform:scale(.8);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+
+}
+
+
+
+
+
+/* ================= GIFT OPEN EFFECT ================= */
+
+
+.gift-box.open{
+
+
+animation:
+
+giftShake .8s ease;
+
+
+}
+
+
+
+@keyframes giftShake{
+
+
+0%{
+
+transform:rotate(0);
+
+}
+
+
+25%{
+
+transform:rotate(5deg);
+
+}
+
+
+50%{
+
+transform:rotate(-5deg);
+
+}
+
+
+75%{
+
+transform:rotate(5deg);
+
+}
+
+
+100%{
+
+transform:rotate(0);
+
+}
+
+
+}
+
+
+
+
+
+/* ================= LOVE MESSAGE ================= */
+
+
+#loveMsg,
+#letter,
+#giftSurprise{
+
+
+animation:
+
+fadeUp .8s ease;
+
+
+}
+
+
+
+
+
+/* ================= FLOATING HEART IMPROVE ================= */
+
+
+.kiss-float{
+
+
+text-shadow:
+
+0 0 15px white;
+
+
+}
+
+
+
+
+
+/* ================= MOBILE SPIDER POPUP ================= */
+
+
+@media(max-width:600px){
+
+
+
+.custom-popup
+.leaflet-popup-content{
+
+
+width:250px !important;
+
+
+}
+
+
+
+.popup-message{
+
+
+max-height:150px;
+
+
+}
+
+
+
+.heart-pin{
+
+
+font-size:32px;
+
+
+}
+
+
+
+}
+
+
+
+
+
+/* ================= MAP MOBILE FIX ================= */
+
+
+.leaflet-container{
+
+
+border-radius:30px;
+
+
+overflow:hidden;
+
+
+}
+
+
+
+
+
+/* ================= BUTTON GLOW ================= */
+
+
+button:hover{
+
+
+animation:
+
+buttonGlow .8s infinite alternate;
+
+
+}
+
+
+
+@keyframes buttonGlow{
+
+
+from{
+
+box-shadow:
+0 0 10px white;
+
+}
+
+
+to{
+
+box-shadow:
+0 0 30px #ff1493;
+
+}
+
+
+}
+
+
+
+
+
+/* ================= IMAGE SHINE ================= */
+
+
+.memory-photo{
+
+
+position:relative;
+
+overflow:hidden;
+
+
+}
+
+
+
+
+
+.memory-photo:hover{
+
+
+transform:
+
+scale(1.05)
+rotate(1deg);
+
+
+}
+
+
+
+
+
+/* ================= END EFFECT ================= */
 /* ================= THE END ================= */
