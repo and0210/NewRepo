@@ -775,11 +775,30 @@ button,
         0 0 20px #ff2e7a,
         0 0 40px #ff80b3;
 }
+.custom-popup .leaflet-popup-content{
+    width:420px !important;
+    max-width:90vw !important;
+}
+
+.memory-slider{
+    display:flex;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    gap:10px;
+}
+
 .memory-slide{
     min-width:100%;
     display:flex;
     justify-content:center;
     align-items:center;
+}
+
+.memory-photo{
+    width:100%;
+    max-width:380px;
+    height:auto;
+    object-fit:contain;
 }
 
 /* ================= THE END ================= */
