@@ -556,21 +556,21 @@ memories.forEach(memory=>{
 
 
 
-let photoHTML="";
+let photoHTML = `
+<div class="memory-slider">
+`;
 
-
-
-memory.photos.forEach(photo=>{
-
+memory.photos.forEach(photo => {
 
 photoHTML += `
-<div class="memory-container">
+<div class="memory-slide">
     <img src="${photo}" class="memory-photo">
 </div>
 `;
 
+}
 
-});
+photoHTML += `</div>`;);
 
 
 
