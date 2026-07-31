@@ -234,7 +234,58 @@ transform:scale(1.15);
 }
 
 
+/* ================= MAP PHOTO SCROLLER ================= */
 
+
+.memory-slider{
+
+width:280px;
+
+height:320px;
+
+overflow-x:auto;
+
+display:flex;
+
+scroll-snap-type:x mandatory;
+
+border-radius:20px;
+
+}
+
+
+
+.memory-slider img{
+
+width:280px;
+
+height:320px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+scroll-snap-align:center;
+
+}
+
+
+/* Hide scrollbar */
+
+.memory-slider::-webkit-scrollbar{
+
+height:8px;
+
+}
+
+
+.memory-slider::-webkit-scrollbar-thumb{
+
+background:#ff2e7a;
+
+border-radius:20px;
+
+}
 
 
 /* ================= MEMORY MAP ================= */
