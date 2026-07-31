@@ -367,15 +367,23 @@ document.addEventListener("DOMContentLoaded",()=>{
         let memories=[
 
 
-        {
-            lat:34.0837,
-            lng:74.7973,
-            title:"❤️ First Date",
-            place:"Dal Lake",
-            date:"04 August 2021",
-            photo:"photo1.jpeg",
-            message:"Our beautiful first memory ❤️"
-        },
+      {
+lat:34.0837,
+lng:74.7973,
+
+title:"❤️ First Date",
+
+place:"Dal Lake",
+
+date:"04 August 2021",
+
+photos:[
+"photo1.jpeg",
+"photo2.jpeg",
+"photo3.jpeg"
+],
+
+},
 
 
         {
