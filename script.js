@@ -415,22 +415,27 @@ document.addEventListener("DOMContentLoaded",()=>{
 
             .bindPopup(`
 
-            <div class="popup">
+<div class="popup">
 
-            <img src="${memory.photo}" width="220">
+<div class="memory-slider">
 
-            <h3>${memory.title}</h3>
+<img src="${memory.photo}" class="memory-photo">
 
-            <p>📍 ${memory.place}</p>
+</div>
 
-            <p>📅 ${memory.date}</p>
 
-            <p>${memory.message}</p>
+<h3>${memory.title}</h3>
 
-            </div>
+<p>📍 ${memory.place}</p>
 
-            `);
+<p>📅 ${memory.date}</p>
 
+<p>${memory.message}</p>
+
+
+</div>
+
+`);
 
         });
 
