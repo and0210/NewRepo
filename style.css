@@ -18,9 +18,7 @@ body{
     #FF6F91);
 
     color:white;
-
     text-align:center;
-
     overflow-x:hidden;
 
 }
@@ -29,12 +27,10 @@ body{
 
 /* ================= SECTIONS ================= */
 
-
 section{
 
-padding:50px 20px;
-
-animation:fadeUp 1s ease;
+    padding:50px 20px;
+    animation:fadeUp 1s ease;
 
 }
 
@@ -43,19 +39,13 @@ animation:fadeUp 1s ease;
 @keyframes fadeUp{
 
 from{
-
-opacity:0;
-
-transform:translateY(50px);
-
+    opacity:0;
+    transform:translateY(50px);
 }
 
 to{
-
-opacity:1;
-
-transform:translateY(0);
-
+    opacity:1;
+    transform:translateY(0);
 }
 
 }
@@ -67,11 +57,10 @@ transform:translateY(0);
 
 h1{
 
-font-size:45px;
+    font-size:45px;
+    margin-bottom:20px;
 
-margin-bottom:20px;
-
-animation:glow 2s infinite alternate;
+    animation:glow 2s infinite alternate;
 
 }
 
@@ -110,7 +99,6 @@ margin-bottom:20px;
 p{
 
 font-size:18px;
-
 line-height:1.7;
 
 }
@@ -119,8 +107,7 @@ line-height:1.7;
 
 
 
-
-/* ================= CARD ================= */
+/* ================= GLASS CARD ================= */
 
 
 .card{
@@ -135,11 +122,10 @@ padding:40px;
 
 
 background:
-
 rgba(255,255,255,.15);
 
 
-backdrop-filter:blur(12px);
+backdrop-filter:blur(15px);
 
 
 border-radius:35px;
@@ -207,12 +193,14 @@ border:5px solid white;
 
 box-shadow:
 
-0 0 35px rgba(255,255,255,.8);
+0 0 35px white;
 
 
 animation:photoShow .8s ease;
 
 }
+
+
 
 
 
@@ -225,6 +213,7 @@ opacity:0;
 transform:scale(.8);
 
 }
+
 
 to{
 
@@ -242,26 +231,33 @@ transform:scale(1);
 
 .slider button{
 
+
 width:60px;
 
 height:60px;
 
+
 border-radius:50%;
+
 
 background:#ff1e62;
 
+
 color:white;
+
 
 border:none;
 
+
 font-size:35px;
+
 
 cursor:pointer;
 
 
 box-shadow:
-
 0 0 30px white;
+
 
 }
 
@@ -278,27 +274,33 @@ transform:scale(1.15);
 
 
 
-/* ================= MAP ================= */
+
+/* ================= SNAPCHAT STYLE MAP ================= */
 
 
 #loveMap{
 
+
 width:100%;
 
-height:750px;
 
-border-radius:30px;
+height:800px;
+
+
+border-radius:35px;
 
 
 border:5px solid white;
 
 
+overflow:hidden;
+
+
 box-shadow:
 
-0 0 40px rgba(255,0,120,.8);
+0 0 40px #ff2e7a,
+0 0 80px rgba(255,0,120,.5);
 
-
-overflow:hidden;
 
 }
 
@@ -306,24 +308,190 @@ overflow:hidden;
 
 
 
-/* ================= MAP POPUP PHOTO SCROLLER ================= */
+
+/* ================= HEART MEMORY MARKER ================= */
 
 
-.memory-slider{
+.memory-marker{
 
 
-width:280px;
+background:#ff2e7a;
 
-height:330px;
+
+width:45px!important;
+
+
+height:45px!important;
+
+
+border-radius:50%;
 
 
 display:flex;
 
 
+align-items:center;
+
+
+justify-content:center;
+
+
+font-size:25px;
+
+
+border:3px solid white;
+
+
+box-shadow:
+
+0 0 20px #ff2e7a;
+
+
+animation:pulse 1.5s infinite;
+
+}
+
+
+
+@keyframes pulse{
+
+
+0%{
+
+transform:scale(1);
+
+}
+
+
+50%{
+
+transform:scale(1.2);
+
+}
+
+
+100%{
+
+transform:scale(1);
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* ================= POPUP MEMORY CARD ================= */
+
+
+
+.leaflet-popup-content-wrapper{
+
+
+background:
+
+linear-gradient(
+135deg,
+#ff2e7a,
+#ff6f91
+);
+
+
+color:white;
+
+
+border-radius:25px;
+
+
+box-shadow:
+
+0 0 30px pink;
+
+
+padding:10px;
+
+
+}
+
+
+
+.leaflet-popup-tip{
+
+background:#ff2e7a;
+
+}
+
+
+
+
+.popup{
+
+
+text-align:center;
+
+
+width:280px;
+
+
+}
+
+
+
+
+
+.popup h3{
+
+
+font-size:22px;
+
+color:white;
+
+margin-top:15px;
+
+}
+
+
+
+
+.popup p{
+
+
+color:white;
+
+font-size:15px;
+
+
+}
+
+
+
+
+
+
+
+/* ================= PHOTO SCROLLER ================= */
+
+
+.memory-slider{
+
+
+width:260px;
+
+
+height:320px;
+
+
+display:flex;
+
+
+gap:12px;
+
+
 overflow-x:auto;
-
-
-gap:10px;
 
 
 scroll-snap-type:x mandatory;
@@ -331,17 +499,20 @@ scroll-snap-type:x mandatory;
 
 border-radius:20px;
 
+
 }
+
+
 
 
 
 .memory-photo{
 
 
-width:270px;
+width:250px;
 
 
-height:320px;
+height:300px;
 
 
 object-fit:cover;
@@ -355,55 +526,37 @@ flex-shrink:0;
 
 scroll-snap-align:center;
 
+
+border:3px solid white;
+
+
+box-shadow:
+
+0 0 20px white;
+
+
 }
 
 
-
-/* scrollbar */
 
 
 .memory-slider::-webkit-scrollbar{
 
-height:8px;
+
+height:7px;
 
 }
+
 
 
 .memory-slider::-webkit-scrollbar-thumb{
 
 
-background:#ff2e7a;
+background:white;
+
 
 border-radius:20px;
 
-}
-
-
-
-
-.popup{
-
-text-align:center;
-
-}
-
-
-
-.popup h3{
-
-color:#ff2e7a;
-
-font-size:22px;
-
-}
-
-
-
-.popup p{
-
-color:#444;
-
-font-size:15px;
 
 }
 
@@ -418,7 +571,9 @@ font-size:15px;
 
 button{
 
+
 background:#ff1e62;
+
 
 color:white;
 
@@ -437,15 +592,19 @@ font-size:18px;
 
 cursor:pointer;
 
+
 }
 
 
 
 button:hover{
 
+
 transform:scale(1.1);
 
+
 box-shadow:0 0 30px white;
+
 
 }
 
@@ -477,7 +636,6 @@ font-size:16px;
 
 
 
-
 .hidden{
 
 display:none;
@@ -490,13 +648,16 @@ display:none;
 
 
 
+
 /* ================= GIFT BOX ================= */
+
 
 
 .gift-box{
 
 
 width:180px;
+
 
 height:160px;
 
@@ -512,6 +673,7 @@ cursor:pointer;
 
 transition:.5s;
 
+
 }
 
 
@@ -521,6 +683,7 @@ transition:.5s;
 transform:scale(1.1);
 
 }
+
 
 
 
@@ -559,7 +722,10 @@ font-size:70px;
 
 box-shadow:0 0 30px white;
 
+
 }
+
+
 
 
 
@@ -595,7 +761,10 @@ transition:1s;
 
 transform-origin:left bottom;
 
+
 }
+
+
 
 
 
@@ -614,13 +783,20 @@ translate(-30px,-20px);
 
 
 
+
+
 .ring{
+
 
 font-size:110px;
 
+
 animation:ringGlow 2s infinite alternate;
 
+
 }
+
+
 
 
 
@@ -650,6 +826,8 @@ filter:drop-shadow(0 0 30px gold);
 
 
 
+
+
 /* ================= FLOATING KISS ================= */
 
 
@@ -670,7 +848,10 @@ z-index:999;
 
 animation:kissMove 8s linear;
 
+
 }
+
+
 
 
 
@@ -701,11 +882,11 @@ opacity:0;
 
 
 
+
 /* ================= MOBILE ================= */
 
 
 @media(max-width:600px){
-
 
 
 h1{
@@ -726,6 +907,7 @@ padding:20px;
 
 
 
+
 .slider img,
 .slider video{
 
@@ -735,7 +917,9 @@ max-width:85vw;
 
 max-height:60vh;
 
+
 }
+
 
 
 
@@ -755,34 +939,42 @@ font-size:25px;
 
 
 
+
+
 #loveMap{
 
 
 height:650px;
 
+
 }
+
 
 
 
 .memory-slider{
 
 
-width:230px;
+width:220px;
 
 height:280px;
 
+
 }
+
 
 
 
 .memory-photo{
 
 
-width:220px;
+width:210px;
 
 height:260px;
 
+
 }
+
 
 
 }
