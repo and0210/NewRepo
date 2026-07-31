@@ -7,868 +7,774 @@
     font-family:'Segoe UI',sans-serif;
 }
 
-
-body{
-
-    background:
-    linear-gradient(
-    135deg,
-    #8B0000,
-    #C2185B,
-    #FF1744,
-    #FF6F91);
-
-    color:white;
-    text-align:center;
-
-    overflow-x:hidden;
-
+html{
+    scroll-behavior:smooth;
 }
 
-
+body{
+    background:linear-gradient(
+        135deg,
+        #8B0000,
+        #C2185B,
+        #FF1744,
+        #FF6F91
+    );
+    color:#fff;
+    text-align:center;
+    overflow-x:hidden;
+}
 
 /* ================= SECTIONS ================= */
 
-
 section{
-
-    padding:50px 20px;
-
-    animation:fadeUp 1s ease;
-
+    padding:60px 20px;
+    animation:fadeUp .8s ease;
 }
-
 
 @keyframes fadeUp{
-
-from{
-
-opacity:0;
-transform:translateY(40px);
-
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
-
-to{
-
-opacity:1;
-transform:translateY(0);
-
-}
-
-}
-
-
-
 
 /* ================= HEADINGS ================= */
 
-
 h1{
-
-font-size:45px;
-
-margin-bottom:20px;
-
-animation:glow 2s infinite alternate;
-
+    font-size:45px;
+    margin-bottom:20px;
+    animation:glow 2s infinite alternate;
 }
-
-
 
 @keyframes glow{
 
-from{
+    from{
+        text-shadow:
+        0 0 10px white,
+        0 0 20px #ff1e62;
+    }
 
-text-shadow:
-0 0 10px white,
-0 0 20px #ff1e62;
-
+    to{
+        text-shadow:
+        0 0 30px white,
+        0 0 60px #ff0055;
+    }
 }
-
-
-to{
-
-text-shadow:
-0 0 30px white,
-0 0 60px #ff0055;
-
-}
-
-}
-
-
-
 
 h2{
-
-margin-bottom:20px;
-
+    margin-bottom:20px;
 }
-
-
 
 p{
-
-font-size:18px;
-
-line-height:1.7;
-
+    font-size:18px;
+    line-height:1.7;
 }
 
-
-
-
-
-/* ================= CARD GLASS EFFECT ================= */
-
+/* ================= CARD ================= */
 
 .card{
 
+    width:90%;
+    max-width:1100px;
 
-width:90%;
+    margin:40px auto;
 
-max-width:1100px;
+    padding:40px;
 
-margin:40px auto;
+    background:rgba(255,255,255,.18);
 
+    backdrop-filter:blur(15px);
 
-padding:40px;
+    border-radius:35px;
 
+    box-shadow:0 0 40px rgba(255,255,255,.45);
 
-
-background:
-
-rgba(255,255,255,0.18);
-
-
-backdrop-filter:blur(15px);
-
-
-
-border-radius:35px;
-
-
-
-box-shadow:
-
-0 0 40px rgba(255,255,255,.5);
-
-
-
+    transition:.35s;
 }
-
-
-
 
 .card:hover{
 
-transform:scale(1.02);
+    transform:translateY(-6px) scale(1.02);
 
-transition:.4s;
-
+    box-shadow:0 0 55px rgba(255,255,255,.7);
 }
 
-
-
-
-
-/* ================= PHOTO VIDEO SLIDER ================= */
-
+/* ================= PHOTO & VIDEO ================= */
 
 .slider{
 
-display:flex;
+    display:flex;
 
-align-items:center;
+    justify-content:center;
 
-justify-content:center;
+    align-items:center;
 
-gap:20px;
-
+    gap:20px;
 }
-
-
 
 .slider img,
 .slider video{
 
+    width:100%;
 
-max-width:80vw;
+    max-width:700px;
 
-max-height:75vh;
+    max-height:75vh;
 
+    object-fit:contain;
 
-object-fit:contain;
+    border-radius:30px;
 
+    border:4px solid white;
 
-border-radius:30px;
-
-
-border:4px solid white;
-
-
-box-shadow:
-
-0 0 35px white;
-
+    box-shadow:0 0 35px rgba(255,255,255,.8);
 }
-
-
-
 
 .slider button{
 
+    width:60px;
 
-width:60px;
+    height:60px;
 
-height:60px;
+    border:none;
 
+    border-radius:50%;
 
-border-radius:50%;
+    background:#ff1e62;
 
+    color:white;
 
-border:none;
+    font-size:35px;
 
+    cursor:pointer;
 
-background:#ff1e62;
-
-
-color:white;
-
-
-font-size:35px;
-
-
-cursor:pointer;
-
+    transition:.3s;
 }
-
-
-
 
 .slider button:hover{
 
-transform:scale(1.2);
+    transform:scale(1.15);
 
+    box-shadow:0 0 20px white;
 }
 
-
-
-
-
-/* ================= LOVE MAP ================= */
-
+/* ================= MAP ================= */
 
 #loveMap{
 
+    width:100%;
 
-width:100%;
+    height:850px;
 
+    border-radius:35px;
 
-height:850px;
+    border:5px solid white;
 
+    overflow:hidden;
 
-border-radius:35px;
-
-
-border:5px solid white;
-
-
-box-shadow:
-
-0 0 50px #ff1493;
-
-
-
-overflow:hidden;
-
-
+    box-shadow:0 0 50px #ff1493;
 }
 
-
-
-
-/* ================= LEAFLET CUSTOM ================= */
-
-
+/* ================= POPUP ================= */
 
 .leaflet-popup-content-wrapper{
 
+    border-radius:25px;
 
-border-radius:25px;
+    background:linear-gradient(
+        135deg,
+        #fff0f5,
+        #ffd6e8
+    );
 
+    padding:12px;
 
-background:
-
-linear-gradient(
-135deg,
-#fff0f5,
-#ffd6e8
-);
-
-
-box-shadow:
-
-0 0 30px #ff1493;
-
-
+    box-shadow:0 0 30px #ff1493;
 }
 
+.leaflet-popup-content{
 
+    width:460px !important;
+
+    max-width:90vw !important;
+
+    margin:10px auto !important;
+}
 
 .leaflet-popup-tip{
-
-
-background:#ffd6e8;
-
+    background:#ffd6e8;
 }
 
-
-
-
-/* ================= MAP PHOTO SWIPE ================= */
-
-
+/* ================= MEMORY SLIDER ================= */
 
 .memory-slider{
 
+    width:100%;
 
-width:320px;
+    display:flex;
 
+    justify-content:flex-start;
 
-height:380px;
+    gap:12px;
 
+    overflow-x:auto;
 
+    scroll-snap-type:x mandatory;
 
-display:flex;
+    padding:10px;
 
-
-
-gap:15px;
-
-
-
-overflow-x:auto;
-
-
-
-scroll-snap-type:x mandatory;
-
-
-
-padding:10px;
-
-
-
-cursor:grab;
-
-
-
+    scrollbar-width:thin;
 }
-
-
-
-.memory-slider:active{
-
-cursor:grabbing;
-
-}
-
-
-
-.memory-photo{
-
-
-width:300px;
-
-
-height:350px;
-
-
-flex-shrink:0;
-
-
-
-object-fit:cover;
-
-
-
-border-radius:30px;
-
-
-
-scroll-snap-align:center;
-
-
-
-border:4px solid white;
-
-
-
-box-shadow:
-
-0 0 25px #ff2e7a;
-
-
-
-transition:.4s;
-
-
-}
-
-
-
-.memory-photo:hover{
-
-
-transform:scale(1.05);
-
-
-}
-
-
-
-
-/* scrollbar */
-
 
 .memory-slider::-webkit-scrollbar{
 
-
-height:10px;
-
-
+    height:8px;
 }
-
 
 .memory-slider::-webkit-scrollbar-thumb{
 
+    background:#ff2e7a;
 
-background:
-
-linear-gradient(
-90deg,
-#ff0066,
-#ff99cc
-);
-
-
-border-radius:20px;
-
-
+    border-radius:20px;
 }
 
+.memory-photo{
 
+    width:100%;
 
+    max-width:420px;
 
+    max-height:520px;
 
-/* Popup text */
+    height:auto;
 
+    object-fit:contain;
+
+    flex-shrink:0;
+
+    scroll-snap-align:center;
+
+    border-radius:25px;
+
+    border:4px solid white;
+
+    box-shadow:0 0 20px #ff2e7a;
+
+    transition:.3s;
+}
+
+.memory-photo:hover{
+
+    transform:scale(1.03);
+}
 
 .popup{
 
-
-text-align:center;
-
+    text-align:center;
 }
-
-
 
 .popup h3{
 
+    color:#ff0066;
 
-color:#ff0066;
+    font-size:28px;
 
-font-size:24px;
-
+    margin:15px 0;
 }
-
-
 
 .popup p{
 
+    color:#444;
 
-color:#444;
+    font-size:17px;
 
-font-size:16px;
-
-
+    line-height:1.6;
 }
-
-
-
-
-
-
 /* ================= BUTTON ================= */
 
-
 button{
-
-
-background:#ff1e62;
-
-
-color:white;
-
-
-border:none;
-
-
-padding:12px 30px;
-
-
-border-radius:30px;
-
-
-font-size:18px;
-
-
-cursor:pointer;
-
-
+    background:linear-gradient(135deg,#ff1e62,#ff5c8a);
+    color:#fff;
+    border:none;
+    padding:14px 32px;
+    border-radius:35px;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 5px 15px rgba(255,30,98,.4);
 }
-
-
 
 button:hover{
-
-
-box-shadow:0 0 30px white;
-
-
-transform:scale(1.1);
-
-
+    transform:translateY(-3px) scale(1.08);
+    box-shadow:0 0 30px rgba(255,255,255,.8);
 }
 
+button:active{
+    transform:scale(.97);
+}
 
-
-
+/* ================= INPUT ================= */
 
 input{
 
+    width:280px;
+    max-width:90%;
 
-padding:12px 25px;
+    padding:14px 20px;
 
+    border:none;
 
-border-radius:25px;
+    border-radius:30px;
 
+    outline:none;
 
-border:none;
+    text-align:center;
 
+    font-size:17px;
 
-font-size:16px;
+    background:#fff;
 
+    color:#444;
 
-text-align:center;
+    box-shadow:0 0 15px rgba(255,255,255,.5);
 
-
+    transition:.3s;
 }
 
+input:focus{
 
+    transform:scale(1.03);
 
+    box-shadow:0 0 25px #fff;
+}
 
 .hidden{
-
-display:none;
-
+    display:none;
 }
-
-
-
-
-
 
 /* ================= GIFT BOX ================= */
 
-
 .gift-box{
 
+    width:200px;
+    height:180px;
 
-width:180px;
+    margin:50px auto;
 
-height:160px;
+    position:relative;
 
+    cursor:pointer;
 
-margin:50px auto;
-
-
-position:relative;
-
-
-cursor:pointer;
-
-
+    transition:.4s;
 }
 
+.gift-box:hover{
 
+    transform:scale(1.05);
+}
 
 .gift-body{
 
+    position:absolute;
 
-position:absolute;
+    bottom:0;
 
+    width:200px;
 
-bottom:0;
+    height:130px;
 
+    background:#ff2675;
 
-width:180px;
+    border-radius:0 0 25px 25px;
 
+    display:flex;
 
-height:120px;
+    justify-content:center;
 
+    align-items:center;
 
-background:#ff2675;
+    font-size:75px;
 
-
-border-radius:0 0 20px 20px;
-
-
-display:flex;
-
-
-align-items:center;
-
-
-justify-content:center;
-
-
-font-size:70px;
-
-
-box-shadow:0 0 30px white;
-
-
+    box-shadow:0 0 30px rgba(255,255,255,.8);
 }
-
-
 
 .gift-lid{
 
+    position:absolute;
 
-position:absolute;
+    top:0;
 
+    left:-5px;
 
-top:10px;
+    width:210px;
 
+    height:45px;
 
-width:190px;
+    background:#ff9dc2;
 
+    border-radius:20px;
 
-height:40px;
+    transition:1s;
 
-
-background:#ff8bb5;
-
-
-border-radius:15px;
-
-
-transition:1s;
-
-
-z-index:2;
-
-
+    z-index:10;
 }
-
-
 
 .gift-box.open .gift-lid{
 
-
-transform:
-
-rotate(-50deg)
-translate(-30px,-20px);
-
-
+    transform:
+    rotate(-45deg)
+    translate(-30px,-25px);
 }
-
-
 
 .ring{
 
+    position:absolute;
 
-font-size:110px;
+    top:-20px;
 
+    left:50%;
 
-animation:ringGlow 2s infinite alternate;
+    transform:translateX(-50%);
 
+    font-size:95px;
 
+    animation:ringGlow 2s infinite alternate;
 }
-
-
 
 @keyframes ringGlow{
 
+    from{
 
-from{
+        transform:translateX(-50%) scale(1);
 
-filter:drop-shadow(0 0 10px gold);
+        filter:drop-shadow(0 0 10px gold);
+    }
 
+    to{
+
+        transform:translateX(-50%) scale(1.12);
+
+        filter:drop-shadow(0 0 35px gold);
+    }
 }
-
-
-to{
-
-transform:scale(1.2);
-
-filter:drop-shadow(0 0 35px gold);
-
-}
-
-}
-
-
-
-
-
-
 
 /* ================= FLOATING KISS ================= */
 
-
-
 .kiss-float{
 
+    position:fixed;
 
-position:fixed;
+    bottom:-60px;
 
+    font-size:38px;
 
-bottom:-50px;
+    z-index:999;
 
+    pointer-events:none;
 
-font-size:40px;
-
-
-z-index:999;
-
-
-animation:kissMove 8s linear;
-
-
+    animation:kissMove linear forwards;
 }
-
-
-
 
 @keyframes kissMove{
 
+    from{
 
-from{
+        transform:translateY(0) rotate(0deg);
 
-transform:translateY(0);
+        opacity:1;
+    }
 
+    to{
+
+        transform:translateY(-120vh) rotate(360deg);
+
+        opacity:0;
+    }
 }
 
+/* ================= EXTRA ANIMATIONS ================= */
 
-to{
-
-transform:translateY(-120vh);
-
-opacity:0;
-
+.fade-in{
+    animation:fadeUp 1s ease;
 }
 
+.zoom{
+    animation:zoomIn .7s ease;
 }
 
+@keyframes zoomIn{
 
+    from{
 
+        transform:scale(.7);
+
+        opacity:0;
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+    }
+}
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar{
+    width:10px;
+    height:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#ffd4e3;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#ff2e7a;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#ff0055;
+}
+/* ================= RESPONSIVE ================= */
+
+@media (max-width:992px){
+
+    h1{
+        font-size:38px;
+    }
+
+    h2{
+        font-size:28px;
+    }
+
+    p{
+        font-size:17px;
+    }
+
+    .card{
+        width:95%;
+        padding:30px 20px;
+    }
+
+    .slider img,
+    .slider video{
+
+        max-width:95%;
+        max-height:65vh;
+    }
+
+    #loveMap{
+        height:650px;
+    }
+
+    .leaflet-popup-content{
+
+        width:360px !important;
+        max-width:90vw !important;
+    }
+
+    .memory-photo{
+
+        max-width:320px;
+        max-height:420px;
+    }
+}
 
 
 /* ================= MOBILE ================= */
 
+@media (max-width:600px){
 
-@media(max-width:600px){
+    body{
+        overflow-x:hidden;
+    }
 
+    section{
+        padding:40px 15px;
+    }
 
-h1{
+    h1{
+        font-size:30px;
+    }
 
-font-size:32px;
+    h2{
+        font-size:22px;
+    }
+
+    p{
+        font-size:15px;
+        line-height:1.6;
+    }
+
+    .card{
+
+        width:96%;
+        padding:20px 15px;
+        border-radius:25px;
+    }
+
+    .slider{
+        gap:10px;
+    }
+
+    .slider button{
+
+        width:45px;
+        height:45px;
+        font-size:22px;
+    }
+
+    .slider img,
+    .slider video{
+
+        width:100%;
+        max-width:100%;
+        max-height:50vh;
+        border-radius:20px;
+    }
+
+    #loveMap{
+
+        height:500px;
+        border-radius:25px;
+    }
+
+    .leaflet-popup-content{
+
+        width:260px !important;
+        max-width:90vw !important;
+        margin:5px auto !important;
+    }
+
+    .memory-slider{
+
+        padding:5px;
+        gap:5px;
+    }
+
+    .memory-photo{
+
+        width:100%;
+        max-width:240px;
+        max-height:320px;
+        object-fit:contain;
+    }
+
+    .popup h3{
+
+        font-size:20px;
+        margin:10px 0;
+    }
+
+    .popup p{
+
+        font-size:14px;
+    }
+
+    input{
+
+        width:100%;
+        max-width:250px;
+        font-size:15px;
+    }
+
+    button{
+
+        padding:12px 25px;
+        font-size:16px;
+    }
+
+    .gift-box{
+
+        transform:scale(.85);
+        margin:20px auto;
+    }
 
 }
 
 
+/* ================= LARGE SCREEN ================= */
 
-.card{
+@media (min-width:1400px){
 
-width:95%;
+    .card{
+        max-width:1250px;
+    }
 
-padding:20px;
+    .leaflet-popup-content{
 
-}
+        width:500px !important;
+    }
 
+    .memory-photo{
 
-
-
-.slider button{
-
-
-width:45px;
-
-height:45px;
-
-
-font-size:25px;
-
+        max-width:450px;
+        max-height:550px;
+    }
 
 }
 
 
+/* ================= POPUP IMAGE CENTER ================= */
 
+.popup img{
+
+    display:block;
+    margin:auto;
+}
+
+
+/* ================= LEAFLET FIX ================= */
+
+.leaflet-container{
+
+    font-family:'Segoe UI',sans-serif;
+}
+
+.leaflet-popup-close-button{
+
+    font-size:22px !important;
+    padding:8px !important;
+}
+
+
+/* ================= IMAGE LOADING ================= */
+
+img{
+
+    user-select:none;
+    -webkit-user-drag:none;
+}
+
+
+/* ================= SMOOTH EFFECT ================= */
+
+.card,
+button,
+.memory-photo,
 .slider img,
 .slider video{
 
-
-max-width:85vw;
-
-
-max-height:60vh;
-
-
+    transition:all .35s ease;
 }
 
 
+/* ================= GLOW EFFECT ================= */
 
+.memory-photo:hover{
 
-#loveMap{
-
-
-height:600px;
-
-
+    box-shadow:
+        0 0 20px #ff2e7a,
+        0 0 40px #ff80b3;
 }
 
 
-
-
-/* Popup Slider */
-.memory-slider{
-    width:100%;
-    max-width:400px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    overflow:hidden;
-}
-
-.memory-photo{
-    width:100%;
-    height:auto;
-    max-height:450px;
-    object-fit:contain !important;
-    display:block;
-    margin:auto;
-    border-radius:20px;
-    border:4px solid white;
-    box-shadow:0 0 20px #ff2e7a;
-}    .popup h3{
-
-font-size:20px;
-
-}
-
-
-}
+/* ================= THE END ================= */
