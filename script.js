@@ -556,92 +556,41 @@ memories.forEach(memory=>{
 
 
 
-let photoHTML = `
-<div class="memory-slider">
-`;
+let photoHTML = "";
 
 memory.photos.forEach(photo => {
 
-photoHTML += `
-<div class="memory-slide">
-    <img src="${photo}" class="memory-photo">
-</div>
-`;
-
-}
-
-photoHTML += `</div>`;);
-
-
-
-
-
-
-L.marker(
-
-[memory.lat,memory.lng],
-
-{
-icon:heartIcon
-}
-
-)
-
-.addTo(map)
-
-
-.bindPopup(`
-
-
-<div class="popup">
-
-
-<div class="memory-slider">
-
-${photoHTML}
-
-</div>
-
-
-
-<h3>
-
-${memory.title}
-
-</h3>
-
-
-
-<p>
-
-📍 ${memory.place}
-
-</p>
-
-
-<p>
-
-📅 ${memory.date}
-
-</p>
-
-
-<p>
-
-${memory.message}
-
-</p>
-
-
-
-</div>
-
-
-`);
-
-
+    photoHTML += `
+    <div class="memory-slide">
+        <img src="${photo}" class="memory-photo" loading="lazy">
+    </div>
+    `;
 
 });
+
+L.marker([memory.lat, memory.lng], {
+    icon: heartIcon
+})
+.addTo(map)
+.bindPopup(`
+<div class="popup">
+
+    <div class="memory-slider">
+        ${photoHTML}
+    </div>
+
+    <h3>${memory.title}</h3>
+
+    <p>📍 ${memory.place}</p>
+
+    <p>📅 ${memory.date}</p>
+
+    <p>${memory.message}</p>
+
+</div>
+`, {
+    maxWidth: 450
+});});
 
 
 
