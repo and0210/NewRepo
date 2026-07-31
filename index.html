@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,10 +8,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Happy Birthday Jannu ❤️</title>
-<!-- Leaflet CSS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
 <link rel="stylesheet" href="style.css">
-<!-- <script src="script.js"></script> -->
+
+<!-- Leaflet Map CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
 </head>
 
 
@@ -19,26 +22,17 @@
 
 <section class="welcome">
 
-<h1>
-🎂 Happy Birthday Jannu ❤️
-</h1>
+<h1>🎂 Happy Birthday Jannu ❤️</h1>
 
-<p>
-With endless love from your Jaan 💕
-</p>
+<p>With endless love from your Jaan 💕</p>
 
-<p>
-Birthday Date: 04 August 2000
-</p>
-
+<p>Birthday Date: 04 August 2000</p>
 
 <div class="kiss">
 💋 ❤️ 💋
 </div>
 
-
 </section>
-
 
 
 
@@ -47,10 +41,7 @@ Birthday Date: 04 August 2000
 
 <div class="card">
 
-<h2>
-💖 What I Love About You
-</h2>
-
+<h2>💖 What I Love About You</h2>
 
 <p>
 
@@ -86,15 +77,11 @@ Birthday Date: 04 August 2000
 
 
 
-
 <section>
 
 <div class="card">
 
-
-<h2>
-📸 Our Memories
-</h2>
+<h2>📸 Our Memories</h2>
 
 <div class="slider">
 
@@ -106,12 +93,9 @@ Birthday Date: 04 August 2000
 
 </div>
 
-
-
 <p>
 Our beautiful memories forever ❤️
 </p>
-
 
 </div>
 
@@ -122,54 +106,35 @@ Our beautiful memories forever ❤️
 
 
 
-
-
 <section>
-
 
 <div class="card">
 
+<h1>🔐 A Secret Just For You</h1>
 
-<h1>
-🔐 A Secret Just For You
-</h1>
+<h2>Unlock my heart 💝</h2>
 
-
-<h2>
-Unlock my heart 💝
-</h2>
-
-
-<p>
-Enter your lover's name ❤️
-</p>
-
+<p>Enter your lover's name ❤️</p>
 
 <input id="pass1" placeholder="Password">
 
-
-<br>
- <br>
+<br><br>
 
 <button onclick="openLove()">
 Open ❤️
 </button>
 
-
 <p id="hint"></p>
 
-
 <h2 id="loveMsg" class="hidden">
-
 💖 I Love You My Hubby ❤️
-
 </h2>
-
 
 </div>
 
-
 </section>
+
+
 
 
 
@@ -177,78 +142,63 @@ Open ❤️
 
 <section>
 
-    <h1>🎥 Our Beautiful Memories ❤️</h1>
+<h1>🎥 Our Beautiful Memories ❤️</h1>
 
-    <div class="card">
+<div class="card">
 
-        <div class="slider">
+<div class="slider">
 
-            <button onclick="prevVideo()">❮</button>
+<button onclick="prevVideo()">❮</button>
 
-            <video id="video" controls>
-                <source src="video1.mp4" type="video/mp4">
-            </video>
+<video id="video" controls>
 
-            <button onclick="nextVideo()">❯</button>
+<source src="video1.mp4" type="video/mp4">
 
-        </div>
+</video>
 
-    </div>
+<button onclick="nextVideo()">❯</button>
+
+</div>
+
+</div>
 
 </section>
 
 
 
 
-<!-- GIFT BOX -->
 
 
 <section>
-
 
 <div class="card gift-card">
-
 
 <h2 id="giftTitle">
 🎁 A Special Gift For You
 </h2>
-
 
 <p id="giftText">
 Click the gift box to open your surprise ❤️
 </p>
 
 
-
-
 <div class="gift-box" onclick="openGift()">
 
-
-
 <div class="gift-lid"></div>
-
 
 <div class="gift-body">
 🎁
 </div>
 
-
-
 <div class="ring">
 💍
 </div>
 
-
 </div>
 
 
 
-
-
-
-
 <div id="giftSurprise" class="hidden">
-
 
 <h2>
 For My Forever Love ❤️
@@ -256,7 +206,6 @@ For My Forever Love ❤️
 
 
 <p class="quote">
-
 
 You are the most precious gift life has ever given me.
 
@@ -270,16 +219,12 @@ trust, and promise to stand beside you.
 I choose you today, tomorrow,
 and forever. ❤️
 
-
 </p>
 
-
 </div>
 
 
-
 </div>
-
 
 </section>
 
@@ -289,43 +234,29 @@ and forever. ❤️
 
 
 
-
-
 <section>
 
-
 <div class="card">
-
 
 <h2>
 💌 My Love Letter To You
 </h2>
-
 
 <p>
 Enter our proposing date ❤️
 </p>
 
 
-
 <input id="pass2" placeholder="Password">
 
-
-<br>
-
+<br><br>
 
 <button onclick="openLetter()">
-  <br>
-
 Unlock Letter 💌
-
 </button>
 
 
-
-
 <p id="letter" class="hidden">
-
 
 My Jannu ❤️
 
@@ -363,12 +294,33 @@ Forever yours,
 
 Jaan 💕
 
-
 </p>
-
 
 </div>
 
+</section>
+
+
+
+
+
+
+
+<section>
+
+<div class="card">
+
+<h1>🗺️ Our Love Map ❤️</h1>
+
+<p>
+Every place has a beautiful memory with you.
+</p>
+
+
+<div id="loveMap"></div>
+
+
+</div>
 
 </section>
 
@@ -379,7 +331,7 @@ Jaan 💕
 
 <audio id="music" loop>
 
-<source src="song1.mp3.mp4" type="audio/mpeg">
+<source src="song1.mp3" type="audio/mpeg">
 
 </audio>
 
@@ -387,23 +339,17 @@ Jaan 💕
 
 
 
-
-
-
-
-<section class="memory-map">
-
-    <h1>🗺️ Our Love Map ❤️</h1>
-
-    <p>Every place has a beautiful memory with you.</p>
-
-    <div id="loveMap"></div>
-
-</section>
+<!-- Leaflet JS -->
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
+
+<!-- Your JS -->
+
 <script src="script.js"></script>
+
+
 </body>
 
 </html>
+```
