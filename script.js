@@ -564,11 +564,10 @@ memory.photos.forEach(photo=>{
 
 
 photoHTML += `
-
-<img src="${photo}" class="memory-photo">
-
+<div class="memory-container">
+    <img src="${photo}" class="memory-photo">
+</div>
 `;
-
 
 
 });
