@@ -1,4 +1,4 @@
-/* ================= BASIC SETTINGS ================= */
+/* ================= BASIC RESET ================= */
 
 *{
     margin:0;
@@ -10,7 +10,8 @@
 
 body{
 
-    background:linear-gradient(
+    background:
+    linear-gradient(
     135deg,
     #8B0000,
     #C2185B,
@@ -19,6 +20,7 @@ body{
 
     color:white;
     text-align:center;
+
     overflow-x:hidden;
 
 }
@@ -27,28 +29,34 @@ body{
 
 /* ================= SECTIONS ================= */
 
+
 section{
 
     padding:50px 20px;
+
     animation:fadeUp 1s ease;
 
 }
 
 
-
 @keyframes fadeUp{
 
 from{
-    opacity:0;
-    transform:translateY(50px);
+
+opacity:0;
+transform:translateY(40px);
+
 }
 
 to{
-    opacity:1;
-    transform:translateY(0);
+
+opacity:1;
+transform:translateY(0);
+
 }
 
 }
+
 
 
 
@@ -57,10 +65,11 @@ to{
 
 h1{
 
-    font-size:45px;
-    margin-bottom:20px;
+font-size:45px;
 
-    animation:glow 2s infinite alternate;
+margin-bottom:20px;
+
+animation:glow 2s infinite alternate;
 
 }
 
@@ -76,6 +85,7 @@ text-shadow:
 
 }
 
+
 to{
 
 text-shadow:
@@ -85,6 +95,7 @@ text-shadow:
 }
 
 }
+
 
 
 
@@ -99,6 +110,7 @@ margin-bottom:20px;
 p{
 
 font-size:18px;
+
 line-height:1.7;
 
 }
@@ -107,28 +119,34 @@ line-height:1.7;
 
 
 
-/* ================= GLASS CARD ================= */
+/* ================= CARD GLASS EFFECT ================= */
 
 
 .card{
 
+
 width:90%;
 
-max-width:1000px;
+max-width:1100px;
 
 margin:40px auto;
+
 
 padding:40px;
 
 
+
 background:
-rgba(255,255,255,.15);
+
+rgba(255,255,255,0.18);
 
 
 backdrop-filter:blur(15px);
 
 
+
 border-radius:35px;
+
 
 
 box-shadow:
@@ -136,19 +154,19 @@ box-shadow:
 0 0 40px rgba(255,255,255,.5);
 
 
-transition:.5s;
 
 }
+
 
 
 
 .card:hover{
 
-transform:scale(1.03);
+transform:scale(1.02);
+
+transition:.4s;
 
 }
-
-
 
 
 
@@ -165,9 +183,7 @@ align-items:center;
 
 justify-content:center;
 
-gap:25px;
-
-margin-top:30px;
+gap:20px;
 
 }
 
@@ -179,52 +195,23 @@ margin-top:30px;
 
 max-width:80vw;
 
-max-height:80vh;
+max-height:75vh;
 
 
 object-fit:contain;
 
 
-border-radius:35px;
+border-radius:30px;
 
 
-border:5px solid white;
+border:4px solid white;
 
 
 box-shadow:
 
 0 0 35px white;
 
-
-animation:photoShow .8s ease;
-
 }
-
-
-
-
-
-@keyframes photoShow{
-
-from{
-
-opacity:0;
-
-transform:scale(.8);
-
-}
-
-
-to{
-
-opacity:1;
-
-transform:scale(1);
-
-}
-
-}
-
 
 
 
@@ -240,13 +227,13 @@ height:60px;
 border-radius:50%;
 
 
+border:none;
+
+
 background:#ff1e62;
 
 
 color:white;
-
-
-border:none;
 
 
 font-size:35px;
@@ -254,18 +241,14 @@ font-size:35px;
 
 cursor:pointer;
 
-
-box-shadow:
-0 0 30px white;
-
-
 }
+
 
 
 
 .slider button:hover{
 
-transform:scale(1.15);
+transform:scale(1.2);
 
 }
 
@@ -273,9 +256,7 @@ transform:scale(1.15);
 
 
 
-
-
-/* ================= SNAPCHAT STYLE MAP ================= */
+/* ================= LOVE MAP ================= */
 
 
 #loveMap{
@@ -284,7 +265,7 @@ transform:scale(1.15);
 width:100%;
 
 
-height:800px;
+height:850px;
 
 
 border-radius:35px;
@@ -293,126 +274,42 @@ border-radius:35px;
 border:5px solid white;
 
 
+box-shadow:
+
+0 0 50px #ff1493;
+
+
+
 overflow:hidden;
 
 
-box-shadow:
-
-0 0 40px #ff2e7a,
-0 0 80px rgba(255,0,120,.5);
-
-
 }
 
 
 
 
-
-
-/* ================= HEART MEMORY MARKER ================= */
-
-
-.memory-marker{
-
-
-background:#ff2e7a;
-
-
-width:45px!important;
-
-
-height:45px!important;
-
-
-border-radius:50%;
-
-
-display:flex;
-
-
-align-items:center;
-
-
-justify-content:center;
-
-
-font-size:25px;
-
-
-border:3px solid white;
-
-
-box-shadow:
-
-0 0 20px #ff2e7a;
-
-
-animation:pulse 1.5s infinite;
-
-}
-
-
-
-@keyframes pulse{
-
-
-0%{
-
-transform:scale(1);
-
-}
-
-
-50%{
-
-transform:scale(1.2);
-
-}
-
-
-100%{
-
-transform:scale(1);
-
-}
-
-
-}
-
-
-
-
-
-
-
-/* ================= POPUP MEMORY CARD ================= */
+/* ================= LEAFLET CUSTOM ================= */
 
 
 
 .leaflet-popup-content-wrapper{
 
 
+border-radius:25px;
+
+
 background:
 
 linear-gradient(
 135deg,
-#ff2e7a,
-#ff6f91
+#fff0f5,
+#ffd6e8
 );
-
-
-color:white;
-
-
-border-radius:25px;
 
 
 box-shadow:
 
-0 0 30px pink;
-
-
-padding:10px;
+0 0 30px #ff1493;
 
 
 }
@@ -421,11 +318,151 @@ padding:10px;
 
 .leaflet-popup-tip{
 
-background:#ff2e7a;
+
+background:#ffd6e8;
 
 }
 
 
+
+
+/* ================= MAP PHOTO SWIPE ================= */
+
+
+
+.memory-slider{
+
+
+width:320px;
+
+
+height:380px;
+
+
+
+display:flex;
+
+
+
+gap:15px;
+
+
+
+overflow-x:auto;
+
+
+
+scroll-snap-type:x mandatory;
+
+
+
+padding:10px;
+
+
+
+cursor:grab;
+
+
+
+}
+
+
+
+.memory-slider:active{
+
+cursor:grabbing;
+
+}
+
+
+
+.memory-photo{
+
+
+width:300px;
+
+
+height:350px;
+
+
+flex-shrink:0;
+
+
+
+object-fit:cover;
+
+
+
+border-radius:30px;
+
+
+
+scroll-snap-align:center;
+
+
+
+border:4px solid white;
+
+
+
+box-shadow:
+
+0 0 25px #ff2e7a;
+
+
+
+transition:.4s;
+
+
+}
+
+
+
+.memory-photo:hover{
+
+
+transform:scale(1.05);
+
+
+}
+
+
+
+
+/* scrollbar */
+
+
+.memory-slider::-webkit-scrollbar{
+
+
+height:10px;
+
+
+}
+
+
+.memory-slider::-webkit-scrollbar-thumb{
+
+
+background:
+
+linear-gradient(
+90deg,
+#ff0066,
+#ff99cc
+);
+
+
+border-radius:20px;
+
+
+}
+
+
+
+
+
+/* Popup text */
 
 
 .popup{
@@ -433,133 +470,30 @@ background:#ff2e7a;
 
 text-align:center;
 
-
-width:280px;
-
-
 }
-
-
 
 
 
 .popup h3{
 
 
-font-size:22px;
+color:#ff0066;
 
-color:white;
-
-margin-top:15px;
+font-size:24px;
 
 }
-
 
 
 
 .popup p{
 
 
-color:white;
+color:#444;
 
-font-size:15px;
-
-
-}
-
-
-
-
-
-
-
-/* ================= PHOTO SCROLLER ================= */
-
-
-.memory-slider{
-
-
-width:260px;
-
-
-height:320px;
-
-
-display:flex;
-
-
-gap:12px;
-
-
-overflow-x:auto;
-
-
-scroll-snap-type:x mandatory;
-
-
-border-radius:20px;
+font-size:16px;
 
 
 }
-
-
-
-
-
-.memory-photo{
-
-
-width:250px;
-
-
-height:300px;
-
-
-object-fit:cover;
-
-
-border-radius:20px;
-
-
-flex-shrink:0;
-
-
-scroll-snap-align:center;
-
-
-border:3px solid white;
-
-
-box-shadow:
-
-0 0 20px white;
-
-
-}
-
-
-
-
-.memory-slider::-webkit-scrollbar{
-
-
-height:7px;
-
-}
-
-
-
-.memory-slider::-webkit-scrollbar-thumb{
-
-
-background:white;
-
-
-border-radius:20px;
-
-
-}
-
 
 
 
@@ -600,10 +534,10 @@ cursor:pointer;
 button:hover{
 
 
-transform:scale(1.1);
-
-
 box-shadow:0 0 30px white;
+
+
+transform:scale(1.1);
 
 
 }
@@ -615,7 +549,7 @@ box-shadow:0 0 30px white;
 input{
 
 
-padding:12px;
+padding:12px 25px;
 
 
 border-radius:25px;
@@ -624,14 +558,13 @@ border-radius:25px;
 border:none;
 
 
-text-align:center;
-
-
 font-size:16px;
 
 
-}
+text-align:center;
 
+
+}
 
 
 
@@ -647,17 +580,13 @@ display:none;
 
 
 
-
-
 /* ================= GIFT BOX ================= */
-
 
 
 .gift-box{
 
 
 width:180px;
-
 
 height:160px;
 
@@ -671,19 +600,7 @@ position:relative;
 cursor:pointer;
 
 
-transition:.5s;
-
-
 }
-
-
-
-.gift-box:hover{
-
-transform:scale(1.1);
-
-}
-
 
 
 
@@ -727,8 +644,6 @@ box-shadow:0 0 30px white;
 
 
 
-
-
 .gift-lid{
 
 
@@ -736,9 +651,6 @@ position:absolute;
 
 
 top:10px;
-
-
-left:-5px;
 
 
 width:190px;
@@ -753,18 +665,13 @@ background:#ff8bb5;
 border-radius:15px;
 
 
-z-index:2;
-
-
 transition:1s;
 
 
-transform-origin:left bottom;
+z-index:2;
 
 
 }
-
-
 
 
 
@@ -774,14 +681,10 @@ transform-origin:left bottom;
 transform:
 
 rotate(-50deg)
-
 translate(-30px,-20px);
 
 
 }
-
-
-
 
 
 
@@ -795,8 +698,6 @@ animation:ringGlow 2s infinite alternate;
 
 
 }
-
-
 
 
 
@@ -814,13 +715,11 @@ to{
 
 transform:scale(1.2);
 
-filter:drop-shadow(0 0 30px gold);
+filter:drop-shadow(0 0 35px gold);
 
 }
 
-
 }
-
 
 
 
@@ -829,6 +728,7 @@ filter:drop-shadow(0 0 30px gold);
 
 
 /* ================= FLOATING KISS ================= */
+
 
 
 .kiss-float{
@@ -854,7 +754,6 @@ animation:kissMove 8s linear;
 
 
 
-
 @keyframes kissMove{
 
 
@@ -873,11 +772,7 @@ opacity:0;
 
 }
 
-
 }
-
-
-
 
 
 
@@ -908,6 +803,21 @@ padding:20px;
 
 
 
+.slider button{
+
+
+width:45px;
+
+height:45px;
+
+
+font-size:25px;
+
+
+}
+
+
+
 .slider img,
 .slider video{
 
@@ -923,28 +833,10 @@ max-height:60vh;
 
 
 
-.slider button{
-
-
-width:45px;
-
-
-height:45px;
-
-
-font-size:25px;
-
-
-}
-
-
-
-
-
 #loveMap{
 
 
-height:650px;
+height:600px;
 
 
 }
@@ -955,26 +847,34 @@ height:650px;
 .memory-slider{
 
 
-width:220px;
+width:250px;
 
-height:280px;
+
+height:320px;
 
 
 }
-
 
 
 
 .memory-photo{
 
 
-width:210px;
+width:230px;
 
-height:260px;
+
+height:290px;
 
 
 }
 
+
+
+.popup h3{
+
+font-size:20px;
+
+}
 
 
 }
