@@ -1,53 +1,80 @@
 /* ===========================================
-   ❤️ HAPPY BIRTHDAY LOVE WEBSITE ❤️
-   PART 1
-   Video Slider + Photo Slider + Secret Love
-===========================================*/
+ ❤️ PART 1
+ VIDEO SLIDER
+=========================================== */
 
-
-/* ================= VIDEO SLIDER ================= */
 
 const videos = [
+
     "video.mp4"
+
 ];
+
 
 let videoIndex = 0;
 
-function showVideo() {
+
+
+function showVideo(){
 
     const video = document.getElementById("video");
 
-    if (!video) return;
+
+    if(!video) return;
+
 
     video.src = videos[videoIndex];
+
     video.load();
+
 }
 
-function nextVideo() {
+
+
+
+function nextVideo(){
+
 
     videoIndex++;
 
-    if (videoIndex >= videos.length) {
+
+    if(videoIndex >= videos.length){
+
         videoIndex = 0;
+
     }
 
+
     showVideo();
+
+
 }
 
-function prevVideo() {
+
+
+
+function prevVideo(){
+
 
     videoIndex--;
 
-    if (videoIndex < 0) {
+
+    if(videoIndex < 0){
+
         videoIndex = videos.length - 1;
+
     }
 
+
     showVideo();
+
+
 }
+ /* ===========================================
+ ❤️ PART 2
+ PHOTO SLIDER
+=========================================== */
 
-
-
-/* ================= PHOTO SLIDER ================= */
 
 const photos = [
 
@@ -63,213 +90,413 @@ const photos = [
 
 ];
 
+
 let photoIndex = 0;
 
-function showPhoto() {
+
+
+
+function showPhoto(){
+
 
     const photo = document.getElementById("photo");
 
-    if (!photo) return;
+
+    if(!photo) return;
+
+
 
     photo.src = photos[photoIndex];
+
+
 }
 
-function nextPhoto() {
+
+
+
+
+function nextPhoto(){
+
 
     photoIndex++;
 
-    if (photoIndex >= photos.length) {
+
+
+    if(photoIndex >= photos.length){
+
+
         photoIndex = 0;
+
+
     }
 
+
+
     showPhoto();
+
+
 }
 
-function prevPhoto() {
+
+
+
+
+function prevPhoto(){
+
 
     photoIndex--;
 
-    if (photoIndex < 0) {
+
+
+    if(photoIndex < 0){
+
+
         photoIndex = photos.length - 1;
+
+
     }
 
+
+
     showPhoto();
+
+
 }
 
 
 
-/* Auto Slide Every 5 Seconds */
 
-setInterval(() => {
+
+/* AUTO SLIDE EVERY 5 SECOND */
+
+
+setInterval(()=>{
+
 
     nextPhoto();
 
-}, 5000);
+
+},5000);
+ /* ===========================================
+ ❤️ PART 3
+ SECRET LOVE PASSWORD
+=========================================== */
+
+
+function openLove(){
+
+
+    const input = document.getElementById("pass1");
+
+
+    const message = document.getElementById("loveMsg");
+
+
+    const hint = document.getElementById("hint");
 
 
 
-/* ================= SECRET LOVE ================= */
+    if(!input || !message || !hint) return;
 
-function openLove() {
 
-    const password = document
-        .getElementById("pass1")
-        .value
+
+    const password = input.value
         .trim()
         .toLowerCase();
 
-    const message = document.getElementById("loveMsg");
-    const hint = document.getElementById("hint");
 
-    if (password === "jaan") {
+
+
+
+    if(password === "jaan"){
+
 
         message.classList.remove("hidden");
 
-        hint.innerHTML =
-            "💖 Welcome to my heart, my love ❤️";
+
+        hint.innerHTML = 
+        "💖 Welcome to my heart, my love ❤️";
+
+
 
     }
 
-    else {
+    else{
+
 
         hint.innerHTML =
-            "💡 Hint: What do you lovingly call your partner? ❤️";
+        "💡 Hint: What do you lovingly call your partner? ❤️";
+
 
     }
+
+
 
 }
-/* ===========================================
-   ❤️ PART 2
-   Love Letter + Gift Box + Floating Kisses
-===========================================*/
+ /* ===========================================
+ ❤️ PART 4
+ LOVE LETTER PASSWORD
+=========================================== */
 
 
-/* ================= LOVE LETTER ================= */
+function openLetter(){
 
-function openLetter() {
 
-    const password = document
-        .getElementById("pass2")
-        .value
-        .trim()
-        .toLowerCase();
+    const input = document.getElementById("pass2");
+
 
     const letter = document.getElementById("letter");
 
-    if (password === "18 april") {
+
+
+    if(!input || !letter) return;
+
+
+
+
+    const password = input.value
+        .trim()
+        .toLowerCase();
+
+
+
+
+
+    if(password === "18 april"){
+
 
         letter.classList.remove("hidden");
 
-    } else {
+
 
         letter.innerHTML = `
-        ❤️ Hint: Our Special Proposing Date ❤️
+
+        ❤️ My Love Letter ❤️
+
+        <br><br>
+
+        From the first day we met,
+        my life became more beautiful.
+
+        <br><br>
+
+        Thank you for being my happiness,
+        my smile and my forever person.
+
+        ❤️ I Love You ❤️
+
         `;
 
-        letter.classList.remove("hidden");
+
 
     }
 
+
+    else{
+
+
+        letter.classList.remove("hidden");
+
+
+        letter.innerHTML = `
+
+        💡 Hint:
+
+        Our Special Proposing Date ❤️
+
+        `;
+
+
+    }
+
+
+
 }
+/* ===========================================
+ ❤️ PART 5
+ GIFT BOX + FLOATING LOVE ANIMATION
+=========================================== */
 
 
 
 /* ================= GIFT BOX ================= */
 
-function openGift() {
+
+function openGift(){
+
 
     const box = document.querySelector(".gift-box");
 
-    const surprise =
-        document.getElementById("giftSurprise");
 
-    const title =
-        document.getElementById("giftTitle");
-
-    const text =
-        document.getElementById("giftText");
+    const surprise = document.getElementById("giftSurprise");
 
 
-    if (!box) return;
+    const title = document.getElementById("giftTitle");
 
-    if (box.classList.contains("open")) return;
+
+    const text = document.getElementById("giftText");
+
+
+
+    if(!box || !surprise) return;
+
+
+
+    // Already open
+
+    if(box.classList.contains("open")) return;
+
+
 
 
     box.classList.add("open");
 
 
-    setTimeout(() => {
-
-        if (title) title.style.display = "none";
-
-        if (text) text.style.display = "none";
-
-    }, 500);
 
 
-    setTimeout(() => {
+
+    setTimeout(()=>{
+
+
+        if(title)
+
+            title.style.display="none";
+
+
+
+        if(text)
+
+            text.style.display="none";
+
+
+
+    },500);
+
+
+
+
+
+
+    setTimeout(()=>{
+
 
         surprise.classList.remove("hidden");
 
+
         createGiftMagic();
 
-    }, 1200);
+
+
+    },1200);
+
+
+
 
 }
+
+
 
 
 
 /* ================= GIFT MAGIC ================= */
 
-function createGiftMagic() {
 
-    for (let i = 0; i < 25; i++) {
+function createGiftMagic(){
 
-        let rose = document.createElement("div");
 
-        rose.innerHTML =
-        Math.random() > 0.5 ? "🌹" : "❤️";
 
-        rose.style.position = "fixed";
+    for(let i=0;i<30;i++){
 
-        rose.style.left =
-            Math.random() * 100 + "%";
 
-        rose.style.bottom = "-80px";
 
-        rose.style.fontSize =
-            (25 + Math.random() * 20) + "px";
+        let item=document.createElement("div");
 
-        rose.style.zIndex = "9999";
 
-        rose.style.pointerEvents = "none";
 
-        rose.style.animation =
-            "kissMove 6s linear";
+        item.innerHTML = 
 
-        document.body.appendChild(rose);
+        Math.random()>0.5 ? "🌹" : "❤️";
 
-        setTimeout(() => {
 
-            rose.remove();
 
-        }, 6000);
+        item.style.position="fixed";
+
+
+
+        item.style.left =
+
+        Math.random()*100+"%";
+
+
+
+        item.style.bottom="-50px";
+
+
+
+        item.style.fontSize =
+
+        (25 + Math.random()*25)+"px";
+
+
+
+        item.style.zIndex="9999";
+
+
+
+        item.style.pointerEvents="none";
+
+
+
+        item.style.animation=
+
+        "kissMove 6s linear";
+
+
+
+        document.body.appendChild(item);
+
+
+
+
+
+        setTimeout(()=>{
+
+
+            item.remove();
+
+
+
+        },6000);
+
+
 
     }
+
 
 }
 
 
 
+
+
+
+
 /* ================= FLOATING KISSES ================= */
 
-function createKiss() {
 
-    let kiss = document.createElement("div");
+function createKiss(){
 
-    kiss.className = "kiss-float";
 
-    const emojis = [
+
+    let kiss=document.createElement("div");
+
+
+
+    kiss.className="kiss-float";
+
+
+
+    const emojis=[
 
         "💋",
         "❤️",
@@ -279,421 +506,758 @@ function createKiss() {
 
     ];
 
+
+
+
     kiss.innerHTML =
-        emojis[Math.floor(Math.random() * emojis.length)];
+
+    emojis[
+
+    Math.floor(Math.random()*emojis.length)
+
+    ];
+
+
+
 
     kiss.style.left =
-        Math.random() * 100 + "%";
+
+    Math.random()*100+"%";
+
+
+
 
     kiss.style.fontSize =
-        (25 + Math.random() * 20) + "px";
+
+    (25+Math.random()*20)+"px";
+
+
+
 
     kiss.style.animationDuration =
-        (5 + Math.random() * 4) + "s";
+
+    (5+Math.random()*4)+"s";
+
+
+
 
     document.body.appendChild(kiss);
 
-    setTimeout(() => {
+
+
+
+
+    setTimeout(()=>{
+
 
         kiss.remove();
 
-    }, 9000);
+
+
+    },9000);
+
+
 
 }
 
 
-/* Every 1.5 Second */
 
-setInterval(createKiss, 1500);
+
+
+/* CREATE FLOATING HEARTS */
+
+setInterval(()=>{
+
+
+    createKiss();
+
+
+
+},1500);
 /* ===========================================
-   ❤️ PART 3
-   LOVE MAP + SPIDERFY SETUP
-===========================================*/
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const mapElement = document.getElementById("loveMap");
-
-    if (!mapElement) return;
-
-    if (typeof L === "undefined") {
-        console.log("Leaflet not loaded");
-        return;
-    }
-
-    /* ================= MAP ================= */
-
-    const map = L.map("loveMap", {
-
-        zoomControl: true,
-        scrollWheelZoom: true
-
-    }).setView([32.76982, 74.81392], 15);
+ ❤️ PART 6
+ LOVE MAP + SPIDERFY
+=========================================== */
 
 
 
-    L.tileLayer(
-
-        "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-
-        {
-
-            maxZoom: 19,
-            attribution: "© OpenStreetMap"
-
-        }
-
-    ).addTo(map);
+document.addEventListener("DOMContentLoaded",()=>{
 
 
 
-    setTimeout(() => {
-
-        map.invalidateSize();
-
-    }, 500);
+const mapElement = document.getElementById("loveMap");
 
 
 
-    /* ================= HEART ICON ================= */
-
-    const heartIcon = L.divIcon({
-
-        className: "memory-marker",
-
-        html: `
-        <div style="
-            font-size:38px;
-            filter:drop-shadow(0 0 8px hotpink);
-        ">
-        ❤️
-        </div>
-        `,
-
-        iconSize: [40,40],
-
-        iconAnchor: [20,20]
-
-    });
+if(!mapElement) return;
 
 
 
-    /* ================= SPIDERFY ================= */
 
-    const oms = new OverlappingMarkerSpiderfier(map, {
+if(typeof L === "undefined"){
 
-        keepSpiderfied: true,
+console.log("Leaflet not loaded");
 
-        nearbyDistance: 25
+return;
 
-    });
-
+}
 
 
-    /* ================= MEMORIES ================= */
 
-    const memories = [
-        /* ================= MEMORIES ================= */
+if(typeof OverlappingMarkerSpiderfier === "undefined"){
 
-const memories = [
+console.log("Spiderfy library missing");
+
+return;
+
+}
+
+
+
+
+
+
+/* ================= MAP CREATE ================= */
+
+
+
+const map = L.map("loveMap",{
+
+zoomControl:true,
+
+scrollWheelZoom:true
+
+}).setView(
+
+[32.76982,74.81392],
+
+15
+
+);
+
+
+
+
+
+L.tileLayer(
+
+"https://tile.openstreetmap.org/{z}/{x}/{y}.png",
 
 {
-    lat:32.76982,
-    lng:74.81392,
 
-    title:"❤️ Our Love Story Began",
+maxZoom:19,
 
-    place:"YCET Jammu",
+attribution:"© OpenStreetMap"
 
-    date:"18 April 2020",
+}
 
-    photos:[
-        "1.jpeg",
-        "2.jpeg",
-        "3.jpeg"
-    ],
+).addTo(map);
 
-    message:`
-    This was the day our love story began. ❤️
-    We both knew there was something special between us,
-    but neither of us had the courage to say it.
 
-    I still remember your hairband...
-    I started playing with it just to find an excuse
-    to hold your hand.
 
-    That beautiful feeling is something
-    I'll never forget.
-    `
+
+
+
+
+/* ================= SPIDERFY ================= */
+
+
+
+const oms = new OverlappingMarkerSpiderfier(
+
+map,
+
+{
+
+keepSpiderfied:true,
+
+nearbyDistance:40
+
+}
+
+);
+
+
+
+
+
+
+
+/* ================= HEART ICON ================= */
+
+
+
+const heartIcon = L.divIcon({
+
+
+className:"heart-marker",
+
+
+html:`
+
+<div class="heart-pin">
+
+❤️
+
+</div>
+
+`,
+
+
+
+iconSize:[40,40],
+
+
+iconAnchor:[20,20]
+
+
+});
+
+
+
+
+
+
+
+
+
+/* ================= MEMORY DATA ================= */
+
+
+
+const memories=[
+
+
+
+{
+
+
+lat:32.76982,
+
+lng:74.81392,
+
+
+title:"❤️ Our Love Story Began",
+
+
+place:"YCET Jammu",
+
+
+date:"18 April 2020",
+
+
+
+photos:[
+
+"1.jpeg",
+
+"2.jpeg",
+
+"3.jpeg"
+
+],
+
+
+
+message:`
+
+This was the day our beautiful story started ❤️
+
+Forever with you.
+
+`
+
 },
 
+
+
+
+
+
 {
-    lat:32.76982,
-    lng:74.81392,
 
-    title:"❤️ Our First Meeting",
 
-    place:"YCET Jammu",
+lat:32.76982,
 
-    date:"First Day",
+lng:74.81392,
 
-    photos:[
-        "photo1.jpeg"
-    ],
 
-    message:`
-    This was our very first meeting.
+title:"❤️ First Meeting",
 
-    At that time,
-    we never imagined that one day
-    we would become each other's forever.
 
-    Today,
-    I can't imagine my life without you.
-    ❤️
-    `
+place:"YCET Jammu",
+
+
+
+photos:[
+
+"photo1.jpeg"
+
+],
+
+
+
+message:`
+
+Our first meeting.
+
+A memory that will stay forever ❤️
+
+`
+
 },
 
+
+
+
+
+
+
 {
-    lat:32.76982,
-    lng:74.81392,
 
-    title:"❤️ First Selfie",
 
-    place:"YCET Jammu",
+lat:32.76982,
 
-    photos:[
-        "selfie1.jpeg",
-        "selfie2.jpeg"
-    ],
+lng:74.81392,
 
-    message:`
-    Our first selfie together.
 
-    Looking at this picture
-    still makes me smile.
-    ❤️
-    `
+title:"❤️ First Selfie",
+
+
+place:"YCET Jammu",
+
+
+
+photos:[
+
+"selfie1.jpeg",
+
+"selfie2.jpeg"
+
+],
+
+
+
+message:`
+
+Our first selfie together ❤️
+
+`
+
 },
 
+
+
+
+
+
+
 {
-    lat:34.0159,
 
-    lng:75.3180,
 
-    title:"💕 Pahalgam",
+lat:34.0159,
 
-    place:"Pahalgam",
+lng:75.3180,
 
-    photos:[
-        "photo6.jpeg",
-        "photo7.jpeg"
-    ],
 
-    message:`
-    Every journey with you
-    becomes a beautiful memory.
+title:"💕 Pahalgam",
 
-    Forever with you.
-    ❤️
-    `
-};
+
+place:"Pahalgam",
+
+
+
+photos:[
+
+"photo6.jpeg",
+
+"photo7.jpeg"
+
+],
+
+
+
+message:`
+
+Every trip with you becomes magical ❤️
+
+`
+
+}
+
+
+
+];
+
+
+
+
+
+
+
+
+
 /* ================= CREATE MARKERS ================= */
 
-memories.forEach(memory => {
 
-    /* Create Photos */
 
-    let photoHTML = "";
-
-    memory.photos.forEach(photo => {
-
-        photoHTML += `
-        <div class="memory-slide">
-            <img src="${photo}" class="memory-photo">
-        </div>
-        `;
-
-    });
+memories.forEach(memory=>{
 
 
 
 
-    /* Popup HTML */
 
-    const popupHTML = `
+let images="";
 
-    <div class="popup">
 
-        <div class="memory-slider">
 
-            ${photoHTML}
+memory.photos.forEach(photo=>{
 
-        </div>
 
-        <h3>${memory.title}</h3>
+images += `
 
-        <p>📍 ${memory.place}</p>
 
-        ${memory.date ? `<p>📅 ${memory.date}</p>` : ""}
+<img src="${photo}" class="memory-photo">
 
-        <div class="popup-message">
 
-            ${memory.message}
+`;
 
-        </div>
 
-    </div>
-
-    `;
+});
 
 
 
 
-    /* Create Marker */
 
-    const marker = L.marker(
 
-        [memory.lat, memory.lng],
+let popupHTML = `
 
-        {
-            icon: heartIcon
-        }
 
-    );
+<div class="popup">
 
 
 
+<div class="memory-slider">
 
-    /* Add Popup */
 
-    marker.bindPopup(
+${images}
 
-        popupHTML,
 
-        {
-
-            maxWidth: 520,
-
-            minWidth: 420,
-
-            className: "custom-popup"
-
-        }
-
-    );
+</div>
 
 
 
 
-    /* Add Marker */
+<h3>
 
-    marker.addTo(map);
+${memory.title}
+
+</h3>
+
+
+
+<p>
+
+📍 ${memory.place}
+
+</p>
 
 
 
 
-    /* Spiderfy */
 
-    oms.addMarker(marker);
+${memory.date ?
+
+`<p>📅 ${memory.date}</p>`
+
+:""}
+
+
+
+
+<p>
+
+${memory.message}
+
+</p>
+
+
+
+</div>
+
+
+`;
+
+
+
+
+
+
+
+
+let marker = L.marker(
+
+
+[memory.lat,memory.lng],
+
+
+{
+
+icon:heartIcon
+
+}
+
+
+);
+
+
+
+
+
+
+marker.bindPopup(
+
+popupHTML,
+
+{
+
+maxWidth:500,
+
+className:"custom-popup"
+
+}
+
+);
+
+
+
+
+
+marker.addTo(map);
+
+
+
+
+
+/* ⭐ IMPORTANT FOR SPIDERFY */
+
+oms.addMarker(marker);
+
+
+
+
+});
+
+
+
+
+
+
+
+
+setTimeout(()=>{
+
+
+map.invalidateSize();
+
+
+},1000);
+
+
+
+
+
 
 });
 /* ===========================================
-   ❤️ PART 6
-   POPUP EVENTS + PHOTO SLIDER
-===========================================*/
+ ❤️ PART 7
+ POPUP PHOTO SLIDER
+=========================================== */
 
-map.on("popupopen", function (e) {
 
-    const popup = e.popup.getElement();
 
-    if (!popup) return;
+document.addEventListener("click", function(){
 
-    const slider = popup.querySelector(".memory-slider");
 
-    if (!slider) return;
+const sliders = document.querySelectorAll(".memory-slider");
 
-    let isDown = false;
-    let startX;
-    let scrollLeft;
 
-    slider.addEventListener("mousedown", (event) => {
 
-        isDown = true;
+sliders.forEach(slider=>{
 
-        slider.style.cursor = "grabbing";
 
-        startX = event.pageX - slider.offsetLeft;
 
-        scrollLeft = slider.scrollLeft;
+if(slider.dataset.ready) return;
 
-    });
 
-    slider.addEventListener("mouseleave", () => {
 
-        isDown = false;
+slider.dataset.ready="true";
 
-        slider.style.cursor = "grab";
 
-    });
 
-    slider.addEventListener("mouseup", () => {
+let isDown=false;
 
-        isDown = false;
+let startX;
 
-        slider.style.cursor = "grab";
+let scrollLeft;
 
-    });
 
-    slider.addEventListener("mousemove", (event) => {
 
-        if (!isDown) return;
 
-        event.preventDefault();
 
-        const x = event.pageX - slider.offsetLeft;
+slider.style.cursor="grab";
 
-        const walk = (x - startX) * 2;
 
-        slider.scrollLeft = scrollLeft - walk;
 
-    });
+
+
+
+slider.addEventListener("mousedown",(e)=>{
+
+
+isDown=true;
+
+
+slider.style.cursor="grabbing";
+
+
+startX = e.pageX - slider.offsetLeft;
+
+
+scrollLeft = slider.scrollLeft;
+
+
 
 });
 
 
-/* ================= MAP ANIMATION ================= */
 
-setTimeout(() => {
 
-    map.invalidateSize();
 
-}, 800);
+
+
+slider.addEventListener("mouseleave",()=>{
+
+
+isDown=false;
+
+
+slider.style.cursor="grab";
+
+
+});
+
+
+
+
+
+
+
+slider.addEventListener("mouseup",()=>{
+
+
+isDown=false;
+
+
+slider.style.cursor="grab";
+
+
+});
+
+
+
+
+
+
+
+
+slider.addEventListener("mousemove",(e)=>{
+
+
+if(!isDown) return;
+
+
+e.preventDefault();
+
+
+
+const x = e.pageX - slider.offsetLeft;
+
+
+
+const walk = (x-startX)*2;
+
+
+
+slider.scrollLeft = scrollLeft - walk;
+
+
+
+});
+
+
+
+
+
+});
+
+
 
 });
 /* ===========================================
-   ❤️ PART 7
-   MUSIC
-===========================================*/
+ ❤️ PART 8
+ MUSIC + PAGE LOAD
+=========================================== */
 
-window.addEventListener("click", () => {
+
+
+/* ================= MUSIC AUTO PLAY ================= */
+
+
+window.addEventListener("click",()=>{
+
 
     const music = document.getElementById("music");
 
-    if (!music) return;
 
-    music.play().catch(() => { });
 
-}, { once: true });
+    if(!music) return;
 
 
 
-/* ================= LOAD FIRST PHOTO ================= */
+    music.play().catch(()=>{});
 
-window.onload = () => {
+
+
+},{once:true});
+
+
+
+
+
+
+
+
+/* ================= PAGE LOAD ================= */
+
+
+
+window.addEventListener("load",()=>{
+
+
+
+    // First Photo Load
 
     showPhoto();
 
+
+
+
+    // First Video Load
+
     showVideo();
 
-};
+
+
+
+});
