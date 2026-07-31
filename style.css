@@ -1,3 +1,4 @@
+```css
 /* ================= BASIC SETTINGS ================= */
 
 *{
@@ -10,7 +11,8 @@
 
 body{
 
-    background:linear-gradient(135deg,
+    background:linear-gradient(
+    135deg,
     #8B0000,
     #C2185B,
     #FF1744,
@@ -22,56 +24,15 @@ body{
 
 }
 
-.memory-map{
-    padding:40px 20px;
-    text-align:center;
-}
 
-.memory-map h1{
-    color:#ff2e7a;
-    margin-bottom:10px;
-}
+/* ================= SECTIONS ================= */
 
-.memory-map p{
-    color:white;
-    margin-bottom:20px;
-}
-
-#loveMap{
-    width:100%;
-    height:550px;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 0 25px rgba(255,0,120,.4);
-}
-
-/* Popup */
-
-.popup{
-    text-align:center;
-}
-
-.popup img{
-    width:220px;
-    border-radius:15px;
-    margin-bottom:10px;
-}
-
-.popup h3{
-    color:#ff2e7a;
-}
-
-.popup p{
-    color:#444;
-    margin:5px;
-}
 section{
 
     padding:50px 20px;
     animation:fadeUp 1s ease;
 
 }
-
 
 
 @keyframes fadeUp{
@@ -92,35 +53,6 @@ to{
 
 /* ================= HEADINGS ================= */
 
-/* ================= VIDEO ================= */
-
-.slider video{
-
-    width:auto;
-    height:auto;
-
-    max-width:80vw;
-    max-height:80vh;
-
-    border-radius:35px;
-    border:5px solid white;
-
-    box-shadow:0 0 35px rgba(255,255,255,.8);
-
-    background:black;
-
-}
-
-@media(max-width:600px){
-
-    .slider video{
-
-        max-width:85vw;
-        max-height:60vh;
-
-    }
-
-}
 h1{
 
 font-size:45px;
@@ -139,7 +71,6 @@ text-shadow:
 0 0 20px #ff1e62;
 
 }
-
 
 to{
 
@@ -160,8 +91,6 @@ margin-bottom:20px;
 }
 
 
-
-
 p{
 
 font-size:18px;
@@ -176,78 +105,77 @@ line-height:1.7;
 /* ================= CARD ================= */
 
 
-/* ================= PHOTO SLIDER ================= */
-/* ================= CARD ================= */
-/* ================= CARD ================= */
-
 .card{
 
-    width:fit-content;
-    max-width:95%;
+width:fit-content;
 
-    margin:40px auto;
+max-width:95%;
 
-    padding:40px;
+margin:40px auto;
 
-    background:rgba(255,255,255,.15);
+padding:40px;
 
-    backdrop-filter:blur(12px);
+background:rgba(255,255,255,.15);
 
-    border-radius:35px;
+backdrop-filter:blur(12px);
 
-    box-shadow:
-    0 0 40px rgba(255,255,255,.5);
+border-radius:35px;
 
-    transition:.5s;
+box-shadow:
+0 0 40px rgba(255,255,255,.5);
+
+transition:.5s;
 
 }
+
 
 
 .card:hover{
 
-    transform:scale(1.03);
+transform:scale(1.03);
 
 }
 
 
 
-/* ================= PHOTO SLIDER ================= */
+
+
+/* ================= PHOTO & VIDEO SLIDER ================= */
+
 
 .slider{
 
-    display:flex;
+display:flex;
 
-    align-items:center;
+align-items:center;
 
-    justify-content:center;
+justify-content:center;
 
-    gap:25px;
+gap:25px;
 
-    margin-top:30px;
+margin-top:30px;
 
 }
 
 
-.slider img{
 
-    width:auto;
+.slider img,
+.slider video{
 
-    height:auto;
+max-width:80vw;
 
-    max-width:80vw;
+max-height:80vh;
 
-    max-height:80vh;
+object-fit:contain;
 
-    object-fit:contain;
+border-radius:35px;
 
-    border-radius:35px;
+border:5px solid white;
 
-    border:5px solid white;
+box-shadow:
+0 0 35px rgba(255,255,255,.8);
 
-    box-shadow:
-    0 0 35px rgba(255,255,255,.8);
-
-    animation:photoShow .8s ease;
+animation:photoShow .8s ease;
 
 }
 
@@ -258,7 +186,6 @@ line-height:1.7;
 from{
 
 opacity:0;
-
 transform:scale(.8);
 
 }
@@ -266,7 +193,6 @@ transform:scale(.8);
 to{
 
 opacity:1;
-
 transform:scale(1);
 
 }
@@ -277,13 +203,11 @@ transform:scale(1);
 
 
 
-/* Slider Arrows */
-
 .slider button{
 
-width:70px;
+width:60px;
 
-height:70px;
+height:60px;
 
 border-radius:50%;
 
@@ -293,38 +217,93 @@ color:white;
 
 border:none;
 
-font-size:45px;
-
-padding:0;
+font-size:35px;
 
 cursor:pointer;
 
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-box-shadow:
-
-0 0 30px white;
-
-transition:.3s;
+box-shadow:0 0 30px white;
 
 }
-
 
 
 
 .slider button:hover{
 
-transform:scale(1.2);
+transform:scale(1.15);
 
-background:#ff0055;
+}
+
+
+
+
+
+/* ================= MEMORY MAP ================= */
+
+
+.memory-map{
+
+padding:50px 20px;
+
+}
+
+
+
+#loveMap{
+
+width:100%;
+
+height:750px;
+
+border-radius:30px;
 
 box-shadow:
 
-0 0 50px white;
+0 0 40px rgba(255,0,120,.8);
+
+border:5px solid white;
+
+overflow:hidden;
+
+}
+
+
+
+/* Map Popup */
+
+
+.popup{
+
+text-align:center;
+
+}
+
+
+
+.popup img{
+
+width:250px;
+
+border-radius:20px;
+
+}
+
+
+
+.popup h3{
+
+color:#ff2e7a;
+
+font-size:22px;
+
+}
+
+
+
+.popup p{
+
+color:#444;
+
+font-size:15px;
 
 }
 
@@ -332,52 +311,7 @@ box-shadow:
 
 
 
-
-/* ================= MOBILE ================= */
-
-
-
-
-@media(max-width:600px){
-
-.card{
-
-    width:90%;
-    padding:20px;
-
-}
-
-
-.slider img{
-
-    max-width:85vw;
-    max-height:60vh;
-
-}
-
-.slider button{
-
-    width:45px;
-    height:45px;
-    font-size:25px;
-
-}
-
-}
-
-
-.slider button{
-
-width:50px;
-
-height:50px;
-
-font-size:25px;
-
-}
-
-
-}/* ================= BUTTON ================= */
+/* ================= BUTTON ================= */
 
 
 button{
@@ -429,7 +363,6 @@ font-size:16px;
 
 
 
-
 .hidden{
 
 display:none;
@@ -440,48 +373,7 @@ display:none;
 
 
 
-/* ================= GALLERY ================= */
-
-
-.gallery{
-
-display:flex;
-
-justify-content:center;
-
-gap:20px;
-
-flex-wrap:wrap;
-
-}
-
-
-
-.gallery img{
-
-    width:100%;
-    max-width:600px;
-    height:auto;
-    object-fit:contain;
-    border-radius:20px;
-    border:4px solid white;
-
-}
-
-
-
-
 /* ================= GIFT BOX ================= */
-
-
-.gift-area{
-
-position:relative;
-
-height:300px;
-
-}
-
 
 
 .gift-box{
@@ -510,9 +402,6 @@ transform:scale(1.1);
 
 
 
-/* Box */
-
-
 .gift-body{
 
 position:absolute;
@@ -535,15 +424,10 @@ justify-content:center;
 
 font-size:70px;
 
-box-shadow:
-
-0 0 30px white;
+box-shadow:0 0 30px white;
 
 }
 
-
-
-/* Lid */
 
 
 .gift-lid{
@@ -572,107 +456,19 @@ transform-origin:left bottom;
 
 
 
-/* Opening */
-
-
 .gift-box.open .gift-lid{
 
 transform:
-
 rotate(-50deg)
-
 translate(-30px,-20px);
 
 }
 
 
 
-
-/* Ribbon */
-
-
-.gift-body:before{
-
-content:"";
-
-position:absolute;
-
-height:120px;
-
-width:20px;
-
-background:gold;
-
-left:50%;
-
-transform:translateX(-50%);
-
-}
-
-
-.gift-body:after{
-
-content:"";
-
-position:absolute;
-
-height:20px;
-
-width:180px;
-
-background:gold;
-
-top:50px;
-
-}
-
-
-
-
-/* ================= SURPRISE AREA ================= */
-
-
-#giftSurprise{
-
-margin-top:20px;
-
-animation:showGift 1s ease;
-
-}
-
-
-
-@keyframes showGift{
-
-from{
-
-opacity:0;
-
-transform:scale(.5);
-
-}
-
-
-to{
-
-opacity:1;
-
-transform:scale(1);
-
-}
-
-}
-
-
-
-/* Ring */
-
-
 .ring{
 
 font-size:110px;
-
-margin:20px auto;
 
 animation:ringGlow 2s infinite alternate;
 
@@ -684,83 +480,19 @@ animation:ringGlow 2s infinite alternate;
 
 from{
 
-transform:scale(1);
-
 filter:drop-shadow(0 0 10px gold);
 
 }
 
-
 to{
 
-transform:scale(1.25);
+filter:drop-shadow(0 0 30px gold);
 
-filter:
-
-drop-shadow(0 0 30px gold);
+transform:scale(1.2);
 
 }
 
 }
-
-
-
-
-
-.quote{
-
-font-size:20px;
-
-max-width:650px;
-
-margin:auto;
-
-line-height:1.8;
-
-}
-
-
-
-
-
-/* ================= FLOATING HEARTS ================= */
-
-
-.heart{
-
-position:fixed;
-
-bottom:-50px;
-
-font-size:35px;
-
-z-index:999;
-
-animation:heartMove 8s linear;
-
-}
-
-
-@keyframes heartMove{
-
-from{
-
-transform:translateY(0);
-
-opacity:1;
-
-}
-
-to{
-
-transform:translateY(-120vh);
-
-opacity:0;
-
-}
-
-}
-
 
 
 
@@ -781,6 +513,7 @@ z-index:999;
 animation:kissMove 8s linear;
 
 }
+
 
 
 @keyframes kissMove{
@@ -805,48 +538,11 @@ opacity:0;
 
 
 
-/* ================= SPARKLES ================= */
-
-
-.sparkle{
-
-position:fixed;
-
-font-size:25px;
-
-animation:spark 2s forwards;
-
-}
-
-
-@keyframes spark{
-
-from{
-
-opacity:1;
-
-transform:scale(.5);
-
-}
-
-to{
-
-opacity:0;
-
-transform:translateY(-100px) scale(1.5);
-
-}
-
-}
-
-
-
-
-
-/* MOBILE */
+/* ================= MOBILE ================= */
 
 
 @media(max-width:600px){
+
 
 h1{
 
@@ -855,19 +551,46 @@ font-size:32px;
 }
 
 
-.gallery img{
-
-width:600px;
-
-height:700px;
-
-}
-
-
 .card{
+
+width:90%;
 
 padding:20px;
 
 }
 
+
+
+.slider img,
+.slider video{
+
+max-width:85vw;
+
+max-height:60vh;
+
 }
+
+
+
+.slider button{
+
+width:45px;
+
+height:45px;
+
+font-size:25px;
+
+}
+
+
+
+#loveMap{
+
+height:600px;
+
+}
+
+
+
+}
+```
