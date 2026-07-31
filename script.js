@@ -1,622 +1,699 @@
+/* ===========================================
+   ❤️ HAPPY BIRTHDAY LOVE WEBSITE ❤️
+   PART 1
+   Video Slider + Photo Slider + Secret Love
+===========================================*/
+
+
 /* ================= VIDEO SLIDER ================= */
 
-let videos = [
+const videos = [
     "video.mp4"
 ];
 
 let videoIndex = 0;
 
+function showVideo() {
 
-function showVideo(){
+    const video = document.getElementById("video");
 
-    let video = document.getElementById("video");
+    if (!video) return;
 
-    if(video){
-
-        video.src = videos[videoIndex];
-        video.load();
-
-    }
-
+    video.src = videos[videoIndex];
+    video.load();
 }
 
-
-
-function nextVideo(){
+function nextVideo() {
 
     videoIndex++;
 
-    if(videoIndex >= videos.length){
+    if (videoIndex >= videos.length) {
         videoIndex = 0;
     }
 
     showVideo();
-
 }
 
-
-
-function prevVideo(){
+function prevVideo() {
 
     videoIndex--;
 
-    if(videoIndex < 0){
+    if (videoIndex < 0) {
         videoIndex = videos.length - 1;
     }
 
     showVideo();
-
 }
-
-
 
 
 
 /* ================= PHOTO SLIDER ================= */
 
+const photos = [
 
-let photos = [
-
-"photo1.jpeg",
-"photo2.jpeg",
-"photo3.jpeg",
-"photo4.jpeg",
-"photo5.jpeg",
-"photo6.jpeg",
-"photo7.jpeg",
-"photo8.jpeg",
-"photo9.jpeg"
+    "photo1.jpeg",
+    "photo2.jpeg",
+    "photo3.jpeg",
+    "photo4.jpeg",
+    "photo5.jpeg",
+    "photo6.jpeg",
+    "photo7.jpeg",
+    "photo8.jpeg",
+    "photo9.jpeg"
 
 ];
 
+let photoIndex = 0;
 
-let index = 0;
+function showPhoto() {
 
+    const photo = document.getElementById("photo");
 
+    if (!photo) return;
 
-function showPhoto(){
-
-    let photo=document.getElementById("photo");
-
-    if(photo){
-
-        photo.src = photos[index];
-
-    }
-
+    photo.src = photos[photoIndex];
 }
 
+function nextPhoto() {
 
+    photoIndex++;
 
-function nextPhoto(){
-
-    index++;
-
-    if(index >= photos.length){
-        index = 0;
+    if (photoIndex >= photos.length) {
+        photoIndex = 0;
     }
 
     showPhoto();
-
 }
 
+function prevPhoto() {
 
+    photoIndex--;
 
-function prevPhoto(){
-
-    index--;
-
-    if(index < 0){
-        index = photos.length-1;
+    if (photoIndex < 0) {
+        photoIndex = photos.length - 1;
     }
 
     showPhoto();
-
 }
 
 
 
+/* Auto Slide Every 5 Seconds */
+
+setInterval(() => {
+
+    nextPhoto();
+
+}, 5000);
 
 
 
 /* ================= SECRET LOVE ================= */
 
+function openLove() {
 
-function openLove(){
+    const password = document
+        .getElementById("pass1")
+        .value
+        .trim()
+        .toLowerCase();
 
-let password =
-document.getElementById("pass1")
-.value
-.trim()
-.toLowerCase();
+    const message = document.getElementById("loveMsg");
+    const hint = document.getElementById("hint");
 
+    if (password === "jaan") {
 
-let message =
-document.getElementById("loveMsg");
+        message.classList.remove("hidden");
 
+        hint.innerHTML =
+            "💖 Welcome to my heart, my love ❤️";
 
-let hint =
-document.getElementById("hint");
+    }
 
+    else {
 
-if(password === "jaan"){
+        hint.innerHTML =
+            "💡 Hint: What do you lovingly call your partner? ❤️";
 
-message.classList.remove("hidden");
-
-hint.innerHTML =
-"💋 Welcome to my heart, my love ❤️";
-
-}
-
-else{
-
-hint.innerHTML =
-"Hint: What do you call your loved one? 😘";
+    }
 
 }
-
-}
-
-
-
-
-
+/* ===========================================
+   ❤️ PART 2
+   Love Letter + Gift Box + Floating Kisses
+===========================================*/
 
 
 /* ================= LOVE LETTER ================= */
 
+function openLetter() {
 
-function openLetter(){
+    const password = document
+        .getElementById("pass2")
+        .value
+        .trim()
+        .toLowerCase();
 
-let password =
-document.getElementById("pass2")
-.value
-.trim()
-.toLowerCase();
+    const letter = document.getElementById("letter");
 
+    if (password === "18 april") {
 
-let letter =
-document.getElementById("letter");
+        letter.classList.remove("hidden");
 
+    } else {
 
-if(password === "18 april"){
+        letter.innerHTML = `
+        ❤️ Hint: Our Special Proposing Date ❤️
+        `;
 
-letter.classList.remove("hidden");
+        letter.classList.remove("hidden");
 
-}
-
-else{
-
-letter.innerHTML =
-"Hint: Our special proposing date ❤️";
-
-letter.classList.remove("hidden");
+    }
 
 }
-
-}
-
-
-
-
-
 
 
 
 /* ================= GIFT BOX ================= */
 
+function openGift() {
 
-function openGift(){
+    const box = document.querySelector(".gift-box");
 
-let box=document.querySelector(".gift-box");
+    const surprise =
+        document.getElementById("giftSurprise");
 
-let surprise=document.getElementById("giftSurprise");
+    const title =
+        document.getElementById("giftTitle");
 
-let title=document.getElementById("giftTitle");
-
-let text=document.getElementById("giftText");
-
-
-if(!box) return;
-
-
-if(box.classList.contains("open")){
-    return;
-}
+    const text =
+        document.getElementById("giftText");
 
 
-box.classList.add("open");
+    if (!box) return;
+
+    if (box.classList.contains("open")) return;
 
 
-
-setTimeout(()=>{
-
-
-if(title){
-title.style.display="none";
-}
+    box.classList.add("open");
 
 
-if(text){
-text.style.display="none";
-}
+    setTimeout(() => {
+
+        if (title) title.style.display = "none";
+
+        if (text) text.style.display = "none";
+
+    }, 500);
 
 
-},500);
+    setTimeout(() => {
 
+        surprise.classList.remove("hidden");
 
+        createGiftMagic();
 
-
-setTimeout(()=>{
-
-
-if(surprise){
-
-surprise.classList.remove("hidden");
-
-}
-
-
-createGiftMagic();
-
-
-},1200);
-
+    }, 1200);
 
 }
 
 
 
+/* ================= GIFT MAGIC ================= */
 
+function createGiftMagic() {
 
-function createGiftMagic(){
+    for (let i = 0; i < 25; i++) {
 
+        let rose = document.createElement("div");
 
-for(let i=0;i<15;i++){
+        rose.innerHTML =
+        Math.random() > 0.5 ? "🌹" : "❤️";
 
+        rose.style.position = "fixed";
 
-let rose=document.createElement("div");
+        rose.style.left =
+            Math.random() * 100 + "%";
 
+        rose.style.bottom = "-80px";
 
-rose.innerHTML="🌹";
+        rose.style.fontSize =
+            (25 + Math.random() * 20) + "px";
 
+        rose.style.zIndex = "9999";
 
-rose.style.position="fixed";
+        rose.style.pointerEvents = "none";
 
-rose.style.bottom="-50px";
+        rose.style.animation =
+            "kissMove 6s linear";
 
-rose.style.left=Math.random()*100+"%";
+        document.body.appendChild(rose);
 
-rose.style.fontSize="35px";
+        setTimeout(() => {
 
-rose.style.zIndex="999";
+            rose.remove();
 
+        }, 6000);
 
-rose.style.animation=
-"kissMove 6s linear";
-
-
-
-document.body.appendChild(rose);
-
-
-
-setTimeout(()=>{
-
-rose.remove();
-
-},6000);
-
-
-}
-
+    }
 
 }
 
 
 
+/* ================= FLOATING KISSES ================= */
 
+function createKiss() {
 
+    let kiss = document.createElement("div");
 
+    kiss.className = "kiss-float";
 
-/* ================= FLOATING KISS ================= */
+    const emojis = [
 
+        "💋",
+        "❤️",
+        "💕",
+        "💖",
+        "🌹"
 
-function createKiss(){
+    ];
 
-let kiss=document.createElement("div");
+    kiss.innerHTML =
+        emojis[Math.floor(Math.random() * emojis.length)];
 
+    kiss.style.left =
+        Math.random() * 100 + "%";
 
-kiss.className="kiss-float";
+    kiss.style.fontSize =
+        (25 + Math.random() * 20) + "px";
 
+    kiss.style.animationDuration =
+        (5 + Math.random() * 4) + "s";
 
-kiss.innerHTML="💋";
+    document.body.appendChild(kiss);
 
+    setTimeout(() => {
 
-kiss.style.left =
-Math.random()*100+"%";
+        kiss.remove();
 
-
-kiss.style.animationDuration =
-(5+Math.random()*5)+"s";
-
-
-
-document.body.appendChild(kiss);
-
-
-
-setTimeout(()=>{
-
-kiss.remove();
-
-},9000);
-
-
-}
-
-
-setInterval(createKiss,1200);
-
-
-
-
-
-
-
-
-/* ================= SNAPCHAT STYLE LOVE MAP ================= */
-
-
-document.addEventListener("DOMContentLoaded",()=>{
-
-
-let mapElement =
-document.getElementById("loveMap");
-
-
-
-if(!mapElement){
-
-console.log("Map div missing");
-
-return;
+    }, 9000);
 
 }
 
 
+/* Every 1.5 Second */
 
-if(typeof L === "undefined"){
+setInterval(createKiss, 1500);
+/* ===========================================
+   ❤️ PART 3
+   LOVE MAP + SPIDERFY SETUP
+===========================================*/
 
-console.log("Leaflet not loaded");
+document.addEventListener("DOMContentLoaded", function () {
 
-return;
+    const mapElement = document.getElementById("loveMap");
 
-}
+    if (!mapElement) return;
 
+    if (typeof L === "undefined") {
+        console.log("Leaflet not loaded");
+        return;
+    }
 
+    /* ================= MAP ================= */
 
+    const map = L.map("loveMap", {
 
-let map =
-L.map("loveMap",
-{
+        zoomControl: true,
+        scrollWheelZoom: true
 
-scrollWheelZoom:true
-
-})
-.setView(
-[34.0837,74.7973],
-8
-);
-
-
-
-
-
-L.tileLayer(
-
-"https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-
-{
-
-maxZoom:19
-
-}
-
-).addTo(map);
+    }).setView([32.76982, 74.81392], 15);
 
 
 
+    L.tileLayer(
 
+        "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
 
-setTimeout(()=>{
+        {
 
-map.invalidateSize();
+            maxZoom: 19,
+            attribution: "© OpenStreetMap"
 
-},800);
+        }
 
-
-
-
-
-
-
-
-/* Heart Marker */
-
-let heartIcon = L.divIcon({
-
-className:"memory-marker",
-
-html:"❤️",
-
-iconSize:[45,45],
-
-iconAnchor:[22,22]
-
-});
+    ).addTo(map);
 
 
 
+    setTimeout(() => {
+
+        map.invalidateSize();
+
+    }, 500);
 
 
 
+    /* ================= HEART ICON ================= */
 
-let memories=[
+    const heartIcon = L.divIcon({
 
+        className: "memory-marker",
+
+        html: `
+        <div style="
+            font-size:38px;
+            filter:drop-shadow(0 0 8px hotpink);
+        ">
+        ❤️
+        </div>
+        `,
+
+        iconSize: [40,40],
+
+        iconAnchor: [20,20]
+
+    });
+
+
+
+    /* ================= SPIDERFY ================= */
+
+    const oms = new OverlappingMarkerSpiderfier(map, {
+
+        keepSpiderfied: true,
+
+        nearbyDistance: 25
+
+    });
+
+
+
+    /* ================= MEMORIES ================= */
+
+    const memories = [
+        /* ================= MEMORIES ================= */
+
+const memories = [
 
 {
+    lat:32.76982,
+    lng:74.81392,
 
-lat: 32.76982,
-lng: 74.81392,
+    title:"❤️ Our Love Story Began",
 
-title:"love story began❤️",
+    place:"YCET Jammu",
 
-place:"ycet",
+    date:"18 April 2020",
 
+    photos:[
+        "1.jpeg",
+        "2.jpeg",
+        "3.jpeg"
+    ],
 
-photos:[
+    message:`
+    This was the day our love story began. ❤️
+    We both knew there was something special between us,
+    but neither of us had the courage to say it.
 
-"1.jpeg",
-"2.jpeg",
-"3.jpeg"
+    I still remember your hairband...
+    I started playing with it just to find an excuse
+    to hold your hand.
 
-],
-
-message:
-'This was the day our love story began❤️.aapko yaad hai iss din hairband ar aapka haath..hairband ke saath khelne se bahane mai aake haath ke saath khel rhi thi ..ar aap bhi.ye vhi din hai jb hum dono ko lga ki hum ek dusre ke lie kuch feel kr rhe hai ....dono ke mnn mei hai kuch lekin bol nhi rhe.....'
-
+    That beautiful feeling is something
+    I'll never forget.
+    `
 },
 
-
-
-
 {
+    lat:32.76982,
+    lng:74.81392,
 
-lat: 32.76982,
-lng: 74.81392,
+    title:"❤️ Our First Meeting",
 
-title:"The Day We First Met❤️",
+    place:"YCET Jammu",
 
-place:"ycet",
+    date:"First Day",
 
+    photos:[
+        "photo1.jpeg"
+    ],
 
-photos:[
+    message:`
+    This was our very first meeting.
 
-"photo1.jpeg",
+    At that time,
+    we never imagined that one day
+    we would become each other's forever.
 
-],
-
-message:
-'ye humaari pehli mulakat..is din jb mille socha bhi nhi tha ki we became life partners in love, and we can no longer imagine our lives without each other. ❤️'
+    Today,
+    I can't imagine my life without you.
+    ❤️
+    `
 },
 
+{
+    lat:32.76982,
+    lng:74.81392,
 
+    title:"❤️ First Selfie",
 
+    place:"YCET Jammu",
 
+    photos:[
+        "selfie1.jpeg",
+        "selfie2.jpeg"
+    ],
 
+    message:`
+    Our first selfie together.
+
+    Looking at this picture
+    still makes me smile.
+    ❤️
+    `
+},
 
 {
+    lat:34.0159,
 
-lat:34.0159,
+    lng:75.3180,
 
-lng:75.3180,
+    title:"💕 Pahalgam",
 
-title:"💕 Forever",
+    place:"Pahalgam",
 
-place:"Pahalgam",
+    photos:[
+        "photo6.jpeg",
+        "photo7.jpeg"
+    ],
+
+    message:`
+    Every journey with you
+    becomes a beautiful memory.
+
+    Forever with you.
+    ❤️
+    `
+};
+/* ================= CREATE MARKERS ================= */
+
+memories.forEach(memory => {
+
+    /* Create Photos */
+
+    let photoHTML = "";
+
+    memory.photos.forEach(photo => {
+
+        photoHTML += `
+        <div class="memory-slide">
+            <img src="${photo}" class="memory-photo">
+        </div>
+        `;
+
+    });
 
 
 
-photos:[
 
-"photo6.jpeg",
-"photo7.jpeg"
+    /* Popup HTML */
 
-],
+    const popupHTML = `
 
-message:
-"Every journey with you is special ❤️"
+    <div class="popup">
 
-}
+        <div class="memory-slider">
 
+            ${photoHTML}
 
-];
+        </div>
 
+        <h3>${memory.title}</h3>
 
+        <p>📍 ${memory.place}</p>
 
+        ${memory.date ? `<p>📅 ${memory.date}</p>` : ""}
 
+        <div class="popup-message">
 
+            ${memory.message}
 
-memories.forEach(memory=>{
+        </div>
 
-
-
-let photoHTML = "";
-
-memory.photos.forEach(photo => {
-
-    photoHTML += `
-    <div class="memory-slide">
-        <img src="${photo}" class="memory-photo" loading="lazy">
     </div>
+
     `;
 
+
+
+
+    /* Create Marker */
+
+    const marker = L.marker(
+
+        [memory.lat, memory.lng],
+
+        {
+            icon: heartIcon
+        }
+
+    );
+
+
+
+
+    /* Add Popup */
+
+    marker.bindPopup(
+
+        popupHTML,
+
+        {
+
+            maxWidth: 520,
+
+            minWidth: 420,
+
+            className: "custom-popup"
+
+        }
+
+    );
+
+
+
+
+    /* Add Marker */
+
+    marker.addTo(map);
+
+
+
+
+    /* Spiderfy */
+
+    oms.addMarker(marker);
+
+});
+/* ===========================================
+   ❤️ PART 6
+   POPUP EVENTS + PHOTO SLIDER
+===========================================*/
+
+map.on("popupopen", function (e) {
+
+    const popup = e.popup.getElement();
+
+    if (!popup) return;
+
+    const slider = popup.querySelector(".memory-slider");
+
+    if (!slider) return;
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    slider.addEventListener("mousedown", (event) => {
+
+        isDown = true;
+
+        slider.style.cursor = "grabbing";
+
+        startX = event.pageX - slider.offsetLeft;
+
+        scrollLeft = slider.scrollLeft;
+
+    });
+
+    slider.addEventListener("mouseleave", () => {
+
+        isDown = false;
+
+        slider.style.cursor = "grab";
+
+    });
+
+    slider.addEventListener("mouseup", () => {
+
+        isDown = false;
+
+        slider.style.cursor = "grab";
+
+    });
+
+    slider.addEventListener("mousemove", (event) => {
+
+        if (!isDown) return;
+
+        event.preventDefault();
+
+        const x = event.pageX - slider.offsetLeft;
+
+        const walk = (x - startX) * 2;
+
+        slider.scrollLeft = scrollLeft - walk;
+
+    });
+
 });
 
-L.marker([memory.lat, memory.lng], {
-    icon: heartIcon
-})
-.addTo(map)
-.bindPopup(`
-<div class="popup">
 
-    <div class="memory-slider">
-        ${photoHTML}
-    </div>
+/* ================= MAP ANIMATION ================= */
 
-    <h3>${memory.title}</h3>
+setTimeout(() => {
 
-    <p>📍 ${memory.place}</p>
+    map.invalidateSize();
 
-    // <p>📅 ${memory.date}</p>
-
-    <div class="popup-message">
-        ${memory.message}
-    </div>
-
-</div>
-`)});
-
-
+}, 800);
 
 });
+/* ===========================================
+   ❤️ PART 7
+   MUSIC
+===========================================*/
+
+window.addEventListener("click", () => {
+
+    const music = document.getElementById("music");
+
+    if (!music) return;
+
+    music.play().catch(() => { });
+
+}, { once: true });
 
 
 
+/* ================= LOAD FIRST PHOTO ================= */
 
+window.onload = () => {
 
+    showPhoto();
 
+    showVideo();
 
-
-
-/* ================= MUSIC ================= */
-
-
-window.addEventListener("click",()=>{
-
-
-let music =
-document.getElementById("music");
-
-
-
-if(music){
-
-music.play()
-.catch(()=>{});
-
-}
-
-
-},{once:true});
+};
