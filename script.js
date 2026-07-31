@@ -843,11 +843,10 @@ ${memory.date ?
 
 : ""}
 
-<p>
 
 ${memory.message}
 
-</p>
+
 
 </div>
 
