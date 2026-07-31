@@ -754,9 +754,9 @@ document.addEventListener("DOMContentLoaded", () => {
             date:"18 April 2020",
 
             photos:[
-                "photo1.jpeg",
-                "photo2.jpeg",
-                "photo3.jpeg"
+                "1.jpeg",
+                "2.jpeg",
+                "3.jpeg"
             ],
 
             message:
