@@ -526,7 +526,7 @@ title:"💕 Forever",
 
 place:"Pahalgam",
 
-date:"20 May 2023",
+
 
 photos:[
 
