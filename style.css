@@ -1150,38 +1150,31 @@ input:focus{
 /* ===========================
    IMAGE SLIDER
 =========================== */
-
 .memory-slider{
 
+    width:100%;
+    height:320px;
+
     display:flex;
+    justify-content:center;
+    align-items:center;
 
     overflow:hidden;
 
-    position:relative;
+    background:#fff;
 
-    border-radius:18px;
+    border-radius:20px;
 
 }
-
-
-/* ===========================
-   POPUP IMAGE
-=========================== */
 
 .memory-slider img{
 
     width:100%;
+    height:100%;
 
-    height:260px;
-
-    object-fit:cover;
-
-    border-radius:18px;
-
-    transition:.4s;
+    object-fit:contain;
 
 }
-
 
 .memory-slider img:hover{
 
