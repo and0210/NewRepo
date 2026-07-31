@@ -800,5 +800,14 @@ button,
     height:auto;
     object-fit:contain;
 }
+.popup{
+    max-height:600px;
+    overflow-y:auto;
+}
 
+.popup p{
+    text-align:left;
+    line-height:1.8;
+    white-space:pre-line;
+}
 /* ================= THE END ================= */
