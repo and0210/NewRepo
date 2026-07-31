@@ -747,11 +747,11 @@ document.addEventListener("DOMContentLoaded", () => {
             lat:32.76982,
             lng:74.81392,
 
-            title:"❤️ Our Love Story",
+            title:"❤️ Our Love Story Began",
 
-            place:"YCET Jammu",
+            place:"YCET",
 
-            date:"18 April 2020",
+            // date:"18 April 2020",
 
             photos:[
                 "photo1.jpeg",
@@ -767,13 +767,12 @@ document.addEventListener("DOMContentLoaded", () => {
             lat:32.76982,
             lng:74.81392,
 
-            title:"💕 First Selfie",
+            title:"The Day We First Met💕",
 
-            place:"YCET Campus",
+            place:"YCET",
 
             photos:[
-                "photo4.jpeg",
-                "photo5.jpeg"
+                "photo1.jpeg"
             ],
 
             message:
@@ -838,11 +837,11 @@ ${images}
 
 </p>
 
-${memory.date ?
+// ${memory.date ?
 
-`<p>📅 ${memory.date}</p>`
+// `<p>📅 ${memory.date}</p>`
 
-: ""}
+// : ""}
 
 <p>
 
