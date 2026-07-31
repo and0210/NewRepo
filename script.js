@@ -1,55 +1,82 @@
-/* ================= SECRET LOVE MESSAGE ================= */
+```javascript
 /* ================= VIDEO SLIDER ================= */
 
 let videos = [
     "video.mp4"
-    
 ];
 
 let videoIndex = 0;
 
-function showVideo() {
-    const video = document.getElementById("video");
-    video.src = videos[videoIndex];
-    video.load();
+function showVideo(){
+
+    let video = document.getElementById("video");
+
+    if(video){
+        video.src = videos[videoIndex];
+        video.load();
+    }
+
 }
 
-function nextVideo() {
+
+function nextVideo(){
+
     videoIndex++;
 
-    if (videoIndex >= videos.length) {
+    if(videoIndex >= videos.length){
         videoIndex = 0;
     }
 
     showVideo();
+
 }
 
-function prevVideo() {
+
+function prevVideo(){
+
     videoIndex--;
 
-    if (videoIndex < 0) {
+    if(videoIndex < 0){
         videoIndex = videos.length - 1;
     }
 
     showVideo();
+
 }
+
+
+
+
+
+/* ================= PHOTO SLIDER ================= */
+
+
 let photos = [
     "photo1.jpeg",
     "photo2.jpeg",
     "photo3.jpeg",
     "photo4.jpeg",
     "photo5.jpeg",
-       "photo6.jpeg",
-       "photo7.jpeg",
-       "photo8.jpeg",
-       "photo9.jpeg",
+    "photo6.jpeg",
+    "photo7.jpeg",
+    "photo8.jpeg",
+    "photo9.jpeg"
 ];
+
 
 let index = 0;
 
+
 function showPhoto(){
-    document.getElementById("photo").src = photos[index];
+
+    let photo = document.getElementById("photo");
+
+    if(photo){
+        photo.src = photos[index];
+    }
+
 }
+
 
 
 function nextPhoto(){
@@ -65,6 +92,7 @@ function nextPhoto(){
 }
 
 
+
 function prevPhoto(){
 
     index--;
@@ -76,6 +104,14 @@ function prevPhoto(){
     showPhoto();
 
 }
+
+
+
+
+
+/* ================= SECRET LOVE ================= */
+
+
 function openLove(){
 
     let password =
@@ -113,11 +149,11 @@ function openLove(){
 
 
 
+
 /* ================= LOVE LETTER ================= */
 
 
 function openLetter(){
-
 
     let password =
     document.getElementById("pass2")
@@ -126,32 +162,24 @@ function openLetter(){
     .toLowerCase();
 
 
-
     let letter =
     document.getElementById("letter");
 
 
-
     if(password === "18 april"){
 
-
         letter.classList.remove("hidden");
-
 
     }
 
     else{
 
-
         letter.innerHTML =
         "Hint: Our special proposing date ❤️";
 
-
         letter.classList.remove("hidden");
 
-
     }
-
 
 }
 
@@ -159,11 +187,10 @@ function openLetter(){
 
 
 
-/* ================= VIRTUAL GIFT BOX ================= */
+/* ================= GIFT BOX ================= */
 
 
 function openGift(){
-
 
     let box =
     document.querySelector(".gift-box");
@@ -173,69 +200,47 @@ function openGift(){
     document.getElementById("giftSurprise");
 
 
-
     let heading =
-    document.querySelector(".gift-heading");
+    document.getElementById("giftTitle");
 
 
     let instruction =
-    document.querySelector(".gift-text");
+    document.getElementById("giftText");
 
-
-
-    // prevent double click
 
     if(box.classList.contains("open")){
-
         return;
-
     }
 
-
-
-    // open box
 
     box.classList.add("open");
 
 
-
-    // remove heading text
-
     setTimeout(()=>{
 
-
         if(heading){
-
             heading.style.display="none";
-
         }
 
 
         if(instruction){
-
             instruction.style.display="none";
-
         }
-
 
     },500);
 
 
 
-
-    // show ring and message
-
     setTimeout(()=>{
 
-
-        surprise.classList.remove("hidden");
-
+        if(surprise){
+            surprise.classList.remove("hidden");
+        }
 
         createGiftMagic();
 
 
     },1200);
-
 
 
 }
@@ -244,62 +249,9 @@ function openGift(){
 
 
 
-
-
-
-/* ================= GIFT MAGIC ================= */
-
-
 function createGiftMagic(){
 
-
-
-    // // sparkle effect
-
-
-    // for(let i=0;i<40;i++){
-
-
-    //     let sparkle =
-    //     document.createElement("div");
-
-
-    //     sparkle.className="sparkle";
-
-
-    //     sparkle.innerHTML="✨";
-
-
-    //     sparkle.style.left =
-    //     Math.random()*100+"%";
-
-
-    //     sparkle.style.top =
-    //     Math.random()*80+"%";
-
-
-
-    //     document.body.appendChild(sparkle);
-
-
-
-    //     setTimeout(()=>{
-
-    //         sparkle.remove();
-
-    //     },2000);
-
-
-    // }
-
-
-
-
-    // roses
-
-
     for(let i=0;i<15;i++){
-
 
         let rose =
         document.createElement("div");
@@ -310,9 +262,7 @@ function createGiftMagic(){
 
         rose.style.position="fixed";
 
-
         rose.style.bottom="-50px";
-
 
         rose.style.left =
         Math.random()*100+"%";
@@ -321,13 +271,11 @@ function createGiftMagic(){
         rose.style.fontSize="35px";
 
 
-        rose.style.animation=
+        rose.style.animation =
         "heartMove 6s linear";
 
 
-
         document.body.appendChild(rose);
-
 
 
         setTimeout(()=>{
@@ -336,9 +284,7 @@ function createGiftMagic(){
 
         },6000);
 
-
     }
-
 
 }
 
@@ -346,69 +292,10 @@ function createGiftMagic(){
 
 
 
-
-
-
-
-/* ================= FLOATING HEARTS ================= */
-
-
-// function createHeart(){
-
-
-//     let heart =
-//     document.createElement("div");
-
-
-//     heart.className="heart";
-
-
-//     heart.innerHTML="❤️";
-
-
-//     heart.style.left =
-//     Math.random()*100+"%";
-
-
-//     heart.style.animationDuration =
-//     (5+Math.random()*5)+"s";
-
-
-
-//     document.body.appendChild(heart);
-
-
-
-//     setTimeout(()=>{
-
-//         heart.remove();
-
-//     },9000);
-
-
-// }
-
-
-
-// setInterval(()=>{
-
-//     createHeart();
-
-// },800);
-
-
-
-
-
-
-
-
-
-/* ================= FLOATING KISSES ================= */
+/* ================= FLOATING KISS ================= */
 
 
 function createKiss(){
-
 
     let kiss =
     document.createElement("div");
@@ -428,9 +315,7 @@ function createKiss(){
     (5+Math.random()*5)+"s";
 
 
-
     document.body.appendChild(kiss);
-
 
 
     setTimeout(()=>{
@@ -439,18 +324,11 @@ function createKiss(){
 
     },9000);
 
-
 }
 
 
 
-setInterval(()=>{
-
-
-    createKiss();
-
-
-},1200);
+setInterval(createKiss,1200);
 
 
 
@@ -458,70 +336,117 @@ setInterval(()=>{
 
 
 
-// Create Map
+/* ================= MEMORY MAP ================= */
 
-document.addEventListener("DOMContentLoaded", function () {
 
-    var map = L.map("loveMap").setView([34.0837, 74.7973], 8);
+document.addEventListener("DOMContentLoaded",()=>{
 
-    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        maxZoom: 19
-    }).addTo(map);
 
-    const memories = [
+    let mapBox =
+    document.getElementById("loveMap");
+
+
+    if(mapBox && typeof L !== "undefined"){
+
+
+        let map =
+        L.map("loveMap")
+        .setView([34.0837,74.7973],8);
+
+
+
+        L.tileLayer(
+        "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+        {
+            maxZoom:19
+        })
+        .addTo(map);
+
+
+
+        let memories=[
+
+
         {
             lat:34.0837,
             lng:74.7973,
             title:"❤️ First Date",
-            date:"04 August 2021",
             place:"Dal Lake",
+            date:"04 August 2021",
             photo:"photo1.jpeg",
-            message:"The day our love story became even more beautiful ❤️"
+            message:"Our beautiful first memory ❤️"
         },
+
+
         {
             lat:34.2955,
             lng:74.6200,
             title:"❄️ Snow Memories",
-            date:"15 January 2022",
             place:"Gulmarg",
+            date:"15 January 2022",
             photo:"photo2.jpeg",
-            message:"You made even the snow feel warm ❤️"
+            message:"Every moment with you is special ❤️"
         },
+
+
         {
             lat:34.0159,
             lng:75.3180,
-            title:"💕 Together Forever",
-            date:"20 May 2023",
+            title:"💕 Forever",
             place:"Pahalgam",
+            date:"20 May 2023",
             photo:"photo3.jpeg",
-            message:"Every journey with you is my favorite ❤️"
+            message:"My favourite journey with you ❤️"
         }
-    ];
 
-    memories.forEach(memory => {
-        L.marker([memory.lat, memory.lng])
+
+        ];
+
+
+
+        memories.forEach(memory=>{
+
+
+            L.marker(
+            [memory.lat,memory.lng]
+            )
+
             .addTo(map)
+
             .bindPopup(`
-                <div class="popup">
-                    <img src="${memory.photo}" width="220">
-                    <h3>${memory.title}</h3>
-                    <p>📍 ${memory.place}</p>
-                    <p>📅 ${memory.date}</p>
-                    <p>${memory.message}</p>
-                </div>
+
+            <div class="popup">
+
+            <img src="${memory.photo}" width="220">
+
+            <h3>${memory.title}</h3>
+
+            <p>📍 ${memory.place}</p>
+
+            <p>📅 ${memory.date}</p>
+
+            <p>${memory.message}</p>
+
+            </div>
+
             `);
-    });
-
-});/* ================= RING SPARKLES ================= */
 
 
+        });
+
+
+    }
+
+
+});
 
 
 
 
 
 
-/* ================= MUSIC START ================= */
+
+/* ================= MUSIC ================= */
 
 
 window.addEventListener("click",()=>{
@@ -533,12 +458,11 @@ window.addEventListener("click",()=>{
 
     if(music){
 
-
         music.play()
         .catch(()=>{});
-
 
     }
 
 
 },{once:true});
+```
