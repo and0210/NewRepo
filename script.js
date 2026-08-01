@@ -2066,7 +2066,7 @@ class MafParticle{
 
 
 
- this.update = function(){
+ function(){
 
     this.alpha += this.speed;
 
