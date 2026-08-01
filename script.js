@@ -1517,3 +1517,18 @@ photo.style.zIndex="1";
 });
 
 });
+const notes=[
+
+"You are the brightest star in my universe ❤️",
+
+"You complete my heart 🌙",
+
+"My forever begins with you 💖",
+
+"Every heartbeat whispers your name ❤️",
+
+"You are my favorite miracle ✨",
+
+"I'll love you forever 💕"
+
+];
