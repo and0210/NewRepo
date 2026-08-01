@@ -2109,13 +2109,6 @@ margin-bottom:60px;
 
 }
 
-.solar-system{
-    width:650px;
-    height:650px;
-    margin:auto;
-    position:relative;
-}
-
 .moon{
 
 position:absolute;
@@ -2202,10 +2195,14 @@ transform:rotate(360deg);
 
 transform:
 rotate(calc(var(--i) * 60deg))
-translateY(-190px)
+translateY(-250px)
 rotate(calc(var(--i) * -60deg))
 scale(1.2);
 
-transition:.3s;
-
+}
+.orbit-container{
+    width:650px;
+    height:650px;
+    margin:auto;
+    position:relative;
 }
