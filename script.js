@@ -1537,3 +1537,296 @@ const loveNotes=[
 
 ];
 
+/* ===========================================
+   🌌 CONSTELLATION STARS
+=========================================== */
+
+const canvas = document.getElementById("sky");
+const ctx = canvas.getContext("2d");
+
+function resizeCanvas(){
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+}
+
+resizeCanvas();
+
+window.addEventListener("resize", resizeCanvas);
+
+const STAR_COUNT = 55;
+
+const stars = [];
+
+class Star{
+
+    constructor(){
+
+        this.x = Math.random()*canvas.width;
+        this.y = Math.random()*canvas.height;
+
+        this.r = Math.random()*2+2;
+
+        this.alpha = Math.random();
+
+        this.speed = (Math.random()*0.02)+0.01;
+
+        this.targetX = this.x;
+        this.targetY = this.y;
+
+    }
+
+    update(){
+
+        this.alpha += this.speed;
+
+        if(this.alpha>=1 || this.alpha<=0){
+
+            this.speed *= -1;
+
+        }
+
+        // Smooth movement
+        this.x += (this.targetX-this.x)*0.06;
+        this.y += (this.targetY-this.y)*0.06;
+
+    }
+
+    draw(){
+
+        ctx.beginPath();
+
+        ctx.arc(this.x,this.y,this.r,0,Math.PI*2);
+
+        ctx.fillStyle=`rgba(255,255,255,${this.alpha})`;
+
+        ctx.shadowBlur=18;
+        ctx.shadowColor="white";
+
+        ctx.fill();
+
+    }
+
+}
+
+for(let i=0;i<STAR_COUNT;i++){
+
+    stars.push(new Star());
+
+}
+function drawLines(){
+
+    ctx.lineWidth=1;
+
+    for(let i=0;i<stars.length;i++){
+
+        for(let j=i+1;j<stars.length;j++){
+
+            const dx=stars[i].x-stars[j].x;
+            const dy=stars[i].y-stars[j].y;
+
+            const dist=Math.sqrt(dx*dx+dy*dy);
+
+            if(dist<170){
+
+                ctx.beginPath();
+
+                ctx.moveTo(stars[i].x,stars[i].y);
+
+                ctx.lineTo(stars[j].x,stars[j].y);
+
+                ctx.strokeStyle=`rgba(255,255,255,${0.25-(dist/900)})`;
+
+                ctx.stroke();
+
+            }
+
+        }
+
+    }
+
+}
+function animate(){
+
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    drawLines();
+
+    stars.forEach(star=>{
+
+        star.update();
+        star.draw();
+
+    });
+
+    requestAnimationFrame(animate);
+
+}
+
+animate();
+canvas.addEventListener("click",(e)=>{
+
+    const rect=canvas.getBoundingClientRect();
+
+    const mx=e.clientX-rect.left;
+    const my=e.clientY-rect.top;
+
+    for(const star of stars){
+
+        const dx=mx-star.x;
+        const dy=my-star.y;
+
+        if(Math.sqrt(dx*dx+dy*dy)<18){
+
+            createHeart();
+
+            break;
+
+        }
+
+    }
+
+});
+/* ===========================================
+   ❤️ HEART ANIMATION
+=========================================== */
+
+let heartCreated = false;
+
+function heartPoint(t){
+
+    return{
+
+        x:16*Math.pow(Math.sin(t),3),
+
+        y:-(13*Math.cos(t)
+            -5*Math.cos(2*t)
+            -2*Math.cos(3*t)
+            -Math.cos(4*t))
+
+    };
+
+}
+
+function createHeart(){
+
+    if(heartCreated) return;
+
+    heartCreated=true;
+
+    const centerX = canvas.width/2;
+    const centerY = canvas.height/2;
+
+    const scale = 16;
+
+    stars.forEach((star,index)=>{
+
+        const t = (Math.PI*2/stars.length)*index;
+
+        const p = heartPoint(t);
+
+        star.targetX = centerX + p.x*scale;
+        star.targetY = centerY + p.y*scale;
+
+    });
+
+    setTimeout(()=>{
+
+        showPopup();
+
+    },2500);
+
+}
+let pulse = 1;
+let grow = true;
+
+function heartPulse(){
+
+    if(!heartCreated) return;
+
+    if(grow){
+
+        pulse += 0.002;
+
+        if(pulse>=1.08){
+
+            grow=false;
+
+        }
+
+    }else{
+
+        pulse -= 0.002;
+
+        if(pulse<=1){
+
+            grow=true;
+
+        }
+
+    }
+
+    const centerX = canvas.width/2;
+    const centerY = canvas.height/2;
+
+    stars.forEach((star,index)=>{
+
+        const t=(Math.PI*2/stars.length)*index;
+
+        const p=heartPoint(t);
+
+        star.targetX=centerX+p.x*16*pulse;
+        star.targetY=centerY+p.y*16*pulse;
+
+    });
+
+}
+function animate(){
+
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    drawLines();
+
+    heartPulse();
+
+    stars.forEach(star=>{
+
+        star.update();
+        star.draw();
+
+    });
+
+    requestAnimationFrame(animate);
+
+}
+
+animate();
+const popup = document.getElementById("popup");
+const noteText = document.getElementById("noteText");
+
+function showPopup(){
+
+    popup.style.display="flex";
+
+    noteText.innerHTML=
+
+    loveNotes[Math.floor(Math.random()*loveNotes.length)];
+
+}
+document
+.getElementById("closePopup")
+.onclick=function(){
+
+popup.style.display="none";
+
+}
+document
+.getElementById("nextNote")
+.onclick=function(){
+
+noteText.innerHTML=
+
+loveNotes[Math.floor(Math.random()*loveNotes.length)];
+
+}
