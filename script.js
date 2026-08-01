@@ -2760,11 +2760,13 @@ window.mafMoveToText = function(){
 
 setTimeout(()=>{
 
+    if(window.mafMoveToText){
 
-    mafMoveToText();
+        window.mafMoveToText();
 
+    }
 
-},5000);
+},3000);
 
 
 
