@@ -2066,20 +2066,15 @@ class MafParticle{
 
 
 
-    update(){
+ this.update = function(){
 
+    this.alpha += this.speed;
 
-        this.x +=
-        (this.tx-this.x)*this.speed;
-
-
-        this.y +=
-        (this.ty-this.y)*this.speed;
-
-
-
+    if(this.alpha > 1 || this.alpha < 0){
+        this.speed *= -1;
     }
 
+}
 
 
     draw(){
@@ -2565,140 +2560,64 @@ const mafCtx = mafCanvas.getContext("2d");
    CREATE TEXT POINTS
 =========================== */
 
-
 function mafCreateTextPoints(text){
 
+    const tempCanvas=document.createElement("canvas");
+    const tempCtx=tempCanvas.getContext("2d");
 
-    const tempCanvas =
-    document.createElement("canvas");
-
-
-    const tempCtx =
-    tempCanvas.getContext("2d");
+    tempCanvas.width=mafCanvas.width;
+    tempCanvas.height=mafCanvas.height;
 
 
-
-    tempCanvas.width =
-    mafCanvas.width;
-
-
-    tempCanvas.height =
-    mafCanvas.height;
-
-
-
-    tempCtx.clearRect(
-
-        0,
-
-        0,
-
-        tempCanvas.width,
-
-        tempCanvas.height
-
-    );
-
-
-
-    tempCtx.font =
-    "bold 180px Poppins";
-
-
-
+    tempCtx.font="bold 150px Arial";
     tempCtx.textAlign="center";
-
     tempCtx.textBaseline="middle";
-
-
 
     tempCtx.fillStyle="white";
 
 
-
     tempCtx.fillText(
-
         text,
-
         tempCanvas.width/2,
-
         tempCanvas.height/2
-
     );
 
 
-
-    const imageData =
-    tempCtx.getImageData(
-
+    const data=tempCtx.getImageData(
         0,
-
         0,
-
         tempCanvas.width,
-
         tempCanvas.height
-
     );
-
 
 
     const points=[];
 
 
+    for(let y=0;y<data.height;y+=5){
 
-    for(
-        let y=0;
-        y<tempCanvas.height;
-        y+=8
-    ){
+        for(let x=0;x<data.width;x+=5){
 
-
-        for(
-            let x=0;
-            x<tempCanvas.width;
-            x+=8
-        ){
+            let index=(y*data.width+x)*4;
 
 
-
-            const index =
-            (y*tempCanvas.width+x)*4;
-
-
-
-            if(imageData.data[index+3]>120){
-
-
+            if(data.data[index+3]>100){
 
                 points.push({
-
                     x:x,
-
                     y:y
-
                 });
-
-
 
             }
 
-
         }
-
 
     }
 
 
-
     return points;
 
-
-}
-
-
-
-/* ===========================
+}/* ===========================
    AFFEE TARGET POINTS
 =========================== */
 
