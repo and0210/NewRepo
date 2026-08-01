@@ -2008,7 +2008,7 @@ window.addEventListener("resize", mafResize);
 =========================== */
 
 
-const mafParticles = [];
+window.mafParticles = [];
 
 const mafParticleCount = 900;
 
@@ -2713,7 +2713,7 @@ mafCreateTextPoints("AFFEE");
 =========================== */
 
 
-function mafMoveToText(){
+window.mafMoveToText = function(){
 
 
     if(!window.mafParticles)
