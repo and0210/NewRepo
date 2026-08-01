@@ -2010,7 +2010,7 @@ window.addEventListener("resize", mafResize);
 
 window.mafParticles = [];
 
-const mafParticleCount = 900;
+const mafParticleCount = 350;
 
 
 const mafCenter = {
@@ -2066,7 +2066,7 @@ class MafParticle{
 
 
 
- function(){
+update(){
 
     this.alpha += this.speed;
 
@@ -2075,7 +2075,6 @@ class MafParticle{
     }
 
 }
-
 
     draw(){
 
