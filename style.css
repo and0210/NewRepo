@@ -1995,10 +1995,10 @@ text-shadow:
 
 .orbit-photo{
 
-    width:140px;
-    height:140px;
+    width:200px;
+    height:200px;
 
-    border-radius:50%;
+    border-radius:70%;
 
     object-fit:cover;
 
@@ -2070,8 +2070,8 @@ height:340px;
 
 .orbit-photo{
 
-width:140px;
-height:140px;
+width:200px;
+height:200px;
 
 }
 
@@ -2149,10 +2149,10 @@ animation:spin 20s linear infinite;
 
 position:absolute;
 
-width:140px;
-height:140px;
+width:200px;
+height:200px;
 
-margin:-45px;
+margin:-100px;
 
 border-radius:50%;
 object-fit:cover;
