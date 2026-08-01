@@ -2417,3 +2417,80 @@ font-size:16px;
 }
 
 }
+#constellation{
+
+    position:relative;
+
+    width:100%;
+
+    height:850px;
+
+    overflow:hidden;
+
+    background:#030712;
+
+}
+
+#sky{
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:100%;
+
+    display:block;
+
+}
+
+.constellation-title{
+
+    position:relative;
+
+    z-index:10;
+
+    text-align:center;
+
+    color:white;
+
+    padding-top:30px;
+
+}
+
+#popup{
+
+    position:absolute;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.7);
+
+    z-index:100;
+
+}
+
+.popup-card{
+
+    width:420px;
+
+    max-width:90%;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    background:white;
+
+    text-align:center;
+
+}
