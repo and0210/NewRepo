@@ -1903,3 +1903,191 @@ text-shadow:
 0 0 30px deeppink;
 
 }
+.lunar-gallery{
+
+    width:100%;
+    padding:80px 20px;
+    text-align:center;
+
+    background:#000814;
+
+    overflow:hidden;
+
+}
+
+.gallery-title{
+
+    color:white;
+
+    font-size:40px;
+
+    margin-bottom:60px;
+
+}
+
+.orbit-container{
+
+    width:500px;
+    height:500px;
+
+    margin:auto;
+
+    position:relative;
+
+}
+
+.moon{
+
+    width:120px;
+    height:120px;
+
+    border-radius:50%;
+
+    background:white;
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:60px;
+
+    box-shadow:
+    0 0 30px white,
+    0 0 80px white;
+
+    z-index:5;
+
+}
+
+.orbit{
+
+    width:100%;
+    height:100%;
+
+    position:absolute;
+
+    animation:rotateOrbit 20s linear infinite;
+
+}
+
+@keyframes rotateOrbit{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+.orbit-photo{
+
+    width:90px;
+    height:90px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    position:absolute;
+
+    border:4px solid white;
+
+    box-shadow:
+    0 0 15px hotpink;
+
+}
+
+/* Position */
+
+.p1{
+
+    left:50%;
+    top:0;
+
+    transform:translateX(-50%);
+
+}
+
+.p2{
+
+    right:20px;
+    top:100px;
+
+}
+
+.p3{
+
+    right:20px;
+    bottom:100px;
+
+}
+
+.p4{
+
+    left:50%;
+    bottom:0;
+
+    transform:translateX(-50%);
+
+}
+
+.p5{
+
+    left:20px;
+    bottom:100px;
+
+}
+
+.p6{
+
+    left:20px;
+    top:100px;
+
+}
+
+@media(max-width:600px){
+
+.orbit-container{
+
+width:340px;
+height:340px;
+
+}
+
+.orbit-photo{
+
+width:65px;
+height:65px;
+
+}
+
+.moon{
+
+width:90px;
+height:90px;
+
+font-size:45px;
+
+}
+
+.gallery-title{
+
+font-size:28px;
+
+}
+
+}
