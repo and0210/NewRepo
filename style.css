@@ -1995,8 +1995,8 @@ text-shadow:
 
 .orbit-photo{
 
-    width:90px;
-    height:90px;
+    width:140px;
+    height:140px;
 
     border-radius:50%;
 
@@ -2070,8 +2070,8 @@ height:340px;
 
 .orbit-photo{
 
-width:65px;
-height:65px;
+width:140px;
+height:140px;
 
 }
 
@@ -2149,8 +2149,8 @@ animation:spin 20s linear infinite;
 
 position:absolute;
 
-width:90px;
-height:90px;
+width:140px;
+height:140px;
 
 margin:-45px;
 
@@ -2170,7 +2170,7 @@ box-shadow:0 0 20px hotpink;
 
 transform:
 rotate(calc(var(--i) * 60deg))
-translateY(-300px)
+translateY(-220px)
 rotate(calc(var(--i) * -60deg));
 
 }
@@ -2195,7 +2195,7 @@ transform:rotate(360deg);
 
 transform:
 rotate(calc(var(--i) * 60deg))
-translateY(-300px)
+translateY(-220px)
 rotate(calc(var(--i) * -60deg))
 scale(1.2);
 
