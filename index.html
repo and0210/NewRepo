@@ -70,28 +70,37 @@ href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css">
 
 </section>
 
-<section class="constellation-section">
+<!-- ==============================
+     Constellation Love Notes
+================================ -->
 
-    <h2>✨ Constellation Love Notes ✨</h2>
+<section id="constellation">
 
-    <canvas id="constellationCanvas"></canvas>
+    <h2 class="constellation-title">
+        ✨ Constellation Love Notes ✨
+    </h2>
 
-    <div id="lovePopup" class="love-popup">
+    <canvas id="sky"></canvas>
 
-        <div class="popup-box">
+    <div id="popup">
 
-            <span class="closePopup">&times;</span>
+        <div class="popup-card">
 
-            <h3>❤️ My Love ❤️</h3>
+            <button id="closePopup">×</button>
 
-            <p id="popupText"></p>
+            <h2>❤️ Love Note ❤️</h2>
+
+            <p id="noteText"></p>
+
+            <button id="nextNote">
+                Next Note 💌
+            </button>
 
         </div>
 
     </div>
 
-</section>
-<section>
+</section><section>
 
 <div class="card">
 
