@@ -2170,7 +2170,7 @@ box-shadow:0 0 20px hotpink;
 
 transform:
 rotate(calc(var(--i) * 60deg))
-translateY(-250px)
+translateY(-300px)
 rotate(calc(var(--i) * -60deg));
 
 }
@@ -2195,7 +2195,7 @@ transform:rotate(360deg);
 
 transform:
 rotate(calc(var(--i) * 60deg))
-translateY(-250px)
+translateY(-300px)
 rotate(calc(var(--i) * -60deg))
 scale(1.2);
 
