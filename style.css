@@ -2096,7 +2096,8 @@ font-size:28px;
 background:#111;
 padding:80px 0;
 text-align:center;
-overflow:hidden;
+ min-height:750px;
+    overflow:visible;
 
 }
 
@@ -2109,12 +2110,10 @@ margin-bottom:60px;
 }
 
 .solar-system{
-
-position:relative;
-width:500px;
-height:500px;
-margin:auto;
-
+    width:650px;
+    height:650px;
+    margin:auto;
+    position:relative;
 }
 
 .moon{
@@ -2157,8 +2156,10 @@ animation:spin 20s linear infinite;
 
 position:absolute;
 
-width:80px;
-height:80px;
+width:90px;
+height:90px;
+
+margin:-45px;
 
 border-radius:50%;
 object-fit:cover;
@@ -2166,7 +2167,7 @@ object-fit:cover;
 left:50%;
 top:50%;
 
-margin:-40px;
+
 
 border:4px solid white;
 
@@ -2176,7 +2177,7 @@ box-shadow:0 0 20px hotpink;
 
 transform:
 rotate(calc(var(--i) * 60deg))
-translateY(-190px)
+translateY(-250px)
 rotate(calc(var(--i) * -60deg));
 
 }
