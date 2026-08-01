@@ -1536,7 +1536,7 @@ const loveNotes=[
 "You complete my universe ❤️"
 
 ];
-
+let showLines = true;
 /* ===========================================
    🌌 CONSTELLATION STARS
 =========================================== */
@@ -1616,7 +1616,7 @@ for(let i=0;i<STAR_COUNT;i++){
 
 }
 function drawLines(){
-
+if(!showLines) return;
     ctx.lineWidth=1;
 
     for(let i=0;i<stars.length;i++){
@@ -1713,32 +1713,35 @@ function createHeart(){
 
     if(heartCreated) return;
 
-    heartCreated=true;
+    heartCreated = true;
 
-    const centerX = canvas.width/2;
-    const centerY = canvas.height/2;
+    showLines = false;
+
+    const cx = canvas.width/2;
+    const cy = canvas.height/2;
 
     const scale = 16;
 
     stars.forEach((star,index)=>{
 
-        const t = (Math.PI*2/stars.length)*index;
+        const t = Math.PI*2/stars.length*index;
 
         const p = heartPoint(t);
 
-        star.targetX = centerX + p.x*scale;
-        star.targetY = centerY + p.y*scale;
+        star.targetX = cx + p.x*scale;
+        star.targetY = cy + p.y*scale;
 
     });
 
     setTimeout(()=>{
 
+        createSparkles();
+
         showPopup();
 
-    },2500);
+    },2200);
 
-}
-let pulse = 1;
+}let pulse = 1;
 let grow = true;
 
 function heartPulse(){
@@ -1797,6 +1800,19 @@ function animate(){
 
     });
 
+    for(let i=sparkles.length-1;i>=0;i--){
+
+        sparkles[i].update();
+        sparkles[i].draw();
+
+        if(sparkles[i].life<=0){
+
+            sparkles.splice(i,1);
+
+        }
+
+    }
+
     requestAnimationFrame(animate);
 
 }
@@ -1830,3 +1846,87 @@ noteText.innerHTML=
 loveNotes[Math.floor(Math.random()*loveNotes.length)];
 
 }
+const sparkles=[];
+
+class Sparkle{
+
+    constructor(x,y){
+
+        this.x=x;
+        this.y=y;
+
+        this.dx=(Math.random()-0.5)*6;
+        this.dy=(Math.random()-0.5)*6;
+
+        this.life=100;
+
+        this.size=Math.random()*4+2;
+
+    }
+
+    update(){
+
+        this.x+=this.dx;
+        this.y+=this.dy;
+
+        this.life--;
+
+    }
+
+    draw(){
+
+        ctx.beginPath();
+
+        ctx.arc(this.x,this.y,this.size,0,Math.PI*2);
+
+        ctx.fillStyle=
+        "rgba(255,192,203,"+(this.life/100)+")";
+
+        ctx.fill();
+
+    }
+
+}
+function createSparkles(){
+
+    stars.forEach(star=>{
+
+        for(let i=0;i<3;i++){
+
+            sparkles.push(
+
+                new Sparkle(
+                    star.x,
+                    star.y
+                )
+
+            );
+
+        }
+
+    });
+
+}
+function shootingStar(){
+
+    ctx.beginPath();
+
+    ctx.moveTo(
+        Math.random()*canvas.width,
+        Math.random()*200
+    );
+
+    ctx.lineTo(
+        Math.random()*canvas.width,
+        Math.random()*200+80
+    );
+
+    ctx.strokeStyle="white";
+
+    ctx.lineWidth=2;
+
+    ctx.stroke();
+
+}
+
+setInterval(shootingStar,5000);
