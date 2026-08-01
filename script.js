@@ -2202,7 +2202,7 @@ function mafAnimate(){
     mafParticles.forEach(p=>{
 
 
-        p.update();
+     
 
         p.draw();
 
