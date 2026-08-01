@@ -1496,3 +1496,24 @@ themeBtn.onclick=()=>{
     ?"☀️":"🌙";
 
 };
+// Lunar Orbit Gallery
+
+const orbitPhotos = document.querySelectorAll(".orbit-photo");
+
+orbitPhotos.forEach(photo=>{
+
+photo.addEventListener("mouseenter",()=>{
+
+photo.style.transform += " scale(1.2)";
+photo.style.zIndex="20";
+
+});
+
+photo.addEventListener("mouseleave",()=>{
+
+photo.style.transform=photo.style.transform.replace(" scale(1.2)","");
+photo.style.zIndex="1";
+
+});
+
+});
