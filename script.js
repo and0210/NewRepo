@@ -842,39 +842,9 @@ document.addEventListener("DOMContentLoaded", () => {
             
 "Just another day with you, but somehow it became another memory I'll always cherish ❤️.iss din 4 months hgye thei hummare rltn ko ar humnei socha ki hum millenge..fr hum mille aapne mujhe pick kia..hum subway gye...vha jo order kia vo humnei toh khaya nhi...bs paise ujadte rhe shrm ki vjh se...ar us din aapne mujhe lips pe kiss kia jiske baad mai rone lg gyi..ar aapka muh kaddu jaisa hogya🤣.fr uske baad humnei bohut saare hugs kie...tb milna hummare lie kitna muskil hota tha ..tha kya hai..pr hum khatron ke khiladi thei🤣🤣.."
 },
-        {
-    lat: 32.70497,
-    lng: 74.87267,
+      
 
-    title: "Hashtag Foods 🍔❤️",
 
-    place: "Hashtag",
-        photos:[
-                "7.jpeg",
-                "8.jpeg"
-            ],
-
-            message: "ye aapka pehla bday mere saath...vo  tasty pasta jo humnei waste kia...hr ldki ke lie uske partner ka bday zaida special hota uske bday se...vo uss din ko bohut khass bnaan chhati hai...humamre kpde khud match hoajte thei baar baar...bohut achi memories hai iss din ki jo humehsa humamre saath rhengi "
-            
-
-},
-
-           {
-    lat: 32.70542,
-    lng: 74.87323,
-
-    title: "Subway Date 🥪❤️",
-
-    place: "Subway",
-        photos:[
-                "5.jpeg",
-                "6.jpeg"
-            ],
-
-            message:
-            
-"Just another day with you, but somehow it became another memory I'll always cherish ❤️.iss din 4 months hgye thei hummare rltn ko ar humnei socha ki hum millenge..fr hum mille aapne mujhe pick kia..hum subway gye...vha jo order kia vo humnei toh khaya nhi...bs paise ujadte rhe shrm ki vjh se...ar us din aapne mujhe lips pe kiss kia jiske baad mai rone lg gyi..ar aapka muh kaddu jaisa hogya🤣.fr uske baad humnei bohut saare hugs kie...tb milna hummare lie kitna muskil hota tha ..tha kya hai..pr hum khatron ke khiladi thei🤣🤣.."
-},
         {
     lat: 32.70497,
     lng: 74.87267,
