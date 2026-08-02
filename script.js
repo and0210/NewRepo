@@ -859,7 +859,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
 },
 
+{
+    lat: 32.72072,
+    lng: 74.87609,
 
+    title: "❤️ My B'day",
+
+    place: "Smugglers, Bahu Plaza",
+
+    
+
+    photos: [
+        "10.jpeg",
+        "11.jpeg",
+        "12.jpeg"
+    ],
+
+    message: "A day full of laughter, delicious food, and beautiful memories together. ❤️
+       ye last din jb hum last baar bahu plaza mille thei ...iss din aapne mujhe apne haatho se pasta khilaya tha...maine aapko first tym lip kiss ki thi...aapne chlaki se eyes bnd ki taaki mai lip kiss kru❤️❤️❤️❤️
+   kitni prblms chl rhi thi ghr pe iss din ..lekin vo tym jb mai aapke satah thi mai sb bhul gyi thi....aap kehte ho na ki mai aapke gift ki kdr nhi krti ..lekin iss din jb aaone mujhe apne haatho se chain pehnayi thi vo feeling hi alg....maine jb vo chain ghr laayi maine msbhaal di ki mai ye nhi pehnungi isko smbhalal kr rhungi humesha...pr vo ho nhi paaya...pr mere lie sch mei vo bohut khass thi..isliye nhi ki usmei paise lge..balki isliye ki tune mujhe di...ar khud soch smjh ke mere lie gift laaya surprise dia mujhe..
+       "
+},
     ];
 
     const bounds = [];
