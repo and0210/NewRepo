@@ -2751,7 +2751,7 @@ function animate(){
 
 
 }
-animate();
+ requestAnimationFrame(animate);
 
 })();
 /* =====================================================
