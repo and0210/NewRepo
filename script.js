@@ -2071,7 +2071,7 @@ window.addEventListener("resize", resize);
 
 const moon = {
     x: () => canvas.width/2,
-    y: () => canvas.height/2 - 80,
+    y: () => canvas.height/2 - 40,
     radius: 70
 };
 const particles = [];
