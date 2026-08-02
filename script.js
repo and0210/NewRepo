@@ -2075,7 +2075,7 @@ const moon = {
     radius: 70
 };
 const particles = [];
-const PARTICLE_COUNT = 900;
+const PARTICLE_COUNT = 1500;
 
 /* ===========================
    PARTICLE
@@ -2312,7 +2312,7 @@ function createTextPoints(text){
     tctx.fillStyle="white";
     tctx.textAlign="center";
     tctx.textBaseline="middle";
-    tctx.font="bold 170px Poppins";
+    tctx.font="900 170px Poppins, Arial, sans-serif";
 
     tctx.fillText(
         text,
@@ -2419,5 +2419,112 @@ setInterval(()=>{
     }
 
 },5000);
+
+})();
+/* =====================================================
+   🌙 PART 3
+   MOVE PARTICLES TO AFFEE
+===================================================== */
+
+(() => {
+
+const mafCanvas = document.getElementById("mafCanvas");
+if(!mafCanvas) return;
+
+/* ===========================
+   CREATE TEXT POINTS
+=========================== */
+
+function mafCreateTextPoints(text){
+
+    const tempCanvas = document.createElement("canvas");
+    const tempCtx = tempCanvas.getContext("2d");
+
+    tempCanvas.width = mafCanvas.width;
+    tempCanvas.height = mafCanvas.height;
+
+    tempCtx.clearRect(0,0,tempCanvas.width,tempCanvas.height);
+
+    tempCtx.fillStyle = "#ffffff";
+    tempCtx.textAlign = "center";
+    tempCtx.textBaseline = "middle";
+
+    tempCtx.font = "900 180px Arial";
+
+    // Moon ke neeche text
+    tempCtx.fillText(
+        text,
+        tempCanvas.width/2,
+        tempCanvas.height/2 + 90
+    );
+
+    const img = tempCtx.getImageData(
+        0,
+        0,
+        tempCanvas.width,
+        tempCanvas.height
+    );
+
+    const points = [];
+
+    // Dense sampling
+    for(let y=0; y<img.height; y+=3){
+
+        for(let x=0; x<img.width; x+=3){
+
+            const i = (y*img.width+x)*4;
+
+            if(img.data[i+3] > 150){
+
+                points.push({
+                    x,
+                    y
+                });
+
+            }
+
+        }
+
+    }
+
+    return points;
+
+}
+
+/* ===========================
+   TEXT POINTS
+=========================== */
+
+const mafTextPoints = mafCreateTextPoints("AFFEE");
+
+/* ===========================
+   MOVE PARTICLES
+=========================== */
+
+window.mafMoveToText = function(){
+
+    if(!window.mafParticles) return;
+
+    mafParticles.forEach((p,index)=>{
+
+        const point =
+        mafTextPoints[index % mafTextPoints.length];
+
+        p.tx = point.x;
+        p.ty = point.y;
+
+    });
+
+};
+
+/* ===========================
+   START AFTER 4 SEC
+=========================== */
+
+setTimeout(()=>{
+
+    window.mafMoveToText();
+
+},4000);
 
 })();
