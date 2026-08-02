@@ -783,16 +783,16 @@ document.addEventListener("DOMContentLoaded", () => {
             lat:32.76982,
             lng:74.81392,
 
-            title:"💕",
+            title:"The Day You Became My Safe Place💕",
 
             place:"YCET",
 
             photos:[
-                "8.jpeg"
+                "9.jpeg"
             ],
 
             message:
-            " ❤️"
+            "26 march...jiss din humm shi mei coneect hue..humari souls...first tym iss din humeni ek dusre ko hug kia...aapko pta jb hum class se niklne lge thei end mei...ar aapne apni baju khol kr mujhe bola hug kr tb maine kuch nhi socha mai khuskheenchi hui aapke pass aagyi jaise mujhe ar kuch chaiye hi nhiiske ilava...vo sukoon kuch lag hi tha....is din aapne mujeh first kiss bhi ki..jiske baad mai dr gyi....mujhe kuch smjh nhi aarh tha ki kyu mai aapke saath baithi hu...pr mnn bhi nhi kr thaa aapse dur jaane ka...mnn kr rha tha bs aise hi aapki baho mei baithi rhu... ❤️"
         },
         {
             lat:32.76982,
