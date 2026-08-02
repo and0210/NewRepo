@@ -2071,10 +2071,9 @@ window.addEventListener("resize", resize);
 
 const moon = {
     x: () => canvas.width/2,
-    y: () => canvas.height/2,
+    y: () => canvas.height/2 - 40,
     radius: 70
 };
-
 const particles = [];
 const PARTICLE_COUNT = 900;
 
@@ -2189,67 +2188,67 @@ moonParticles();
 
 function drawMoon(){
 
-    const glow =
-    ctx.createRadialGradient(
+    const x = moon.x();
+    const y = moon.y();
 
-        moon.x(),
-        moon.y(),
-        10,
+    /* Glow */
 
-        moon.x(),
-        moon.y(),
-        170
-
+    const glow = ctx.createRadialGradient(
+        x, y, 60,
+        x, y, 180
     );
 
-    glow.addColorStop(
-        0,
-        "rgba(255,255,255,0.9)"
-    );
-
-    glow.addColorStop(
-        0.3,
-        "rgba(255,255,255,0.35)"
-    );
-
-    glow.addColorStop(
-        1,
-        "rgba(255,255,255,0)"
-    );
+    glow.addColorStop(0,"rgba(255,255,255,0.75)");
+    glow.addColorStop(0.35,"rgba(255,255,255,0.25)");
+    glow.addColorStop(1,"rgba(255,255,255,0)");
 
     ctx.beginPath();
-
     ctx.fillStyle = glow;
-
-    ctx.arc(
-        moon.x(),
-        moon.y(),
-        170,
-        0,
-        Math.PI*2
-    );
-
+    ctx.arc(x,y,180,0,Math.PI*2);
     ctx.fill();
 
+    /* Moon */
+
+    ctx.save();
+
     ctx.beginPath();
+    ctx.arc(x,y,70,0,Math.PI*2);
+    ctx.closePath();
 
-    ctx.arc(
-        moon.x(),
-        moon.y(),
-        moon.radius,
-        0,
-        Math.PI*2
-    );
+    ctx.fillStyle="#fafafa";
 
-    ctx.fillStyle="#fff";
-
-    ctx.shadowBlur=60;
+    ctx.shadowBlur=40;
     ctx.shadowColor="white";
 
     ctx.fill();
 
-}
+    ctx.restore();
 
+    /* Craters */
+
+    ctx.fillStyle="rgba(220,220,220,0.55)";
+
+    [
+        [-22,-18,8],
+        [18,-10,6],
+        [-8,18,10],
+        [20,20,5],
+        [-25,22,6]
+    ].forEach(c=>{
+
+        ctx.beginPath();
+        ctx.arc(
+            x+c[0],
+            y+c[1],
+            c[2],
+            0,
+            Math.PI*2
+        );
+        ctx.fill();
+
+    });
+
+}
 /* ===========================
    MAIN LOOP
 =========================== */
