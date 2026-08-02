@@ -1293,7 +1293,7 @@ input:focus{
 
 .popup-message{
 
-    max-height:180px;
+    max-height:300px;
 
     overflow-y:auto;
 
@@ -1349,7 +1349,7 @@ width:270px !important;
 
 .memory-slider img{
 
-height:400px;
+height:300px;
 
 }
 
@@ -2789,7 +2789,7 @@ font-size:24px;
 
 .popup-message{
 
-    height:250px;
+    height:400px;
 
     overflow-y:scroll;
 
