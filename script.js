@@ -2283,3 +2283,141 @@ function animate(){
 animate();
 
 })();
+/* =====================================================
+   🌙 PART 2
+   MOON → AFFEE FORMATION
+===================================================== */
+
+(() => {
+
+if(!window.mafParticles) return;
+
+const canvas = window.mafCanvas;
+const ctx = window.mafCtx;
+const moon = window.mafMoon;
+const particles = window.mafParticles;
+
+/* ===========================
+   CREATE TEXT POINTS
+=========================== */
+
+function createTextPoints(text){
+
+    const temp=document.createElement("canvas");
+    temp.width=canvas.width;
+    temp.height=canvas.height;
+
+    const tctx=temp.getContext("2d");
+
+    tctx.fillStyle="white";
+    tctx.textAlign="center";
+    tctx.textBaseline="middle";
+    tctx.font="bold 170px Poppins";
+
+    tctx.fillText(
+        text,
+        canvas.width/2,
+        canvas.height/2+170
+    );
+
+    const img=tctx.getImageData(
+        0,
+        0,
+        temp.width,
+        temp.height
+    );
+
+    const pts=[];
+
+    for(let y=0;y<img.height;y+=4){
+
+        for(let x=0;x<img.width;x+=4){
+
+            const index=(y*img.width+x)*4;
+
+            if(img.data[index+3]>120){
+
+                pts.push({
+                    x,
+                    y
+                });
+
+            }
+
+        }
+
+    }
+
+    return pts;
+
+}
+
+const affeePoints=createTextPoints("AFFEE");
+
+/* ===========================
+   MOVE TO TEXT
+=========================== */
+
+window.mafMoveToAFFEE=function(){
+
+    particles.forEach((p,i)=>{
+
+        const point=
+        affeePoints[
+            i%affeePoints.length
+        ];
+
+        p.tx=point.x;
+        p.ty=point.y;
+
+    });
+
+};
+
+/* ===========================
+   RETURN TO MOON
+=========================== */
+
+window.mafBackToMoon=function(){
+
+    particles.forEach(p=>{
+
+        const angle=Math.random()*Math.PI*2;
+
+        const r=25+Math.random()*45;
+
+        p.tx=
+        moon.x()+
+        Math.cos(angle)*r;
+
+        p.ty=
+        moon.y()+
+        Math.sin(angle)*r;
+
+    });
+
+};
+
+/* ===========================
+   LOOP
+=========================== */
+
+let affee=false;
+
+setInterval(()=>{
+
+    affee=!affee;
+
+    if(affee){
+
+        mafMoveToAFFEE();
+
+    }else{
+
+        mafBackToMoon();
+
+    }
+
+},5000);
+
+})();
