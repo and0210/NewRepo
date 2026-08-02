@@ -2600,9 +2600,13 @@ pointer-events:none;
 
     position:absolute;
 
-    width:100%;
+    left:50%;
 
-    bottom:60px;
+    top:62%;
+
+    transform:translateX(-50%);
+
+    width:100%;
 
     text-align:center;
 
@@ -2770,7 +2774,7 @@ padding:0 20px;
 @media(max-width:480px){
 
 #mafMoon{
-
+top:35%;
 width:95px;
 
 height:95px;
