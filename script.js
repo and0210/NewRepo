@@ -2045,1197 +2045,242 @@ function animate(){
 animate();
 
 }
+
 /* =====================================================
-   🌙 MOON AFFEE PARTICLE FEATURE
+   🌙 MOON + PARTICLE ENGINE
    PART 1
-   UNIQUE PREFIX : MAF
 ===================================================== */
 
 (() => {
 
+const canvas = document.getElementById("mafCanvas");
+if (!canvas) return;
 
-const mafCanvas = document.getElementById("mafCanvas");
+const ctx = canvas.getContext("2d");
 
-if(!mafCanvas) return;
-
-
-const mafCtx = mafCanvas.getContext("2d");
-
-
-function mafResize(){
-
-    mafCanvas.width = window.innerWidth;
-
-    mafCanvas.height = window.innerHeight;
-
+function resize(){
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 }
-
-
-mafResize();
-
-
-window.addEventListener("resize", mafResize);
-
-
+resize();
+window.addEventListener("resize", resize);
 
 /* ===========================
-   PARTICLE SETTINGS
+   SETTINGS
 =========================== */
 
-
-window.mafParticles = [];
-
-const mafParticleCount = 350;
-
-
-const mafCenter = {
-
-    x: window.innerWidth/2,
-
-    y: window.innerHeight/2
-
+const moon = {
+    x: () => canvas.width/2,
+    y: () => canvas.height/2,
+    radius: 70
 };
 
-
+const particles = [];
+const PARTICLE_COUNT = 900;
 
 /* ===========================
-   PARTICLE CLASS
+   PARTICLE
 =========================== */
 
-
-class MafParticle{
-
+class Particle{
 
     constructor(){
 
+        this.reset();
 
-        this.x = mafCenter.x;
+    }
 
-        this.y = mafCenter.y;
+    reset(){
 
+        this.x = moon.x();
+        this.y = moon.y();
 
         this.tx = this.x;
-
         this.ty = this.y;
-
 
         this.size = Math.random()*2+1;
 
-
-        this.speed = Math.random()*0.03+0.01;
-
-
         this.alpha = Math.random();
 
-
-        this.angle =
-        Math.random()*Math.PI*2;
-
-
-
-        this.radius =
-        Math.random()*250+80;
-
+        this.speed = 0.02 + Math.random()*0.02;
 
     }
 
+    update(){
 
+        this.x += (this.tx-this.x)*0.05;
+        this.y += (this.ty-this.y)*0.05;
 
-update(){
+        this.alpha += this.speed;
 
-    this.alpha += this.speed;
+        if(this.alpha>1 || this.alpha<0){
 
-    if(this.alpha > 1 || this.alpha < 0){
-        this.speed *= -1;
+            this.speed *= -1;
+
+        }
+
     }
-
-}
 
     draw(){
 
+        ctx.beginPath();
 
-        mafCtx.beginPath();
-
-
-        mafCtx.arc(
-
+        ctx.arc(
             this.x,
-
             this.y,
-
             this.size,
-
             0,
-
             Math.PI*2
-
         );
 
-
-        mafCtx.fillStyle =
+        ctx.fillStyle =
         `rgba(255,255,255,${this.alpha})`;
 
+        ctx.shadowBlur = 20;
+        ctx.shadowColor = "white";
 
-        mafCtx.shadowBlur=15;
-
-        mafCtx.shadowColor="white";
-
-
-        mafCtx.fill();
-
+        ctx.fill();
 
     }
 
-
-
 }
-
-
 
 /* ===========================
    CREATE PARTICLES
 =========================== */
 
+for(let i=0;i<PARTICLE_COUNT;i++){
 
-for(let i=0;i<mafParticleCount;i++){
-
-
-    mafParticles.push(
-        new MafParticle()
+    particles.push(
+        new Particle()
     );
-
 
 }
 
-
-
 /* ===========================
-   MOON POSITION
+   MOON PARTICLE POSITION
 =========================== */
 
+function moonParticles(){
 
-function mafSetMoon(){
+    particles.forEach(p=>{
 
+        const angle=Math.random()*Math.PI*2;
 
-    mafParticles.forEach(p=>{
-
-
-        const angle =
-        Math.random()*Math.PI*2;
-
-
-        const distance =
-        Math.random()*120+40;
-
-
+        const radius=20+Math.random()*45;
 
         p.tx =
-        mafCenter.x +
-        Math.cos(angle)*distance;
-
-
+        moon.x() +
+        Math.cos(angle)*radius;
 
         p.ty =
-        mafCenter.y +
-        Math.sin(angle)*distance;
-
-
+        moon.y() +
+        Math.sin(angle)*radius;
 
     });
 
-
 }
 
-
-
-mafSetMoon();
-
-
+moonParticles();
 
 /* ===========================
-   ANIMATION
+   DRAW MOON
 =========================== */
 
+function drawMoon(){
 
-function mafAnimate(){
+    const glow =
+    ctx.createRadialGradient(
 
+        moon.x(),
+        moon.y(),
+        10,
 
-    mafCtx.clearRect(
-
-        0,
-
-        0,
-
-        mafCanvas.width,
-
-        mafCanvas.height
+        moon.x(),
+        moon.y(),
+        170
 
     );
-
-
-
-    mafParticles.forEach(p=>{
-
-
-     
-
-        p.draw();
-
-
-    });
-
-
-
-    requestAnimationFrame(mafAnimate);
-
-
-}
-
-
-
-mafAnimate();
-
-
-
-})();
-/* =====================================================
-   🌙 MOON AFFEE PARTICLE FEATURE
-   PART 2
-   MOON GLOW + EMISSION EFFECT
-===================================================== */
-
-(() => {
-
-
-const mafCanvas = document.getElementById("mafCanvas");
-
-if(!mafCanvas) return;
-
-
-const mafCtx = mafCanvas.getContext("2d");
-
-
-
-/* ===========================
-   MOON POSITION
-=========================== */
-
-
-let mafMoonX = window.innerWidth / 2;
-
-let mafMoonY = window.innerHeight / 2;
-
-
-
-window.addEventListener("resize",()=>{
-
-    mafMoonX = window.innerWidth / 2;
-
-    mafMoonY = window.innerHeight / 2;
-
-});
-
-
-
-/* ===========================
-   MOON DRAW
-=========================== */
-
-
-function mafDrawMoon(){
-
-
-    const glow = mafCtx.createRadialGradient(
-
-        mafMoonX,
-
-        mafMoonY,
-
-        20,
-
-        mafMoonX,
-
-        mafMoonY,
-
-        180
-
-    );
-
 
     glow.addColorStop(
         0,
         "rgba(255,255,255,0.9)"
     );
 
-
     glow.addColorStop(
-        0.4,
+        0.3,
         "rgba(255,255,255,0.35)"
     );
-
 
     glow.addColorStop(
         1,
         "rgba(255,255,255,0)"
     );
 
+    ctx.beginPath();
 
+    ctx.fillStyle = glow;
 
-    mafCtx.beginPath();
-
-
-    mafCtx.fillStyle = glow;
-
-
-    mafCtx.arc(
-
-        mafMoonX,
-
-        mafMoonY,
-
-        180,
-
+    ctx.arc(
+        moon.x(),
+        moon.y(),
+        170,
         0,
-
         Math.PI*2
-
     );
 
+    ctx.fill();
 
-    mafCtx.fill();
+    ctx.beginPath();
 
-
-
-    // Moon Body
-
-    mafCtx.beginPath();
-
-
-    mafCtx.arc(
-
-        mafMoonX,
-
-        mafMoonY,
-
-        65,
-
+    ctx.arc(
+        moon.x(),
+        moon.y(),
+        moon.radius,
         0,
-
         Math.PI*2
-
     );
 
+    ctx.fillStyle="#fff";
 
-    mafCtx.fillStyle="#ffffff";
+    ctx.shadowBlur=60;
+    ctx.shadowColor="white";
 
-
-    mafCtx.shadowBlur=50;
-
-    mafCtx.shadowColor="white";
-
-
-    mafCtx.fill();
-
+    ctx.fill();
 
 }
 
-
-
 /* ===========================
-   PARTICLE EMISSION
+   MAIN LOOP
 =========================== */
 
+window.mafParticles = particles;
+window.mafMoon = moon;
+window.mafCtx = ctx;
+window.mafCanvas = canvas;
 
-function mafEmitParticles(){
+function animate(){
 
-
-    const particles = [];
-
-
-    for(let i=0;i<25;i++){
-
-
-        const angle =
-        Math.random()*Math.PI*2;
-
-
-
-        const distance =
-        70 + Math.random()*80;
-
-
-
-        particles.push({
-
-            x:mafMoonX,
-
-            y:mafMoonY,
-
-
-            tx:
-            mafMoonX +
-            Math.cos(angle)*distance,
-
-
-            ty:
-            mafMoonY +
-            Math.sin(angle)*distance,
-
-
-            life:1
-
-        });
-
-
-    }
-
-
-
-    return particles;
-
-
-}
-
-
-
-let mafEmissionParticles =
-mafEmitParticles();
-
-
-
-/* ===========================
-   DRAW EMISSION
-=========================== */
-
-
-function mafDrawEmission(){
-
-
-    mafEmissionParticles.forEach((p,index)=>{
-
-
-        p.x +=
-        (p.tx-p.x)*0.03;
-
-
-        p.y +=
-        (p.ty-p.y)*0.03;
-
-
-
-        p.life-=0.002;
-
-
-
-        mafCtx.beginPath();
-
-
-
-        mafCtx.arc(
-
-            p.x,
-
-            p.y,
-
-            2,
-
-            0,
-
-            Math.PI*2
-
-        );
-
-
-
-        mafCtx.fillStyle =
-        `rgba(255,255,255,${p.life})`;
-
-
-
-        mafCtx.shadowBlur=20;
-
-        mafCtx.shadowColor="white";
-
-
-
-        mafCtx.fill();
-
-
-
-        if(p.life<=0){
-
-
-            mafEmissionParticles.splice(index,1);
-
-
-        }
-
-
-    });
-
-
-
-    if(mafEmissionParticles.length<20){
-
-        mafEmissionParticles =
-        mafEmitParticles();
-
-    }
-
-
-}
-
-
-
-/* ===========================
-   EXTRA LOOP
-=========================== */
-
-
-function mafMoonAnimation(){
-
-
-    mafDrawMoon();
-
-
-    mafDrawEmission();
-
-
-    requestAnimationFrame(mafMoonAnimation);
-
-
-}
-
-
-mafMoonAnimation();
-
-
-
-})();
- /* =====================================================
-   🌙 MOON AFFEE PARTICLE FEATURE
-   PART 3
-   TEXT POINT GENERATOR
-===================================================== */
-
-(() => {
-
-
-const mafCanvas = document.getElementById("mafCanvas");
-
-if(!mafCanvas) return;
-
-
-const mafCtx = mafCanvas.getContext("2d");
-
-
-
-/* ===========================
-   CREATE TEXT POINTS
-=========================== */
-
-function mafCreateTextPoints(text){
-
-    const tempCanvas=document.createElement("canvas");
-    const tempCtx=tempCanvas.getContext("2d");
-
-    tempCanvas.width=mafCanvas.width;
-    tempCanvas.height=mafCanvas.height;
-
-
-    tempCtx.font="bold 150px Arial";
-    tempCtx.textAlign="center";
-    tempCtx.textBaseline="middle";
-
-    tempCtx.fillStyle="white";
-
-
-    tempCtx.fillText(
-        text,
-        tempCanvas.width/2,
-        tempCanvas.height/2
-    );
-
-
-    const data=tempCtx.getImageData(
+    ctx.clearRect(
         0,
         0,
-        tempCanvas.width,
-        tempCanvas.height
+        canvas.width,
+        canvas.height
     );
 
+    drawMoon();
 
-    const points=[];
+    particles.forEach(p=>{
 
-
-    for(let y=0;y<data.height;y+=5){
-
-        for(let x=0;x<data.width;x+=5){
-
-            let index=(y*data.width+x)*4;
-
-
-            if(data.data[index+3]>100){
-
-                points.push({
-                    x:x,
-                    y:y
-                });
-
-            }
-
-        }
-
-    }
-
-
-    return points;
-
-}/* ===========================
-   AFFEE TARGET POINTS
-=========================== */
-
-
-const mafTextPoints =
-mafCreateTextPoints("AFFEE");
-
-
-
-/* ===========================
-   MOVE PARTICLES TO TEXT
-=========================== */
-
-
-window.mafMoveToText = function(){
-
-
-    if(!window.mafParticles)
-    return;
-
-
-
-    window.mafParticles.forEach(
-
-        (particle,index)=>{
-
-
-            const point =
-            mafTextPoints[
-                index %
-                mafTextPoints.length
-            ];
-
-
-
-            particle.tx =
-            point.x;
-
-
-
-            particle.ty =
-            point.y;
-
-
-
-        }
-
-    );
-
-
-}
-
-
-
-/* ===========================
-   AUTO TRIGGER
-=========================== */
-
-
-setTimeout(()=>{
-
-    if(window.mafMoveToText){
-
-        window.mafMoveToText();
-
-    }
-
-},5000);
-
-
-
-})();
- /* =====================================================
-   🌙 MOON AFFEE PARTICLE FEATURE
-   PART 4
-   TRANSITION + GLOW EFFECT
-===================================================== */
-
-(() => {
-
-
-const mafCanvas = document.getElementById("mafCanvas");
-
-if(!mafCanvas) return;
-
-
-const mafCtx = mafCanvas.getContext("2d");
-
-
-
-let mafTextActive = false;
-
-let mafGlow = 0;
-
-
-
-/* ===========================
-   SMOOTH MOVE
-=========================== */
-
-
-function mafSmoothParticles(){
-
-
-    if(!window.mafParticles)
-    return;
-
-
-
-    window.mafParticles.forEach(p=>{
-
-
-        p.x +=
-        (p.tx-p.x)*0.025;
-
-
-        p.y +=
-        (p.ty-p.y)*0.025;
-
-
+        p.update();
+        p.draw();
 
     });
 
-
-
-}
-
-
-
-/* ===========================
-   TEXT GLOW
-=========================== */
-
-
-function mafDrawGlow(){
-
-
-    mafGlow +=0.03;
-
-
-
-    const glowValue =
-    15 + Math.sin(mafGlow)*10;
-
-
-
-    mafCtx.shadowBlur =
-    glowValue;
-
-
-    mafCtx.shadowColor =
-    "#ffffff";
-
-
+    requestAnimationFrame(animate);
 
 }
 
-
-
-/* ===========================
-   ACTIVATE AFFEE
-=========================== */
-
-
-window.mafShowAFFEE=function(){
-
-
-    mafTextActive=true;
-
-
-    if(window.mafMoveToText){
-
-        window.mafMoveToText();
-
-    }
-
-
-};
-
-
-
-
-/* ===========================
-   RETURN TO MOON
-=========================== */
-
-
-window.mafBackToMoon=function(){
-
-
-    mafTextActive=false;
-
-
-
-    if(!window.mafParticles)
-    return;
-
-
-
-    window.mafParticles.forEach(p=>{
-
-
-        const angle =
-        Math.random()*Math.PI*2;
-
-
-        const radius =
-        Math.random()*80;
-
-
-
-        p.tx =
-        window.innerWidth/2+
-        Math.cos(angle)*radius;
-
-
-
-        p.ty =
-        window.innerHeight/2+
-        Math.sin(angle)*radius;
-
-
-
-    });
-
-
-};
-
-
-
-
-/* ===========================
-   AUTO LOOP
-=========================== */
-
-
-setInterval(()=>{
-
-
-    if(mafTextActive){
-
-
-        window.mafBackToMoon();
-
-
-    }
-    else{
-
-
-        window.mafShowAFFEE();
-
-
-    }
-
-
-
-},8000);
-
-
-
-
-/* ===========================
-   ANIMATION HELPER
-=========================== */
-
-
-function mafTransitionLoop(){
-
-
-    mafSmoothParticles();
-
-
-    mafDrawGlow();
-
-
-
-    requestAnimationFrame(
-        mafTransitionLoop
-    );
-
-
-}
-
-
-mafTransitionLoop();
-
-
-
-})();
-/* =====================================================
-   🌙 MOON AFFEE PARTICLE FEATURE
-   PART 5
-   FINAL CINEMATIC EFFECT
-===================================================== */
-
-(() => {
-
-
-const mafCanvas = document.getElementById("mafCanvas");
-
-if(!mafCanvas) return;
-
-
-const mafCtx = mafCanvas.getContext("2d");
-
-
-const mafTrails=[];
-
-
-/* ===========================
-   PARTICLE TRAIL
-=========================== */
-
-
-function mafCreateTrail(){
-
-
-    if(!window.mafParticles)
-    return;
-
-
-    window.mafParticles.forEach(p=>{
-
-
-        if(Math.random()>0.92){
-
-
-            mafTrails.push({
-
-                x:p.x,
-
-                y:p.y,
-
-                life:1,
-
-                size:
-                Math.random()*3+1
-
-            });
-
-
-        }
-
-
-    });
-
-
-}
-
-
-
-
-function mafDrawTrail(){
-
-
-    mafTrails.forEach((t,index)=>{
-
-
-        mafCtx.beginPath();
-
-
-        mafCtx.arc(
-
-            t.x,
-
-            t.y,
-
-            t.size,
-
-            0,
-
-            Math.PI*2
-
-        );
-
-
-
-        mafCtx.fillStyle=
-        `rgba(255,180,230,${t.life})`;
-
-
-
-        mafCtx.shadowBlur=20;
-
-        mafCtx.shadowColor="pink";
-
-
-
-        mafCtx.fill();
-
-
-
-        t.life-=0.02;
-
-
-
-        if(t.life<=0){
-
-            mafTrails.splice(index,1);
-
-        }
-
-
-    });
-
-
-}
-
-
-
-/* ===========================
-   HEART PARTICLES
-=========================== */
-
-
-const mafHearts=[];
-
-
-
-function mafHeart(){
-
-
-    if(!window.mafParticles)
-    return;
-
-
-
-    const p =
-    window.mafParticles[
-        Math.floor(
-            Math.random()*
-            window.mafParticles.length
-        )
-    ];
-
-
-
-    mafHearts.push({
-
-        x:p.x,
-
-        y:p.y,
-
-        life:1,
-
-        size:
-        Math.random()*10+8
-
-    });
-
-
-
-}
-
-
-
-function mafDrawHearts(){
-
-
-    mafHearts.forEach((h,index)=>{
-
-
-        mafCtx.font =
-        h.size+"px Arial";
-
-
-        mafCtx.fillStyle =
-        `rgba(255,100,180,${h.life})`;
-
-
-        mafCtx.fillText(
-
-            "❤",
-
-            h.x,
-
-            h.y
-
-        );
-
-
-        h.y-=0.5;
-
-
-        h.life-=0.015;
-
-
-
-        if(h.life<=0){
-
-            mafHearts.splice(index,1);
-
-        }
-
-
-    });
-
-
-}
-
-
-
-/* ===========================
-   RANDOM HEART LOOP
-=========================== */
-
-
-setInterval(()=>{
-
-    mafHeart();
-
-},700);
-
-
-
-
-/* ===========================
-   FINAL EFFECT LOOP
-=========================== */
-
-
-function mafFinalAnimation(){
-
-
-    mafCreateTrail();
-
-
-    mafDrawTrail();
-
-
-    mafDrawHearts();
-
-
-
-    requestAnimationFrame(
-        mafFinalAnimation
-    );
-
-
-}
-
-
-mafFinalAnimation();
-
-
+animate();
 
 })();
