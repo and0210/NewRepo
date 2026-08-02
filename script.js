@@ -2932,7 +2932,7 @@ setInterval(()=>{
         if(window.mafShowText){
 
 window.mafShowText();
-            window.mafShowText();
+          
 
         }
 
