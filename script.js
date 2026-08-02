@@ -905,34 +905,23 @@ Pr wvo ho nahi paaya.Par mere liye woh gift hamesha bahut khaas rahega.Isliye na
 
         });
 
-        const popup = `
+const popup = `
 
 <div class="memory-popup">
 
-<div class="memory-slider">
+    <div class="memory-slider">
+        ${images}
+    </div>
 
-${images}
+    <h2>${memory.title}</h2>
 
-</div>
+    <p>📍 ${memory.place}</p>
 
-<h2>${memory.title}</h2>
+    ${memory.date ? `<p>📅 ${memory.date}</p>` : ""}
 
-<p>
-
-📍 ${memory.place}
-
-</p>
-
-${memory.date ?
-
-`<p>📅 ${memory.date}</p>`
-
-: ""}
-
-
-${memory.message}
-
-
+    <div class="popup-message">
+        ${memory.message}
+    </div>
 
 </div>
 
