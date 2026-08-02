@@ -2319,7 +2319,14 @@ function createTextPoints(text){
         canvas.width/2,
         canvas.height/2+170
     );
+tempCtx.strokeStyle = "#ffffff";
+tempCtx.lineWidth = 2;
 
+tempCtx.strokeText(
+    text,
+    tempCanvas.width / 2,
+    tempCanvas.height / 2 + 90
+);
     const img=tctx.getImageData(
         0,
         0,
@@ -2329,9 +2336,9 @@ function createTextPoints(text){
 
     const pts=[];
 
-    for(let y=0;y<img.height;y+=4){
+    for(let y=0;y<img.height;y+=2){
 
-        for(let x=0;x<img.width;x+=4){
+        for(let x=0;x<img.width;x+=2){
 
             const index=(y*img.width+x)*4;
 
@@ -2525,6 +2532,6 @@ setTimeout(()=>{
 
     window.mafMoveToText();
 
-},4000);
+},8000);
 
 })();
