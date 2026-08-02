@@ -875,12 +875,97 @@ document.addEventListener("DOMContentLoaded", () => {
         "12.jpeg"
     ],
 
-    message: "A day full of laughter, delicious food, and beautiful memories together. ❤️
-       ye last din jb hum last baar bahu plaza mille thei ...iss din aapne mujhe apne haatho se pasta khilaya tha...maine aapko first tym lip kiss ki thi...aapne chlaki se eyes bnd ki taaki mai lip kiss kru❤️❤️❤️❤️
-   kitni prblms chl rhi thi ghr pe iss din ..lekin vo tym jb mai aapke satah thi mai sb bhul gyi thi....aap kehte ho na ki mai aapke gift ki kdr nhi krti ..lekin iss din jb aaone mujhe apne haatho se chain pehnayi thi vo feeling hi alg....maine jb vo chain ghr laayi maine msbhaal di ki mai ye nhi pehnungi isko smbhalal kr rhungi humesha...pr vo ho nhi paaya...pr mere lie sch mei vo bohut khass thi..isliye nhi ki usmei paise lge..balki isliye ki tune mujhe di...ar khud soch smjh ke mere lie gift laaya surprise dia mujhe..
-       "
+    message:   {
+            lat:34.0159,
+            lng:75.3180,
+
+            title:"🏔️ Pahalgam Trip",
+
+            place:"Pahalgam",
+
+            photos:[
+                "photo6.jpeg",
+                "photo7.jpeg",
+                "photo8.jpeg"
+            ],
+
+            message:
+            "Every trip with you feels magical ❤️"
+        },
+       {
+    lat: 32.70542,
+    lng: 74.87323,
+
+    title: "Subway Date 🥪❤️",
+
+    place: "Subway",
+        photos:[
+                "5.jpeg",
+                "6.jpeg"
+            ],
+
+            message:
+            
+"Just another day with you, but somehow it became another memory I'll always cherish ❤️.iss din 4 months hgye thei hummare rltn ko ar humnei socha ki hum millenge..fr hum mille aapne mujhe pick kia..hum subway gye...vha jo order kia vo humnei toh khaya nhi...bs paise ujadte rhe shrm ki vjh se...ar us din aapne mujhe lips pe kiss kia jiske baad mai rone lg gyi..ar aapka muh kaddu jaisa hogya🤣.fr uske baad humnei bohut saare hugs kie...tb milna hummare lie kitna muskil hota tha ..tha kya hai..pr hum khatron ke khiladi thei🤣🤣.."
+},
+        {
+    lat: 32.70497,
+    lng: 74.87267,
+
+    title: "Hashtag Foods 🍔❤️",
+
+    place: "Hashtag",
+        photos:[
+                "7.jpeg",
+                "8.jpeg"
+            ],
+
+            message: "ye aapka pehla bday mere saath...vo  tasty pasta jo humnei waste kia...hr ldki ke lie uske partner ka bday zaida special hota uske bday se...vo uss din ko bohut khass bnaan chhati hai...humamre kpde khud match hoajte thei baar baar...bohut achi memories hai iss din ki jo humehsa humamre saath rhengi "
+            
+
+},
+
+{
+    lat: 32.72072,
+    lng: 74.87609,
+
+    title: "❤️ My B'day",
+
+    place: "Smugglers, Bahu Plaza",
+
+    
+
+    photos: [
+        "10.jpeg",
+        "11.jpeg",
+        "12.jpeg"
+    ],
+
+    message: `A day full of laughter, delicious food, and beautiful memories together. ❤️
+
+Ye last din tha jab hum last baar Bahu Plaza mile the.
+
+Iss din aapne mujhe apne haatho se pasta khilaya tha.
+Maine aapko first time lip kiss ki thi.
+Aapne chalaki se eyes band ki taaki main lip kiss karu ❤️❤️❤️
+
+Kitni problems chal rahi thi ghar pe uss din, lekin jab main aapke saath thi to sab bhool gayi thi.
+
+Aap kehte ho na ki main aapke gift ki kadar nahi karti, lekin jab aapne mujhe apne haatho se chain pehnayi thi, woh feeling hi alag thi.
+
+Jab main woh chain ghar layi to maine socha tha ki ise pehnungi nahi, hamesha sambhal kar rakhungi.
+Par woh ho nahi paaya.
+
+Par mere liye woh gift hamesha bahut khaas rahega.
+Isliye nahi ki usme paise lage the, balki isliye ki tumne khud mere liye soch samajh kar surprise diya tha. ❤️`
+       
 },
     ];
+
+
+       
+
+ 
 
     const bounds = [];
 
