@@ -874,7 +874,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "11.jpeg",
         "12.jpeg"
     ],
-
+           }
     message:   {
             lat:34.0159,
             lng:75.3180,
