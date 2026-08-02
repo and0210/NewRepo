@@ -2789,7 +2789,7 @@ font-size:24px;
 
 .popup-message{
 
-    height:180px;
+    height:250px;
 
     overflow-y:scroll;
 
@@ -2818,7 +2818,7 @@ font-size:24px;
 }
    .popup-message{
 
-    max-height:170px !important;
+    max-height:250px !important;
 
     overflow-y:auto !important;
 
