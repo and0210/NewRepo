@@ -778,6 +778,22 @@ document.addEventListener("DOMContentLoaded", () => {
             message:
             "One of my favourite memories ❤️"
         },
+       
+        {
+            lat:32.76982,
+            lng:74.81392,
+
+            title:"💕",
+
+            place:"YCET",
+
+            photos:[
+                "8.jpeg"
+            ],
+
+            message:
+            " ❤️"
+        },
         {
             lat:32.76982,
             lng:74.81392,
