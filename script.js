@@ -2319,13 +2319,13 @@ function createTextPoints(text){
         canvas.width/2,
         canvas.height/2+170
     );
-tempCtx.strokeStyle = "#ffffff";
-tempCtx.lineWidth = 2;
+tctx.strokeStyle = "#ffffff";
+tctx.lineWidth = 2;
 
-tempCtx.strokeText(
+tctx.strokeText(
     text,
-    tempCanvas.width / 2,
-    tempCanvas.height / 2 + 90
+    canvas.width / 2,
+    canvas.height / 2 + 90
 );
     const img=tctx.getImageData(
         0,
