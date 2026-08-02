@@ -2783,37 +2783,3 @@ font-size:24px;
 
 }
 
-}
-.leaflet-popup-content{
-    width:430px !important;
-    max-height:80vh;
-    overflow-y:auto;
-    margin:12px !important;
-}
-
-.memory-popup{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-}
-
-.popup-message{
-    max-height:220px;
-    overflow-y:auto;
-    overflow-x:hidden;
-    padding-right:8px;
-    text-align:left;
-    word-break:break-word;
-}
-@media (max-width:768px){
-
-    .leaflet-popup-content{
-        width:300px !important;
-        max-height:75vh;
-    }
-
-    .popup-message{
-        max-height:180px;
-    }
-
-}
