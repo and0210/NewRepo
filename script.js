@@ -2749,7 +2749,7 @@ function animate(){
 
     });
 
-    requestAnimationFrame();
+    requestAnimationFrame(animate);
 
 }
 animate();
