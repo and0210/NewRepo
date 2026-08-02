@@ -778,7 +778,21 @@ document.addEventListener("DOMContentLoaded", () => {
             message:
             "One of my favourite memories ❤️"
         },
+        {
+            lat:32.76982,
+            lng:74.81392,
 
+            title:"The Day Before my Birthday💕",
+
+            place:"YCET",
+
+            photos:[
+                "4.jpeg"
+            ],
+
+            message:
+            "One of my favourite memories ❤️.is din next da mera bday tha...aapko lgi hui thi..hum ppr dekr class mei aaye thei ...ar fr humnei hug kia ta kyunki next day humnei nhi milna tha...hum dono ne ek dusre ka haath pkda hua tha ar mai uthne lgi thi toh aapke hatah pe zoor se press hogya tha jisse apako bohut drd hui...lekin tb aap aap merpe gussa nhi krte thei aapne mujhe kuch nhi bola fr bhi"
+        },
         {
             lat:34.0159,
             lng:75.3180,
