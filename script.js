@@ -859,40 +859,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 },
 
-{
-    lat: 32.72072,
-    lng: 74.87609,
-
-    title: "❤️ My B'day",
-
-    place: "Smugglers, Bahu Plaza",
-
-    
-
-    photos: [
-        "10.jpeg",
-        "11.jpeg",
-        "12.jpeg"
-    ],
-           }
-    message:   {
-            lat:34.0159,
-            lng:75.3180,
-
-            title:"🏔️ Pahalgam Trip",
-
-            place:"Pahalgam",
-
-            photos:[
-                "photo6.jpeg",
-                "photo7.jpeg",
-                "photo8.jpeg"
-            ],
-
-            message:
-            "Every trip with you feels magical ❤️"
-        },
-       {
+           {
     lat: 32.70542,
     lng: 74.87323,
 
@@ -933,8 +900,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     place: "Smugglers, Bahu Plaza",
 
-    
-
     photos: [
         "10.jpeg",
         "11.jpeg",
@@ -958,9 +923,7 @@ Par woh ho nahi paaya.
 
 Par mere liye woh gift hamesha bahut khaas rahega.
 Isliye nahi ki usme paise lage the, balki isliye ki tumne khud mere liye soch samajh kar surprise diya tha. ❤️`
-       
-},
-    ];
+}    ];
 
 
        
