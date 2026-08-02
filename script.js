@@ -816,14 +816,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     title: "Subway Date 🥪❤️",
 
-    place: "Subway"
+    place: "Subway",
         photos:[
                 "5.jpeg",
                 "6.jpeg"
             ],
 
             message:
-            "message:
+            
 "Just another day with you, but somehow it became another memory I'll always cherish ❤️.iss din 4 months hgye thei hummare rltn ko ar humnei socha ki hum millenge..fr hum mille aapne mujhe pick kia..hum subway gye...vha jo order kia vo humnei toh khaya nhi...bs paise ujadte rhe shrm ki vjh se...ar us din aapne mujhe lips pe kiss kia jiske baad mai rone lg gyi..ar aapka muh kaddu jaisa hogya🤣.fr uske baad humnei bohut saare hugs kie...tb milna hummare lie kitna muskil hota tha ..tha kya hai..pr hum khatron ke khiladi thei🤣🤣.."
 }
 
