@@ -2071,7 +2071,7 @@ window.addEventListener("resize", resize);
 
 const moon = {
     x: () => canvas.width/2,
-    y: () => canvas.height/2 - 40,
+    y: () => canvas.height/2 - 80,
     radius: 70
 };
 const particles = [];
@@ -2133,10 +2133,10 @@ class Particle{
         );
 
         ctx.fillStyle =
-        `rgba(255,255,255,${this.alpha})`;
+        "#ffffff";
 
-        ctx.shadowBlur = 20;
-        ctx.shadowColor = "white";
+        ctx.shadowBlur = 18;
+        ctx.shadowColor = "#ffffff";
 
         ctx.fill();
 
