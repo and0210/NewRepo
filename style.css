@@ -2602,9 +2602,9 @@ pointer-events:none;
 
     left:50%;
 
-    top:62%;
+    top:70%;
 
-    transform:translateX(-50%);
+    transform:translateX(-50%,-50%));
 
     width:100%;
 
