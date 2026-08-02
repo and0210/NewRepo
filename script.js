@@ -2931,7 +2931,18 @@ setInterval(()=>{
         showingText=true;
 
         if(window.mafShowText){
+// Pehle particles ko thoda spread karo
+particles.forEach((p, i) => {
 
+    const angle = (i / particles.length) * Math.PI * 2;
+    const radius = 220 + Math.random() * 80;
+
+    p.x = moon.x + Math.cos(angle) * radius;
+    p.y = moon.y + Math.sin(angle) * radius;
+
+});
+
+window.mafShowText();
             window.mafShowText();
 
         }
