@@ -876,12 +876,8 @@ document.addEventListener("DOMContentLoaded", () => {
         "12.jpeg"
     ],
 
-    message: `A day full of laughter, delicious food, and beautiful memories together. ❤️Ye last din tha jab hum last baar Bahu Plaza mile the.Iss din aapne mujhe apne haatho se pasta khilaya tha.Maine aapko first time lip kiss ki thi.
-Aapne chalaki se eyes band ki taaki main lip kiss karu ❤️❤️❤️Kitni problems chal rahi thi ghar pe uss din, lekin jab main aapke saath thi to sab bhool gayi thi.Aap kehte ho na ki main aapke gift ki kadar nahi karti, lekin jab aapne mujhe apne haatho se chain pehnayi thi, woh feeling hi alag thi.Jab main woh chain ghar layi to maine socha tha ki ise pehnungi nahi, hamesha sambhal kar rakhungi.
-Par woh ho nahi paaya.
-
-Par mere liye woh gift hamesha bahut khaas rahega.
-Isliye nahi ki usme paise lage the, balki isliye ki tumne khud mere liye soch samajh kar surprise diya tha. ❤️`
+    message: `❤️Ye last din tha jab hum last baar Bahu Plaza mile the.Iss din aapne mujhe apne haatho se pasta khilaya tha.Maine aapko first time lip kiss ki thi.Aapne chalaki se eyes band ki taaki main lip kiss karu ❤️❤️❤️Kitni problems chal rahi thi ghar pe uss din, lekin jab main aapke saath thi to sab bhool gayi thi.Aap kehte ho na ki main aapke gift ki kadar nahi karti, lekin jab aapne mujhe apne haatho se chain pehnayi thi, woh feeling hi alag thi.Jab main woh chain ghar layi to maine socha tha ki ise pehnungi nahi, hamesha sambhal kar rakhungi.
+Pr wvo ho nahi paaya.Par mere liye woh gift hamesha bahut khaas rahega.Isliye nahi ki usme paise lage the, balki isliye ki tumne khud mere liye soch samajh kar surprise diya tha. ❤️`
 }    ];
 
 
