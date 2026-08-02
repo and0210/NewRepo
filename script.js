@@ -919,9 +919,9 @@ const popup = `
 
     ${memory.date ? `<p>📅 ${memory.date}</p>` : ""}
 
-    <div class="popup-message">
-        ${memory.message}
-    </div>
+   <div class="popup-message">
+    <p>${memory.message}</p>
+</div>
 
 </div>
 
