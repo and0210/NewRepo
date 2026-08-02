@@ -809,7 +809,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             message:
             "Every trip with you feels magical ❤️"
-        }
+        },
        {
     lat: 32.70542,
     lng: 74.87323,
