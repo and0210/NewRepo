@@ -2783,3 +2783,56 @@ font-size:24px;
 
 }
 
+.popup-message{
+
+    max-height:220px;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    padding:10px;
+
+    margin-top:15px;
+
+    border-radius:12px;
+
+    background:#fff5fa;
+
+    color:#555;
+
+    line-height:1.8;
+
+    white-space:pre-wrap;
+
+    word-break:break-word;
+
+}
+
+.popup-message::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.popup-message::-webkit-scrollbar-track{
+
+    background:#ffe6ef;
+
+    border-radius:20px;
+
+}
+
+.popup-message::-webkit-scrollbar-thumb{
+
+    background:#ff2d75;
+
+    border-radius:20px;
+
+}
+
+.popup-message::-webkit-scrollbar-thumb:hover{
+
+    background:#ff0066;
+
+}
