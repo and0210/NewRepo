@@ -2896,7 +2896,11 @@ font-size:24px;
    LOVE + AUDIO SECTION
 =================================*/
 
-.love-audio-section{
+/* =========================================
+   I LOVE YOU ENDLESSLY SECTION
+========================================= */
+
+.ily-section{
 
     width:100%;
     min-height:100vh;
@@ -2906,143 +2910,138 @@ font-size:24px;
     justify-content:center;
     align-items:center;
 
-    padding:60px 20px;
-    box-sizing:border-box;
-
-    background:linear-gradient(180deg,#020412,#081224,#020412);
+    padding:80px 20px;
 
     text-align:center;
-    overflow:hidden;
+
+    background:
+    radial-gradient(circle at top,#162447,#081229,#020814);
 
 }
 
-/* ===============================
-   GLOWING TITLE
-=================================*/
+/* =========================================
+   TITLE
+========================================= */
 
-.glow-text{
+.ily-title{
 
-    width:100%;
-    margin:0 0 50px;
+    margin-bottom:60px;
 
-    font-size:clamp(2.2rem,7vw,5rem);
-
-    color:#fff;
+    font-size:clamp(2.5rem,6vw,5.2rem);
 
     font-weight:900;
 
+    color:#ffffff;
+
     letter-spacing:3px;
 
-    line-height:1.3;
-
-    text-align:center;
-
-    text-transform:none;
-
-    animation:glow 2s ease-in-out infinite alternate;
+    animation:ilyGlow 2s ease-in-out infinite alternate;
 
 }
 
-@keyframes glow{
+/* =========================================
+   GLOW
+========================================= */
+
+@keyframes ilyGlow{
 
     0%{
 
         text-shadow:
-        0 0 5px #fff,
-        0 0 10px #ff4fd8,
+        0 0 10px #ffffff,
         0 0 20px #ff4fd8,
         0 0 40px #ff4fd8,
-        0 0 80px #ff4fd8;
+        0 0 70px #ff4fd8;
 
     }
 
     100%{
 
         text-shadow:
-        0 0 10px #fff,
-        0 0 20px #ff80df,
-        0 0 40px #ff80df,
-        0 0 80px #ff80df,
-        0 0 120px #ff80df;
+        0 0 20px #ffffff,
+        0 0 40px #ff82e8,
+        0 0 80px #ff82e8,
+        0 0 120px #ff82e8,
+        0 0 170px #ff82e8;
 
     }
 
 }
-/* ===============================
-   AUDIO BOX
-=================================*/
 
-.audio-box{
+/* =========================================
+   AUDIO CARD
+========================================= */
+
+.ily-audio-card{
 
     width:100%;
     max-width:520px;
 
-    padding:25px;
-
     margin-bottom:30px;
 
-    border-radius:20px;
+    padding:25px;
+
+    border-radius:22px;
 
     background:rgba(255,255,255,.08);
 
     border:1px solid rgba(255,255,255,.15);
 
-    backdrop-filter:blur(15px);
+    backdrop-filter:blur(18px);
 
-    box-shadow:0 0 30px rgba(255,105,180,.35);
+    box-shadow:
+    0 0 25px rgba(255,105,180,.25);
 
 }
 
-.audio-box h3{
+/* =========================================
+   AUDIO TITLE
+========================================= */
 
-    color:#fff;
-
-    font-size:1.3rem;
+.ily-audio-card h3{
 
     margin-bottom:18px;
 
-    font-weight:700;
+    color:#ffffff;
+
+    font-size:22px;
 
 }
 
-.audio-box audio{
+/* =========================================
+   AUDIO
+========================================= */
+
+.ily-audio-card audio{
 
     width:100%;
-    height:50px;
+    height:55px;
 
 }
 
-/* ===============================
+/* =========================================
    MOBILE
-=================================*/
+========================================= */
 
 @media(max-width:768px){
 
-    .love-audio-section{
+    .ily-section{
 
-        padding:40px 15px;
-
-    }
-
-    .glow-text{
-
-    width:100%;
-    text-align:center;
-
-    font-size:clamp(2.5rem,6vw,5rem);
-    font-weight:900;
-    line-height:1.3;
-    letter-spacing:3px;
-
-    color:#fff;
-
-    animation: glow 1.8s ease-in-out infinite alternate;
-
-    -webkit-text-fill-color:#fff;
+        padding:60px 15px;
 
     }
 
-    .audio-box{
+    .ily-title{
+
+        font-size:2.4rem;
+
+        letter-spacing:1px;
+
+        margin-bottom:40px;
+
+    }
+
+    .ily-audio-card{
 
         padding:18px;
 
