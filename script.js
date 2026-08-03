@@ -248,15 +248,16 @@ function openLove() {
 
     const input = document.getElementById("pass1");
     const hint = document.getElementById("hint");
-    const message = document.getElementById("loveMsg");
+    const audio = document.getElementById("loveAudio");
 
-    if (!input || !hint || !message) return;
+    if (!input || !hint || !audio) return;
 
     const password = input.value.trim().toLowerCase();
 
     if (password === "jaan") {
 
-        message.classList.remove("hidden");
+        audio.classList.remove("hidden");
+        audio.play();
 
         hint.innerHTML = "💖 Welcome to my heart, my love ❤️";
 
@@ -266,7 +267,9 @@ function openLove() {
 
     } else {
 
-        message.classList.add("hidden");
+        audio.classList.add("hidden");
+        audio.pause();
+        audio.currentTime = 0;
 
         hint.innerHTML =
             "❌ Wrong Password<br><br>💡 Hint: What do you lovingly call your partner? ❤️";
@@ -283,9 +286,7 @@ function openLove() {
 
     }
 
-}
-
-/* ===========================
+}/* ===========================
    LOVE LETTER
 =========================== */
 
