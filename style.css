@@ -2640,7 +2640,7 @@ pointer-events:none;
 
     top:70%;
 
-    transform:translateX(-50%,-50%));
+    transform:translate(-50%,-50%));
 
     width:100%;
 
@@ -2822,7 +2822,7 @@ height:95px;
 font-size:24px;
 
 }
-
+}
 .memory-popup{
     text-align:center;
 }
