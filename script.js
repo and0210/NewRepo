@@ -2568,536 +2568,536 @@ animate();
    🌙 MOON PARTICLE ENGINE - PART 1
 ===================================================== */
 
-(() => {
+// (() => {
 
-const canvas = document.getElementById("mafCanvas");
-if(!canvas) return;
+// const canvas = document.getElementById("mafCanvas");
+// if(!canvas) return;
 
-const ctx = canvas.getContext("2d");
+// const ctx = canvas.getContext("2d");
 
-function resize(){
+// function resize(){
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+//     canvas.width = window.innerWidth;
+//     canvas.height = window.innerHeight;
 
-}
+// }
 
-resize();
+// resize();
 
-window.addEventListener("resize",resize);
+// window.addEventListener("resize",resize);
 
-/* ===============================
-   MOON
-================================ */
+// /* ===============================
+//    MOON
+// ================================ */
 
-const moon = {
+// const moon = {
 
-    x:0,
-    y:0,
-    r:75
+//     x:0,
+//     y:0,
+//     r:75
 
-};
+// };
 
-function updateMoon(){
+// function updateMoon(){
 
-    moon.x = canvas.width/2;
-    moon.y = 150;
+//     moon.x = canvas.width/2;
+//     moon.y = 150;
 
-}
+// }
 
-updateMoon();
+// updateMoon();
 
-window.addEventListener("resize",updateMoon);
+// window.addEventListener("resize",updateMoon);
 
-/* ===============================
-   PARTICLES
-================================ */
+// /* ===============================
+//    PARTICLES
+// ================================ */
 
-const particles=[];
+// const particles=[];
 
-const PARTICLE_COUNT = 2200;
+// const PARTICLE_COUNT = 2200;
 
-class Particle{
+// class Particle{
 
-    constructor(){
+//     constructor(){
 
-        this.reset();
+//         this.reset();
 
-    }
+//     }
 
-    reset(){
+//     reset(){
 
-        const angle=Math.random()*Math.PI*2;
-        const radius=Math.random()*65;
+//         const angle=Math.random()*Math.PI*2;
+//         const radius=Math.random()*65;
 
-        this.x=moon.x+Math.cos(angle)*radius;
-        this.y=moon.y+Math.sin(angle)*radius;
+//         this.x=moon.x+Math.cos(angle)*radius;
+//         this.y=moon.y+Math.sin(angle)*radius;
 
-        this.tx=this.x;
-        this.ty=this.y;
+//         this.tx=this.x;
+//         this.ty=this.y;
 
-        this.size=Math.random()*2+1;
+//         this.size=Math.random()*2+1;
 
-        this.alpha=Math.random();
+//         this.alpha=Math.random();
 
-        this.speed=0.04+Math.random()*0.02;
+//         this.speed=0.04+Math.random()*0.02;
 
-    }
+//     }
 
-    update(){
+//     update(){
 
-        this.x+=(this.tx-this.x)*this.speed;
-        this.y+=(this.ty-this.y)*this.speed;
+//         this.x+=(this.tx-this.x)*this.speed;
+//         this.y+=(this.ty-this.y)*this.speed;
 
-        this.alpha+=0.015;
+//         this.alpha+=0.015;
 
-        if(this.alpha>1){
+//         if(this.alpha>1){
 
-            this.alpha=0.25;
+//             this.alpha=0.25;
 
-        }
+//         }
 
-    }
+//     }
 
-    draw(){
+//     draw(){
 
-        ctx.beginPath();
+//         ctx.beginPath();
 
-        ctx.arc(
+//         ctx.arc(
 
-            this.x,
-            this.y,
-            this.size,
-            0,
-            Math.PI*2
+//             this.x,
+//             this.y,
+//             this.size,
+//             0,
+//             Math.PI*2
 
-        );
+//         );
 
-        ctx.fillStyle=`rgba(255,255,255,${this.alpha})`;
+//         ctx.fillStyle=`rgba(255,255,255,${this.alpha})`;
 
-        ctx.shadowBlur=10;
-        ctx.shadowColor="white";
+//         ctx.shadowBlur=10;
+//         ctx.shadowColor="white";
 
-        ctx.fill();
+//         ctx.fill();
 
-    }
+//     }
 
-}
+// }
 
-for(let i=0;i<PARTICLE_COUNT;i++){
+// for(let i=0;i<PARTICLE_COUNT;i++){
 
-    particles.push(new Particle());
+//     particles.push(new Particle());
 
-}
+// }
 
-window.mafParticles=particles;
-window.mafMoon=moon;
-window.mafCtx=ctx;
-window.mafCanvas=canvas;
+// window.mafParticles=particles;
+// window.mafMoon=moon;
+// window.mafCtx=ctx;
+// window.mafCanvas=canvas;
 
-/* ===============================
-   DRAW MOON
-================================ */
+// /* ===============================
+//    DRAW MOON
+// ================================ */
 
-function drawMoon(){
+// function drawMoon(){
 
-    const glow=ctx.createRadialGradient(
+//     const glow=ctx.createRadialGradient(
 
-        moon.x,
-        moon.y,
-        20,
+//         moon.x,
+//         moon.y,
+//         20,
 
-        moon.x,
-        moon.y,
-        180
+//         moon.x,
+//         moon.y,
+//         180
 
-    );
+//     );
 
-    glow.addColorStop(0,"rgba(255,255,255,0.95)");
-    glow.addColorStop(0.5,"rgba(255,255,255,0.35)");
-    glow.addColorStop(1,"rgba(255,255,255,0)");
+//     glow.addColorStop(0,"rgba(255,255,255,0.95)");
+//     glow.addColorStop(0.5,"rgba(255,255,255,0.35)");
+//     glow.addColorStop(1,"rgba(255,255,255,0)");
 
-    ctx.beginPath();
+//     ctx.beginPath();
 
-    ctx.fillStyle=glow;
+//     ctx.fillStyle=glow;
 
-    ctx.arc(
+//     ctx.arc(
 
-        moon.x,
-        moon.y,
-        180,
-        0,
-        Math.PI*2
+//         moon.x,
+//         moon.y,
+//         180,
+//         0,
+//         Math.PI*2
 
-    );
+//     );
 
-    ctx.fill();
+//     ctx.fill();
 
-    ctx.beginPath();
+//     ctx.beginPath();
 
-    ctx.arc(
+//     ctx.arc(
 
-        moon.x,
-        moon.y,
-        moon.r,
-        0,
-        Math.PI*2
+//         moon.x,
+//         moon.y,
+//         moon.r,
+//         0,
+//         Math.PI*2
 
-    );
+//     );
 
-    ctx.fillStyle="#ffffff";
+//     ctx.fillStyle="#ffffff";
 
-    ctx.shadowBlur=50;
-    ctx.shadowColor="white";
+//     ctx.shadowBlur=50;
+//     ctx.shadowColor="white";
 
-    ctx.fill();
+//     ctx.fill();
 
-}
+// }
 
-/* ===============================
-   LOOP
-================================ */
+// /* ===============================
+//    LOOP
+// ================================ */
 
-function animate(){
+// function animate(){
 
-    ctx.clearRect(
+//     ctx.clearRect(
 
-        0,
-        0,
-        canvas.width,
-        canvas.height
+//         0,
+//         0,
+//         canvas.width,
+//         canvas.height
 
-    );
+//     );
 
-    drawMoon();
+//     drawMoon();
 
-    particles.forEach(p=>{
+//     particles.forEach(p=>{
 
-        p.update();
-        p.draw();
+//         p.update();
+//         p.draw();
 
-    });
+//     });
 
 
-}
- requestAnimationFrame(animate);
+// }
+//  requestAnimationFrame(animate);
 
-})();
-/* =====================================================
-   🌙 PART 2
-   PARTICLES FORM "AFFEE"
-===================================================== */
+// })();
+// /* =====================================================
+//    🌙 PART 2
+//    PARTICLES FORM "AFFEE"
+// ===================================================== */
 
-(() => {
+// (() => {
 
-const canvas = window.mafCanvas;
-const particles = window.mafParticles;
+// const canvas = window.mafCanvas;
+// const particles = window.mafParticles;
 
-if(!canvas || !particles) return;
+// if(!canvas || !particles) return;
 
-/* ===========================
-   CREATE TEXT POINTS
-=========================== */
+// /* ===========================
+//    CREATE TEXT POINTS
+// =========================== */
 
-function createTextPoints(text){
+// function createTextPoints(text){
 
-    const c = document.createElement("canvas");
-    const x = c.getContext("2d");
+//     const c = document.createElement("canvas");
+//     const x = c.getContext("2d");
 
-    c.width = canvas.width;
-    c.height = canvas.height;
+//     c.width = canvas.width;
+//     c.height = canvas.height;
 
-    x.clearRect(0,0,c.width,c.height);
+//     x.clearRect(0,0,c.width,c.height);
 
-    x.textAlign = "center";
-    x.textBaseline = "middle";
+//     x.textAlign = "center";
+//     x.textBaseline = "middle";
 
-    // Font change kar sakte ho
-    x.font = "900 190px Poppins, Arial";
+//     // Font change kar sakte ho
+//     x.font = "900 190px Poppins, Arial";
 
-    x.fillStyle = "#ffffff";
+//     x.fillStyle = "#ffffff";
 
-    // Moon ke neeche
-    x.fillText(
+//     // Moon ke neeche
+//     x.fillText(
 
-        text,
+//         text,
 
-        c.width/2,
+//         c.width/2,
 
-        380
+//         380
 
-    );
+//     );
 
-    const img = x.getImageData(
+//     const img = x.getImageData(
 
-        0,
-        0,
-        c.width,
-        c.height
+//         0,
+//         0,
+//         c.width,
+//         c.height
 
-    ).data;
+//     ).data;
 
-    const pts=[];
+//     const pts=[];
 
-    for(let y=0;y<c.height;y+=2){
+//     for(let y=0;y<c.height;y+=2){
 
-        for(let xx=0;xx<c.width;xx+=2){
+//         for(let xx=0;xx<c.width;xx+=2){
 
-            const i=(y*c.width+xx)*4;
+//             const i=(y*c.width+xx)*4;
 
-            if(img[i+3]>180){
+//             if(img[i+3]>180){
 
-                pts.push({
+//                 pts.push({
 
-                    x:xx,
+//                     x:xx,
 
-                    y:y
+//                     y:y
 
-                });
+//                 });
 
-            }
+//             }
 
-        }
+//         }
 
-    }
+//     }
 
-    return pts;
+//     return pts;
 
-}
+// }
 
-const textPoints=createTextPoints("AFFEE");
+// const textPoints=createTextPoints("AFFEE");
 
-/* ===========================
-   MOVE TO TEXT
-=========================== */
+// /* ===========================
+//    MOVE TO TEXT
+// =========================== */
 
-window.mafShowText=function(){
+// window.mafShowText=function(){
 
-    particles.forEach((p,i)=>{
+//     particles.forEach((p,i)=>{
 
-        const pt=textPoints[
-            i % textPoints.length
-        ];
+//         const pt=textPoints[
+//             i % textPoints.length
+//         ];
 
-        p.tx=pt.x;
-        p.ty=pt.y;
+//         p.tx=pt.x;
+//         p.ty=pt.y;
 
-    });
+//     });
 
-};
+// };
 
-})();
-/* =====================================================
-   🌙 PART 3
-   CINEMATIC ANIMATION
-===================================================== */
+// })();
+// /* =====================================================
+//    🌙 PART 3
+//    CINEMATIC ANIMATION
+// ===================================================== */
 
-(() => {
+// (() => {
 
-const particles = window.mafParticles;
-const moon = window.mafMoon;
+// const particles = window.mafParticles;
+// const moon = window.mafMoon;
 
-if(!particles || !moon) return;
+// if(!particles || !moon) return;
 
-let showingText = false;
+// let showingText = false;
 
-/* ===========================
-   MOON ORBIT
-=========================== */
+// /* ===========================
+//    MOON ORBIT
+// =========================== */
 
-function orbitMoon(){
+// function orbitMoon(){
 
-    particles.forEach((p,i)=>{
+//     particles.forEach((p,i)=>{
 
-        const angle =
-            (i/particles.length)*Math.PI*2 +
-            performance.now()*0.00035;
+//         const angle =
+//             (i/particles.length)*Math.PI*2 +
+//             performance.now()*0.00035;
 
-        const radius =
-            40 + (i%25)*1.8;
+//         const radius =
+//             40 + (i%25)*1.8;
 
-        p.tx = moon.x + Math.cos(angle)*radius;
-        p.ty = moon.y + Math.sin(angle)*radius;
+//         p.tx = moon.x + Math.cos(angle)*radius;
+//         p.ty = moon.y + Math.sin(angle)*radius;
 
-    });
+//     });
 
-}
+// }
 
-/* ===========================
-   RETURN TO MOON
-=========================== */
+// /* ===========================
+//    RETURN TO MOON
+// =========================== */
 
-function backToMoon(){
+// function backToMoon(){
 
-    showingText=false;
+//     showingText=false;
 
-    particles.forEach((p,i)=>{
+//     particles.forEach((p,i)=>{
 
-        const angle=Math.random()*Math.PI*2;
-        const radius=Math.random()*65;
+//         const angle=Math.random()*Math.PI*2;
+//         const radius=Math.random()*65;
 
-        p.tx = moon.x + Math.cos(angle)*radius;
-        p.ty = moon.y + Math.sin(angle)*radius;
+//         p.tx = moon.x + Math.cos(angle)*radius;
+//         p.ty = moon.y + Math.sin(angle)*radius;
 
-    });
+//     });
 
-}
+// }
 
-/* ===========================
-   START LOOP
-=========================== */
+// /* ===========================
+//    START LOOP
+// =========================== */
 
-setInterval(()=>{
+// setInterval(()=>{
 
-    if(showingText){
+//     if(showingText){
 
-        backToMoon();
+//         backToMoon();
 
-    }else{
+//     }else{
 
-        showingText=true;
+//         showingText=true;
 
-        if(window.mafShowText){
+//         if(window.mafShowText){
 
-window.mafShowText();
+// window.mafShowText();
           
 
-        }
+//         }
 
-    }
+//     }
 
-},6000);
+// },6000);
 
-/* ===========================
-   CONTINUOUS ORBIT
-=========================== */
+// /* ===========================
+//    CONTINUOUS ORBIT
+// =========================== */
 
-function loop(){
+// function loop(){
 
-    if(!showingText){
+//     if(!showingText){
 
-        orbitMoon();
+//         orbitMoon();
 
-    }
+//     }
 
-    requestAnimationFrame(loop);
+//     requestAnimationFrame(loop);
 
-}
+// }
 
-loop();
+// loop();
 
-})();
-/* =====================================================
-   🌙 PART 4
-   PERFECT AFFEE POINTS
-===================================================== */
+// })();
+// /* =====================================================
+//    🌙 PART 4
+//    PERFECT AFFEE POINTS
+// ===================================================== */
 
-(() => {
+// (() => {
 
-const particles = window.mafParticles;
-if(!particles) return;
+// const particles = window.mafParticles;
+// if(!particles) return;
 
-const points=[];
+// const points=[];
 
-/* Letter size */
+// /* Letter size */
 
-const startX = window.innerWidth/2 - 320;
-const startY = 380;
+// const startX = window.innerWidth/2 - 320;
+// const startY = 380;
 
-const W = 80;
-const H = 150;
-const GAP = 25;
+// const W = 80;
+// const H = 150;
+// const GAP = 25;
 
-/* Draw Line */
+// /* Draw Line */
 
-function line(x1,y1,x2,y2,step=4){
+// function line(x1,y1,x2,y2,step=4){
 
-    const len=Math.hypot(x2-x1,y2-y1);
+//     const len=Math.hypot(x2-x1,y2-y1);
 
-    const n=Math.floor(len/step);
+//     const n=Math.floor(len/step);
 
-    for(let i=0;i<=n;i++){
+//     for(let i=0;i<=n;i++){
 
-        const t=i/n;
+//         const t=i/n;
 
-        points.push({
+//         points.push({
 
-            x:x1+(x2-x1)*t,
-            y:y1+(y2-y1)*t
+//             x:x1+(x2-x1)*t,
+//             y:y1+(y2-y1)*t
 
-        });
+//         });
 
-    }
+//     }
 
-}
+// }
 
-/* ===========================
-      A
-=========================== */
+// /* ===========================
+//       A
+// =========================== */
 
-let x=startX;
+// let x=startX;
 
-line(x,startY+H,x+W/2,startY);
-line(x+W,startY+H,x+W/2,startY);
-line(x+18,startY+80,x+62,startY+80);
+// line(x,startY+H,x+W/2,startY);
+// line(x+W,startY+H,x+W/2,startY);
+// line(x+18,startY+80,x+62,startY+80);
 
-/* ===========================
-      F
-=========================== */
+// /* ===========================
+//       F
+// =========================== */
 
-x+=W+GAP;
+// x+=W+GAP;
 
-line(x,startY,x,startY+H);
-line(x,startY,x+W,startY);
-line(x,startY+70,x+65,startY+70);
+// line(x,startY,x,startY+H);
+// line(x,startY,x+W,startY);
+// line(x,startY+70,x+65,startY+70);
 
-/* ===========================
-      F
-=========================== */
+// /* ===========================
+//       F
+// =========================== */
 
-x+=W+GAP;
+// x+=W+GAP;
 
-line(x,startY,x,startY+H);
-line(x,startY,x+W,startY);
-line(x,startY+70,x+65,startY+70);
+// line(x,startY,x,startY+H);
+// line(x,startY,x+W,startY);
+// line(x,startY+70,x+65,startY+70);
 
-/* ===========================
-      E
-=========================== */
+// /* ===========================
+//       E
+// =========================== */
 
-x+=W+GAP;
+// x+=W+GAP;
 
-line(x,startY,x,startY+H);
-line(x,startY,x+W,startY);
-line(x,startY+75,x+70,startY+75);
-line(x,startY+H,x+W,startY+H);
+// line(x,startY,x,startY+H);
+// line(x,startY,x+W,startY);
+// line(x,startY+75,x+70,startY+75);
+// line(x,startY+H,x+W,startY+H);
 
-/* ===========================
-      E
-=========================== */
+// /* ===========================
+//       E
+// =========================== */
 
-x+=W+GAP;
+// x+=W+GAP;
 
-line(x,startY,x,startY+H);
-line(x,startY,x+W,startY);
-line(x,startY+75,x+70,startY+75);
-line(x,startY+H,x+W,startY+H);
+// line(x,startY,x,startY+H);
+// line(x,startY,x+W,startY);
+// line(x,startY+75,x+70,startY+75);
+// line(x,startY+H,x+W,startY+H);
 
-/* ===========================
-   SHOW TEXT
-=========================== */
+// /* ===========================
+//    SHOW TEXT
+// =========================== */
 
-window.mafShowText=function(){
+// window.mafShowText=function(){
 
-    particles.forEach((p,i)=>{
+//     particles.forEach((p,i)=>{
 
-        const pt=points[i % points.length];
+//         const pt=points[i % points.length];
 
-        p.tx=pt.x;
-        p.ty=pt.y;
+//         p.tx=pt.x;
+//         p.ty=pt.y;
 
-    });
+//     });
 
-};
+// };
 
-})();
+// })();
