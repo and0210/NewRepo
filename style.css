@@ -2892,3 +2892,108 @@ font-size:24px;
     overflow:visible !important;
 
 }
+   .love-audio-section{
+    width:100%;
+    min-height:100vh;
+    padding:80px 20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:35px;
+
+    background:linear-gradient(180deg,#020412,#081224,#020412);
+    text-align:center;
+}
+
+/* Glowing Text */
+
+.glow-text{
+
+    font-size:clamp(2.2rem,6vw,5rem);
+    color:#fff;
+    font-weight:900;
+    letter-spacing:4px;
+    text-transform:uppercase;
+
+    animation:
+    glow 2s ease-in-out infinite alternate,
+    shine 3s linear infinite;
+}
+
+@keyframes glow{
+
+    from{
+
+        text-shadow:
+        0 0 10px #ff4fd8,
+        0 0 20px #ff4fd8,
+        0 0 40px #ff4fd8,
+        0 0 70px #ff4fd8;
+
+    }
+
+    to{
+
+        text-shadow:
+        0 0 15px #ffffff,
+        0 0 30px #ff82e8,
+        0 0 60px #ff82e8,
+        0 0 90px #ff82e8;
+
+    }
+
+}
+
+@keyframes shine{
+
+    0%{
+        opacity:.8;
+        transform:scale(1);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.04);
+    }
+
+    100%{
+        opacity:.8;
+        transform:scale(1);
+    }
+
+}
+
+/* Audio Cards */
+
+.audio-box{
+
+    width:min(500px,90%);
+    padding:20px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:0 0 20px rgba(255,105,180,.3);
+
+}
+
+.audio-box h3{
+
+    color:white;
+    margin-bottom:15px;
+
+}
+
+.audio-box audio{
+
+    width:100%;
+
+    border-radius:50px;
+
+}
