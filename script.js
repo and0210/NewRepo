@@ -19,17 +19,11 @@ const photos = [
     "photo7.jpeg",
     "photo8.jpeg",
     "photo9.jpeg",
-
-   "12.jpeg",
-   "12(2).jpeg",
-
-   "13.jpeg",
-
-
-   "14.jpeg",
-
-
-   "0.jpeg"
+     "12.jpeg",
+     "12 (2).jpeg",
+     "13.jpeg",
+"14.jpeg",
+"0.jpeg"
 
 
 ];
