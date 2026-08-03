@@ -9,6 +9,7 @@
 =========================== */
 
 const photos = [
+   "15.jpeg",
     "photo1.jpeg",
     "photo2.jpeg",
     "photo3.jpeg",
@@ -17,7 +18,20 @@ const photos = [
     "photo6.jpeg",
     "photo7.jpeg",
     "photo8.jpeg",
-    "photo9.jpeg"
+    "photo9.jpeg",
+
+   "12.jpeg",
+   "12(2).jpeg",
+
+   "13.jpeg",
+
+
+   "14.jpeg",
+
+
+   "0.jpeg"
+
+
 ];
 
 let photoIndex = 0;
