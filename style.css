@@ -122,9 +122,9 @@ section{
     text-align:center;
 
     background-image:
-        url("0.jpg"),
-        url("photo4.jpg"),
-        url("photo6.jpg");
+        url("0.jpeg"),
+        url("photo4.jpeg"),
+        url("photo6.jpeg");
 
     background-repeat:
         no-repeat,
