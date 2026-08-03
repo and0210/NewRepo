@@ -145,9 +145,19 @@ section{
 
 
 @media (max-width:768px){
+
     .welcome{
-        background-size: cover;
+
+        background-image:url("center.jpg");
+
+        background-position:center;
+
+        background-repeat:no-repeat;
+
+        background-size:90% auto;
     }
+
+}
 }/* ===========================
    HEADINGS
 =========================== */
