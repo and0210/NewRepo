@@ -38,7 +38,7 @@ let photoIndex = 0;
 const videos = [
     "video.mp4",
    "video1.mp4",
-   "video20.mp4"
+   "video20.mp4",
    "video2.mp4",
    "video3.mp4",
    "video4.mp4",
