@@ -107,28 +107,22 @@ section{
 =========================== */
 
 .welcome{
-
     min-height:100vh;
 
     display:flex;
-
-    flex-direction:column;
-
     justify-content:center;
-
     align-items:center;
-
     text-align:center;
-   
-    background-image: url("photo2.jpeg");
+
+    background: url("photo2.jpg") center center no-repeat;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-
 }
 
-/* ===========================
+@media (max-width:768px){
+    .welcome{
+        background-size: contain;
+    }
+}/* ===========================
    HEADINGS
 =========================== */
 
