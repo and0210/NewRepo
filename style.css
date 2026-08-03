@@ -121,10 +121,25 @@ section{
 
     text-align:center;
 
-    background-image: url("photo4.jpeg");
- background-size: 80% auto;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-image:
+        url("0.jpg"),
+        url("photo4.jpg"),
+        url("photo6.jpg");
+
+    background-repeat:
+        no-repeat,
+        no-repeat,
+        no-repeat;
+
+    background-position:
+        left center,
+        center center,
+        right center;
+
+    background-size:
+        30% auto,
+        30% auto,
+        30% auto;
 
 }
 
