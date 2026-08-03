@@ -2947,32 +2947,27 @@ font-size:24px;
 
     0%{
 
-        color:#ffffff;
-
         text-shadow:
-        0 0 10px #ff3cac,
-        0 0 20px #ff3cac,
-        0 0 40px #ff3cac,
-        0 0 70px #ff3cac,
-        0 0 100px #ff3cac;
+        0 0 5px #fff,
+        0 0 10px #ff4fd8,
+        0 0 20px #ff4fd8,
+        0 0 40px #ff4fd8,
+        0 0 80px #ff4fd8;
 
     }
 
     100%{
 
-        color:#ffd6f2;
-
         text-shadow:
-        0 0 15px #ffffff,
-        0 0 35px #ff69b4,
-        0 0 60px #ff69b4,
-        0 0 90px #ff69b4,
-        0 0 120px #ff69b4;
+        0 0 10px #fff,
+        0 0 20px #ff80df,
+        0 0 40px #ff80df,
+        0 0 80px #ff80df,
+        0 0 120px #ff80df;
 
     }
 
 }
-
 /* ===============================
    AUDIO BOX
 =================================*/
