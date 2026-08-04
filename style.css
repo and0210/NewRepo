@@ -3048,3 +3048,35 @@ font-size:24px;
     }
 
 }
+.memory-slider{
+    width:100%;
+    height:320px;      /* 600px ki jagah */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:#fff;
+    border-radius:20px;
+}
+
+.memory-slider img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+.popup-message{
+    max-height:220px;   /* 400px ki jagah */
+    overflow-y:auto;
+    overflow-x:hidden;
+    padding:10px;
+    margin-top:15px;
+    text-align:left;
+    border-top:1px solid #eee;
+}
+
+.leaflet-popup-content{
+    width:430px !important;
+    max-height:85vh;
+    overflow-y:auto;
+}
