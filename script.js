@@ -782,7 +782,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             place:"YCET",
 
-            date:"18 April 2020",
+          
 
             photos:[
                 "1.jpeg",
@@ -791,7 +791,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ],
 
             message:
-            "The day our beautiful journey started ❤️"
+            "The day our beautiful journey started ❤️...aapko yaad hai iss din mai aapke haath ar hairband se khel rhi thi....aap bhi chhate thei ki mai khelti hi rhu ...pkdi rkhu aapka haath isliye aap bhi peeche nhi kr rhe theu"
         },
 
         {
@@ -807,7 +807,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ],
 
             message:
-            "One of my favourite memories ❤️"
+            "One of my favourite memories ❤️....kbhi socha nhi tha iss din ki hum aise connected honge aage jaakr ....msti msti mei hum ek dusre ke lie feel krne lg gye"
         },
        
         {
@@ -844,18 +844,19 @@ document.addEventListener("DOMContentLoaded", () => {
             lat:34.0159,
             lng:75.3180,
 
-            title:"🏔️ Pahalgam Trip",
+            title:"memories",
 
-            place:"Pahalgam",
+            place:"❤️",
 
             photos:[
-                "photo6.jpeg",
-                "photo7.jpeg",
-                "photo8.jpeg"
+                "19.jpeg",
+                "16.jpeg",
+                "18.jpeg",
+               "17.jpeg"
             ],
 
             message:
-            "Every trip with you feels magical ❤️"
+            "Every memory with you feels magical ❤️"
         },
        {
     lat: 32.70542,
